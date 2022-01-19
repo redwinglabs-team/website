@@ -1,16 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
-import { RedwingsLogo } from '../../assets';
+import { ROUTE_LIST } from '../../constants/routesList';
+import { Container } from '../shared/Containers';
+import IntroPages from '../shared/IntroPages';
 
-const Container =styled.div`
-  background-color:red;
-`
+
 
 const HomeContainer = () => {
     return (
         <Container>
-            TEST
-            {/* <RedwingsLogo/> */}
+            {/* INTRO */}
+            <IntroPages
+                bgImage={ROUTE_LIST.HOME.backgroundImage}
+                description={ROUTE_LIST.HOME.description}
+            />
         </Container>
     );
 };

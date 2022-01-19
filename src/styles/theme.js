@@ -24,12 +24,13 @@ export const theme = {
     bold: 'roboto-bold'
   },
   colors: {
-    primaryColor: '#3A4750',
+    primaryColor: '#232323',
+    white:'#FFFFFF',
     lightGreen: '#6FC551',
     darkGreen: '#11AA67',
     lighterGreen: '#E2F4DC',
     orange: '#F6B502',
-    red: '#CB2D24',
+    red: '#BE3144',
     lightRed: '#F5D5D3',
     grey: '#7B7B7B',
     layoutBackgroundColor: '#F4F4FD',
