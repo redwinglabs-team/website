@@ -5,13 +5,13 @@ const IntroContainer = styled.div`
     width:100%;
     height: 100vh;
     display: flex;
-    justify-content:center;
     align-items:center;
-    flex-flow:column;
+    flex-flow:row;
     background: ${({theme:{colors}})=>colors.primaryColor};
     color: ${({theme:{colors}})=>colors.white};
     background-position: center;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 2500px;
 
 `;
 
@@ -21,6 +21,10 @@ const TitleLight = styled.span`
     margin:0px;
     text-align:left;
     width: 100%;
+    @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.desktopPixel + 1}px`}) {
+        font-size:24px;
+    }
 `
 const TitleBold = styled.span`
     font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
@@ -28,19 +32,34 @@ const TitleBold = styled.span`
     margin:0px;
     text-align:left;
     width: 100%;
+    @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.desktopPixel + 1}px`}) {
+        font-size:48px;
+    }
     `
 
 const TitleContainer = styled.div`
-    width:60%;
+    width:50%;
     display: flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
-    padding:64px;
+    padding-left: 170px;
     max-width: fit-content;
-    margin: auto;
 `
-const IntroPages = ({bgImage,description}) => {
+
+const ImageProductContainer = styled.div`
+    display: flex;
+    justify-content:flex-end;
+    align-self: flex-end;
+    svg{
+        position: absolute;
+        max-height:600px;
+        bottom:0px;
+        right:-110px;
+    }
+`
+const IntroPages = ({bgImage,description,productImage}) => {
     return (
         <IntroContainer id="intro" style={{ backgroundImage: `url(${bgImage})` }}>
             <TitleContainer>
@@ -48,6 +67,11 @@ const IntroPages = ({bgImage,description}) => {
             {description[1] && <TitleBold>{description[1]}</TitleBold>}
             {description[2] && <TitleLight>{description[2]}</TitleLight>}
             </TitleContainer>
+            {productImage &&
+                <ImageProductContainer>
+                    {productImage}
+                </ImageProductContainer>
+            }
         </IntroContainer>
     );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { TopUpIcon } from '../../assets';
+import Footer from './footer/Footer';
 import DesktopHeader from './header/DesktopHeader';
 
 const LayoutContainer = styled.div`
@@ -71,6 +72,7 @@ const Layout = ({ children }) => {
             <MainContent>
                 {children}
             </MainContent>
+            <Footer/>
             <GoTopContainer topUpIconIsVisible={topUpIconIsVisible}>
                 <ButtonIcon onClick={goToTop}>
                     <TopUpIcon />

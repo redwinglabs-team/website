@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components/macro";
 
 const Item = styled.a`
-  color: #ffffff;
+  color: ${({colorInverted,theme:{colors}})=>colorInverted ? colors.primaryColor : colors.white};
   font-size: 16px;
   text-decoration: none;
   text-transform: capitalize;
@@ -18,7 +18,7 @@ const Item = styled.a`
   .underline {
     width: ${({ isHover }) => (isHover ? "100%" : 0)};
     transition: width 0.3s;
-    background: ${({theme:{colors}})=>colors.red};
+    background: ${({colorInverted,theme:{colors}})=>colorInverted ? colors.primaryColor : colors.red};
     height: 3px;
   }
 `;
@@ -32,6 +32,8 @@ const HeaderItem = ({
   style,
   textRegular,
   shadowHover,
+  colorInverted,
+  onClick
 }) => {
   const [isHover, setIsHover] = useState(false);
 
@@ -41,12 +43,14 @@ const HeaderItem = ({
       className={className}
       href={href}
       target={target}
+      colorInverted={colorInverted}
       isHover={disabledHover ? false : isHover}
       onMouseOver={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
       style={style}
       textRegular={textRegular}
       shadowHover={shadowHover}
+      onClick={onClick}
     >
       <>
         {children}

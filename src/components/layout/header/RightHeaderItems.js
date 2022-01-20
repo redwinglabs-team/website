@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { ROUTE_CAREERS, ROUTE_CONTACT_US, ROUTE_INDEX, ROUTE_PRODUCTS } from "../../../router/routes";
 import HeaderItem from "../../shared/HeaderItem";
 
 const RightContainerHeader = styled.div`
@@ -14,37 +13,21 @@ const RightContainerHeader = styled.div`
   } */
 `;
 
-const RightHeaderItems = () => {
+const RightHeaderItems = ({itemsLink,isQuadroMenu}) => {
   return (
     <RightContainerHeader>
-      <HeaderItem
-        style={{ marginRight: 24 }}
-        className="mobile-none"
-        href={ROUTE_INDEX}
-      >
-        Home
-      </HeaderItem>
-      <HeaderItem
-        style={{ marginRight: 24 }}
-        className="mobile-none"
-        href={ROUTE_PRODUCTS}
-      >
-        Products
-      </HeaderItem>
-      <HeaderItem
-        className="mobile-none"
-        href={ROUTE_CAREERS}
-        style={{ marginRight: 24 }}
-      >
-        Careers
-      </HeaderItem>
-      <HeaderItem
-        className="mobile-none"
-        href={ROUTE_CONTACT_US}
-        style={{ marginRight: 24 }}
-      >
-        Contact Us
-      </HeaderItem>
+      {Object.values(itemsLink).map((item,index)=>(
+              <HeaderItem
+              key={index}
+              style={{ marginRight: 24 }}
+              colorInverted={isQuadroMenu}
+              // className="mobile-none"
+              href={item.link}
+              onClick={item.onClick}
+            >
+              {item.title}
+            </HeaderItem>
+      ))}
     </RightContainerHeader>
   );
 };
