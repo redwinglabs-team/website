@@ -16,6 +16,7 @@ export default createGlobalStyle`
       width: 100%;
       height: 100%;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     };
 
     body {
@@ -24,9 +25,9 @@ export default createGlobalStyle`
       line-height: inherit;
       overflow: auto;
       min-width: 0;
-      font-family: roboto-regular;
+      font-family:  ${({ theme: { fontFamily } }) => fontFamily.regular};
       margin: 0px;
-      background-color: ${({ theme: { colors } }) => colors.layoutBackgroundColor};
+      background-color: ${({ theme: { colors } }) => colors.white};
       color:${({ theme: { colors } }) => colors.primaryColor};
     };
 
