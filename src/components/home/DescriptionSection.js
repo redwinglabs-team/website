@@ -20,7 +20,9 @@ const DescriptionSectionContainer = styled(Container)`
 
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.desktopPixel + 1}px`}) {
-     padding: 32px 64px;
+     padding: 16px 64px;
+     height: fit-content;
+     margin-bottom:64px;
   }
 
 `
@@ -43,12 +45,17 @@ justify-content:space-between;
 &>div:not(:last-child){
  margin-bottom:32px !important;
 }
+@media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    justify-content:center;
+    height: fit-content;
+  }
 `
 
 const GridContainer = styled.div`
-    position:absolute;
-    left:48px;
-    bottom:0px;
+    position:relative;
+    left:-224px;
+    bottom:-200px;
     transform: rotate(90deg);
     svg{
         width:200px;

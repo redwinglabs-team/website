@@ -32,7 +32,7 @@ export const theme = {
     orange: '#F6B502',
     red: '#BE3144',
     lightRed: '#F5D5D3',
-    grey: '#7B7B7B',
+    grey: '#B4B4B4',
     layoutBackgroundColor: '#F4F4FD',
     errorColor: '#CB2D24',
     secondaryColor: '#BE3144',

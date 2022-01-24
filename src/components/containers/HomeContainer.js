@@ -1,5 +1,6 @@
 import React from 'react';
 import { ROUTE_LIST } from '../../constants/routesList';
+import Clients from '../home/Clients';
 import DescriptionSection from '../home/DescriptionSection';
 import { Container } from '../shared/Containers';
 import IntroPages from '../shared/IntroPages';
@@ -17,6 +18,7 @@ const HomeContainer = () => {
             {/* TITLE */}
             <TitleDescriptionPage supTitle="WE ARE" title="REDWING LABS" />
             <DescriptionSection />
+            <Clients/>
         </Container>
     );
 };

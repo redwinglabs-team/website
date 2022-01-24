@@ -26,7 +26,6 @@ const LabeledTitleRegular = styled.span`
 const LabeledTitleBold = styled.span`
     font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
     margin-right:8px;
-
     text-align:left;
 `
 
