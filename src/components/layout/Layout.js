@@ -10,6 +10,11 @@ const LayoutContainer = styled.div`
   width: 100%;
 `
 
+const PageContent = styled.div`
+  position: relative;
+`
+
+
 const MainContent = styled.div`
   height: 100%;
   width: 100%;
@@ -68,10 +73,12 @@ const Layout = ({ children }) => {
 
     return (
         <LayoutContainer>
-            <DesktopHeader />
-            <MainContent>
-                {children}
-            </MainContent>
+          <PageContent>
+              <DesktopHeader />
+              <MainContent>
+                  {children}
+              </MainContent>
+            </PageContent>
             <Footer/>
             <GoTopContainer topUpIconIsVisible={topUpIconIsVisible}>
                 <ButtonIcon onClick={goToTop}>

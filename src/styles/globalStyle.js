@@ -27,7 +27,7 @@ export default createGlobalStyle`
       min-width: 0;
       font-family:  ${({ theme: { fontFamily } }) => fontFamily.regular};
       margin: 0px;
-      background-color: ${({ theme: { colors } }) => colors.layoutBackgroundColor};
+      background-color: ${({ theme: { colors } }) => colors.white};
       color:${({ theme: { colors } }) => colors.primaryColor};
     };
 

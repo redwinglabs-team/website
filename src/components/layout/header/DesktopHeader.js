@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { QuadroLogo, RedwingsLogo } from '../../../assets';
 import { ROUTE_CAREERS, ROUTE_CONTACT_US, ROUTE_INDEX, ROUTE_PRODUCTS_QUADRO_ENTERTAINMENT, ROUTE_PRODUCTS_QUADRO_FNB, ROUTE_PRODUCTS_QUADRO_PMS, ROUTE_PRODUCTS_QUADRO_POP, ROUTE_PRODUCTS_QUADRO_SUITE } from '../../../router/routes';
+import { matchPathname } from '../../../utils/UtilStrings';
 import RightHeaderItems from './RightHeaderItems';
 
 const Container = styled.div`
@@ -53,6 +54,8 @@ const TopHeader = styled.div`
   flex-flow: row;
   justify-content: space-between;
   padding: 16px 170px;
+  min-height: ${({ theme: { header } }) => `${header.height}px`};
+
 
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
@@ -70,7 +73,7 @@ const BottomHeader = styled.div`
   flex-flow: row;
   justify-content: space-between;
   background-color:white;
-  padding: 16px 170px;
+  padding: 8px 170px;
 
   z-index:-1;
 
@@ -114,6 +117,7 @@ const DesktopHeader = ({ className, menuWithMarginBottom }) => {
     },
     PRODUCTS:{
         title:"Products",
+        link:ROUTE_PRODUCTS_QUADRO_SUITE,
         onClick:()=>setQuadroHeaderReveal(true)
     },
     CAREERS:{
@@ -161,7 +165,7 @@ const QUADRO_LINK = {
       <TopHeader>
       <LeftContainer>
         <RedwingsLogo
-          style={{ cursor: 'pointer' }}
+          style={{ cursor: 'pointer',height:20 }}
           onClick={() => navigate(ROUTE_INDEX)}
         />
       </LeftContainer>
@@ -173,9 +177,11 @@ const QUADRO_LINK = {
       </RightContainer>
       </TopHeader>
       <BottomHeader
-        style={{display:quadroHeaderReveal ? 'flex' : 'none'}}
-        className={quadroHeaderReveal ? 'sticky' : 'out'}>
-        <QuadroLogo/>
+        style={{display: matchPathname('products') || quadroHeaderReveal ? 'flex' : 'none'}}
+        className={matchPathname('products') || quadroHeaderReveal ? 'sticky' : 'out'}
+        >
+        <QuadroLogo className="mobile-none" style={{ cursor: 'pointer',height:32 }}
+          onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_SUITE)}/>
         <RightHeaderItems
           itemsLink={QUADRO_LINK}
           isQuadroMenu

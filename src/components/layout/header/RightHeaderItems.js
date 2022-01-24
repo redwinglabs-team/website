@@ -19,9 +19,10 @@ const RightHeaderItems = ({itemsLink,isQuadroMenu}) => {
       {Object.values(itemsLink).map((item,index)=>(
               <HeaderItem
               key={index}
-              style={{ marginRight: 24 }}
+              style={{ marginRight: 32 }}
               colorInverted={isQuadroMenu}
               // className="mobile-none"
+              textRegular={item.link !== window.location.pathname}
               href={item.link}
               onClick={item.onClick}
             >

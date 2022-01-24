@@ -39,7 +39,7 @@ export const theme = {
     borderColor: '#ECEBEC',
     darkGrey: '#55595C',
     lightGrey: '#707070',
-    lightGreyBackground: '#cdd0d9',
+    lightGreyBackground: '#F3F3F3',
     smalt: '#3399CC',
     lightGreyText: '#B5B5B5',
     blackGrey: '#404040',

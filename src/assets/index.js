@@ -2,6 +2,7 @@
 export { ReactComponent as RedwingsLogo } from './svg/redwinglabs_logo.svg';
 export { ReactComponent as QuadroLogo } from './svg/quadro_logo.svg';
 export { ReactComponent as TopUpIcon } from './svg/go_top.svg';
+export { ReactComponent as GridPattern } from './svg/grid-pattern.svg';
 export { ReactComponent as DiscordIcon } from './svg/social/discord.svg';
 export { ReactComponent as TwitterIcon } from './svg/social/twitter.svg';
 export { ReactComponent as TelegramIcon } from './svg/social/telegram.svg';

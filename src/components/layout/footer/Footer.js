@@ -21,7 +21,7 @@ const FooterContainer = styled.div`
   padding: 32px 170px 0px;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
-    //margin-top: 40px;
+    padding:24px;
     flex-flow: column;
   }
 `;
@@ -54,8 +54,9 @@ const FooterContent = styled(Container)`
 `
 
 const FooterColumn = styled(Container)`
-justify-content:flex-start;
-align-items: flex-start;
+    justify-content:flex-start;
+    align-items: flex-start;
+
 `
 
 const Text = styled.p`
@@ -109,14 +110,11 @@ const PrivacyElement = styled.p`
 const Divider = styled.hr``
 
 const FooterLinksGrid = styled.div`
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 1fr 1fr 1fr; 
-  gap: 10px 10px; 
-  grid-template-areas: 
-    ". ."
-    ". ."
-    ". ."; 
+  display:flex;
+  flex-direction:column;
+  & > *:not(:last-child){
+        margin-bottom:8px;
+    }
 `
 
 

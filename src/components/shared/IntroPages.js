@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { TitleBold, TitleLight } from './Texts';
 
 const IntroContainer = styled.div`
     width:100%;
@@ -15,29 +16,6 @@ const IntroContainer = styled.div`
 
 `;
 
-const TitleLight = styled.span`
-    font-family: ${({ theme: { fontFamily } }) => fontFamily.light};
-    font-size:32px;
-    margin:0px;
-    text-align:left;
-    width: 100%;
-    @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.desktopPixel + 1}px`}) {
-        font-size:24px;
-    }
-`
-const TitleBold = styled.span`
-    font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
-    font-size:64px;
-    margin:0px;
-    text-align:left;
-    width: 100%;
-    @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.desktopPixel + 1}px`}) {
-        font-size:48px;
-    }
-    `
-
 const TitleContainer = styled.div`
     width:50%;
     display: flex;
@@ -46,6 +24,11 @@ const TitleContainer = styled.div`
     flex-direction:column;
     padding-left: 170px;
     max-width: fit-content;
+    @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+                width: 100%;
+                padding: 24px;
+    }
 `
 
 const ImageProductContainer = styled.div`
@@ -53,10 +36,9 @@ const ImageProductContainer = styled.div`
     justify-content:flex-end;
     align-self: flex-end;
     svg{
-        position: absolute;
+        position: relative;
         max-height:600px;
-        bottom:0px;
-        right:-110px;
+        right:-106px;
     }
 `
 const IntroPages = ({bgImage,description,productImage}) => {
@@ -68,7 +50,7 @@ const IntroPages = ({bgImage,description,productImage}) => {
             {description[2] && <TitleLight>{description[2]}</TitleLight>}
             </TitleContainer>
             {productImage &&
-                <ImageProductContainer>
+                <ImageProductContainer className='mobile-none'>
                     {productImage}
                 </ImageProductContainer>
             }
