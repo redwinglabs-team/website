@@ -24,7 +24,7 @@ export const TitleBold = styled.span`
 
 export const TextLight = styled.span`
     font-family: ${({ theme: { fontFamily } }) => fontFamily.light};
-    font-size:32px;
+    font-size:${({fontSize})=>fontSize || '32px'};
     margin:0px;
     width: 100%;
     text-align:center;
@@ -32,3 +32,14 @@ export const TextLight = styled.span`
       `${mediaQueries.desktopPixel + 1}px`}) {
         font-size:16px;
     } `
+
+export const Label = styled.span`
+    font-family: ${({ bold,theme: { fontFamily } }) =>bold ? fontFamily.bold : fontFamily.light};
+    font-size:${({fontSize})=>fontSize || '16'};
+    margin:0px;
+    width: 100%;
+    text-align:left; `
+    /* @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.desktopPixel + 1}px`}) {
+        font-size:16px;
+    } ` */

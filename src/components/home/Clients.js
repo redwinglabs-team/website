@@ -20,12 +20,11 @@ const ClientsContainer = styled(Container)`
       `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 32px 64px;
   }
-
+/* 
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.desktopPixel + 1}px`}) {
      padding: 32px 64px;
-  }
-
+  } */
 `
 const ClientsTextContainer = styled(Container)`
 margin:32px;
