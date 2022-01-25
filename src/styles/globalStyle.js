@@ -23,7 +23,8 @@ export default createGlobalStyle`
       width: 100%;
       height: 100%;
       line-height: inherit;
-      overflow: auto;
+      overflow-y: auto;
+      overflow-x:hidden;
       min-width: 0;
       font-family:  ${({ theme: { fontFamily } }) => fontFamily.regular};
       margin: 0px;

@@ -34,8 +34,12 @@ export const TextLight = styled.span`
     } `
 
 export const Label = styled.span`
-    font-family: ${({ bold,theme: { fontFamily } }) =>bold ? fontFamily.bold : fontFamily.light};
-    font-size:${({fontSize})=>fontSize || '16'};
+    font-family: ${({ bold,regular,theme: { fontFamily } }) =>{
+      if(bold) return fontFamily.bold;
+      if(regular) return fontFamily.regular;
+      return fontFamily.light;
+      }};
+    font-size:${({fontSize})=>fontSize || '16px'};
     margin:0px;
     width: 100%;
     text-align:left; `
