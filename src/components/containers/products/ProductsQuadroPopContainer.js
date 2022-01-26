@@ -1,5 +1,6 @@
 import React from 'react';
 import { ROUTE_LIST } from '../../../constants/routesList';
+import Overview from '../../products/Overview';
 import { Container } from '../../shared/Containers';
 import IntroPages from '../../shared/IntroPages';
 import TitleDescriptionPage from '../../shared/TitleDescriptionPage';
@@ -15,6 +16,10 @@ const ProductsQuadroPopContainer = () => {
         />
         {/* TITLE */}
         <TitleDescriptionPage supTitle="QUADRO" title="POP" />
+        <Overview description="User-friendly Point of Purchase system that is compatible with any device.
+         POP features a Fast and intuitive setup.
+          From hotels and resorts to restaurants and retail establishments,
+           Quadro POP is fully customizable and scalable to match your business needs."/>
     </Container>
     );
 };
