@@ -1,7 +1,9 @@
 import React from 'react';
+import { QUADRO_DESCRIPTION_LIST } from '../../../constants/quadroDescriptionList';
 import { ROUTE_LIST } from '../../../constants/routesList';
 import Overview from '../../products/Overview';
 import { Container } from '../../shared/Containers';
+import DescriptionQuadroList from '../../shared/DescriptionQuadroList';
 import IntroPages from '../../shared/IntroPages';
 import TitleDescriptionPage from '../../shared/TitleDescriptionPage';
 
@@ -20,6 +22,12 @@ const ProductsQuadroPopContainer = () => {
          POP features a Fast and intuitive setup.
           From hotels and resorts to restaurants and retail establishments,
            Quadro POP is fully customizable and scalable to match your business needs."/>
+        {/* BASE DESCRIPTION */}
+        <DescriptionQuadroList
+            baseDescriptions={QUADRO_DESCRIPTION_LIST.POP.BASE_DESCRIPTIONS}
+            otherDescriptions={QUADRO_DESCRIPTION_LIST.POP.OTHER_DESCRIPTIONS}
+            />
+        {/* DESKTOP IMAGE */}
     </Container>
     );
 };

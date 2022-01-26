@@ -28,3 +28,9 @@ export { ReactComponent as ProductPms } from './svg/product/product-pms.svg';
 export { ReactComponent as ProductFnb } from './svg/product/product-fnb.svg';
 export { ReactComponent as ProductPop } from './svg/product/product-pop.svg';
 export { ReactComponent as ProductEntertainment } from './svg/product/product-entertainment.svg';
+
+// PRODUCTS QUADRO IMAGES
+export { ReactComponent as DescriptionQuadroEntertainment} from './svg/product/desc-quadro-ent.svg';
+export { ReactComponent as DescriptionQuadroEntertainmentTv} from './svg/product/desc-quadro-ent-tv.svg';
+export { ReactComponent as DescriptionQuadroPms } from './svg/product/desc-quadro-pms.svg';
+export { ReactComponent as DescriptionQuadroPmsMobile } from './svg/product/desc-quadro-pms-mobile.svg';

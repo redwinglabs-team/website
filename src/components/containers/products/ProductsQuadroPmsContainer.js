@@ -1,7 +1,9 @@
 import React from 'react';
+import { QUADRO_DESCRIPTION_LIST } from '../../../constants/quadroDescriptionList';
 import { ROUTE_LIST } from '../../../constants/routesList';
 import Overview from '../../products/Overview';
 import { Container } from '../../shared/Containers';
+import DescriptionQuadroList from '../../shared/DescriptionQuadroList';
 import IntroPages from '../../shared/IntroPages';
 import TitleDescriptionPage from '../../shared/TitleDescriptionPage';
 
@@ -19,6 +21,17 @@ const ProductsQuadroPmsContainer = () => {
             <Overview description="An intuitive solution for hoteliers,
             designed to increase efficiency through actionable data and automation,
             while providing an elevated experience to their guests."/>
+            {/* BASE DESCRIPTION */}
+            <DescriptionQuadroList
+                baseDescriptions={QUADRO_DESCRIPTION_LIST.PMS.BASE_DESCRIPTIONS}
+                image={QUADRO_DESCRIPTION_LIST.PMS.BASE_DESCRIPTIONS_IMAGE}
+                />
+            {/* DESKTOP IMAGE */}
+            {/* OTHER DESCRIPTION */}
+            <DescriptionQuadroList
+                otherDescriptions={QUADRO_DESCRIPTION_LIST.PMS.OTHER_DESCRIPTIONS}
+                image={QUADRO_DESCRIPTION_LIST.PMS.OTHER_DESCRIPTIONS_IMAGE}
+                />
     </Container>
     );
 };
