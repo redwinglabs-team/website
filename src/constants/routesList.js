@@ -12,8 +12,8 @@ export const ROUTE_LIST = {
         title:'Home',
         backgroundImage:BGHome,
         description:{
-            0:"OUR MISSION IS",
-            1:"TO CREATE TOOLS DESIGNED TO ENHANCE THE GUEST EXPERIENCE",
+            0:"WE BUILD TOOLS",
+            1:"DESIGNED TO ENHANCE THE GUEST EXPERIENCE",
             2:"THROUGH ADVANCED DECISION MAKING TECHNOLOGIES",
         },
         route:ROUTE_INDEX
@@ -22,9 +22,9 @@ export const ROUTE_LIST = {
         title:'Products',
         backgroundImage:BGProducts,
         description:{
-            0:"OUR MISSION IS",
-            1:"TO BRING THE LATEST TECHNOLOGICAL ADVANCEMENTS",
-            2:"TO THE FOREFRONT OF THE HOSPITALITY INDUSTRY.",
+            0:"WE BUILD TOOLS",
+            1:"DESIGNED TO ENHANCE THE GUEST EXPERIENCE",
+            2:"THROUGH ADVANCED DECISION MAKING TECHNOLOGIES",
         },
         route:ROUTE_PRODUCTS
     },
@@ -32,9 +32,9 @@ export const ROUTE_LIST = {
         title:'Careers',
         backgroundImage:BGCareers,
         description:{
-            0:"WE ARE LOOKING",
-            1:"FOR PEOPLE TO JOIN OUR FAMILY",
-            2:"AND BUILD A COMMON COMPANY CULTURE",
+            0:"WE ARE",
+            1:"CURIOUS, AMBITIOUS, HUMBLE & HUNGRY",
+            2:"SOUND LIKE YOU? WE WANT TO KNOW",
         },
         route:ROUTE_CAREERS
     },

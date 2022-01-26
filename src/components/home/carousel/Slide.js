@@ -36,8 +36,7 @@ const TitleContainer = styled.div`
 const Slide = ({title,subtitle,description,image}) => {
     return (
         <SlideContainer className="swiper-slide">
-            TEST snsfnsfnsdf
-            {/* <LeftSlideContainer>
+            <LeftSlideContainer>
                 <TitleContainer>
                     <Label bold fontSize="32px">
                         {title}
@@ -51,7 +50,7 @@ const Slide = ({title,subtitle,description,image}) => {
             </Label>
             <CustomButton>Request a demo</CustomButton>
             </LeftSlideContainer>
-            <RightSlideContainer>
+            {/* <RightSlideContainer>
                 {image}
             </RightSlideContainer> */}
         </SlideContainer>

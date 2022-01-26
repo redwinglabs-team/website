@@ -48,55 +48,6 @@ const SlideItem = styled.div`
     height: 100%;
 `;
 
-
-
-const initialParams = {
-    initialSlide: 0,
-    direction: 'horizontal',
-    speed: 300,
-    autoHeight: false,
-    roundLengths: false,
-    nested: false,
-    uniqueNavElements: true,
-    effect: 'slide',
-    spaceBetween: 50,
-    slidesPerView: 'auto',
-    slidesPerColumn: 1,
-    slidesPerColumnFill: 'column',
-    slidesPerGroup: 1,
-    slidesPerGroupSkip: 0,
-    centeredSlides: false,
-    centeredSlidesBounds: false,
-    slidesOffsetBefore: 0,
-    slidesOffsetAfter: 0,
-    touchEventsTarget: 'wrapper',
-    touchRatio: 1,
-    simulateTouch: true,
-    shortSwipes: true,
-    longSwipes: true,
-    followFinger: true,
-    allowTouchMove: true,
-    resistance: true,
-    resistanceRatio: 0.85,
-    preventInteractionOnTransition: false,
-    allowSlidePrev: true,
-    allowSlideNext: true,
-    noSwiping: false,
-    preventClicks: true,
-    preventClicksPropagation: true,
-    slideToClickedSlide: true,
-    loop: true,
-    loopAdditionalSlides: 3,
-    loopedSlides: 3,
-    autoplay: true,
-    delay: 3000,
-    stopOnLastSlide: false,
-    disableOnInteraction: true,
-    reverseDirection: false,
-    waitForTransition: true
-  };
-
-
 const ProductCarousel = () => {
     const params = {
         modules: [Lazy],
@@ -118,7 +69,7 @@ const ProductCarousel = () => {
     autoplay: false,
         renderPrevButton: ()=> <BackIcon className="swiper-button-prev"/>,
         renderNextButton:()=> <ForwardIcon className="swiper-button-next"/>
-      }
+    };
 
 
       const renderItem = useCallback(
@@ -133,21 +84,6 @@ const ProductCarousel = () => {
             ),
         []
       );
-
-      const items = [
-        "#4A9EDA",
-        "#6872E0",
-        "#9966E0",
-        "#D665E0",
-        "#E066AD",
-        "#E16973",
-        "#D7C938",
-        "#DA864A",
-        "#96D73B",
-        "#54DA48",
-        "#46DA84",
-        "#44D9CD"
-      ];
 
     return (
         <ProductCarouselContainer>
@@ -170,7 +106,7 @@ const ProductCarousel = () => {
                 height: 0.5,
                 }}
             />
-            {/* <Swiper {...params}> */}
+            <Swiper {...params}>
                 {/* {[...Array(5)].map(() => (
           <SlideTest >
             <img
@@ -180,7 +116,7 @@ const ProductCarousel = () => {
             />
           </SlideTest>
         ),)} */}
-                {/* <Slide
+                <Slide
                     title="QUADRO"
                     subtitle="PROPERTY MANAGEMENT SYSTEM"
                     description="Designed for modern hoteliers to automate and simplify their properties operations,
@@ -195,34 +131,7 @@ const ProductCarousel = () => {
                      kitchen, and back-office operations from a single cloud-based platform. "
                      image={<CarouselFnb/>}
                     />
-                <Slide
-                    title="QUADRO"
-                    subtitle="Restaurant Manager"
-                    description="All-in-one restaurant management system
-                     that provides restaurateurs with the ability to run front-of-house,
-                     kitchen, and back-office operations from a single cloud-based platform. "
-                     image={<CarouselFnb/>}
-                    />
-                <Slide
-                    title="QUADRO"
-                    subtitle="Restaurant Manager"
-                    description="All-in-one restaurant management system
-                     that provides restaurateurs with the ability to run front-of-house,
-                     kitchen, and back-office operations from a single cloud-based platform. "
-                     image={<CarouselFnb/>}
-                    />
-                <Slide
-                    title="QUADRO"
-                    subtitle="Restaurant Manager"
-                    description="All-in-one restaurant management system
-                     that provides restaurateurs with the ability to run front-of-house,
-                     kitchen, and back-office operations from a single cloud-based platform. "
-                     image={<CarouselFnb/>}
-                    />
-            </Swiper> */}
-            <Swiper {...params}>
-                {items.map(renderItem)}
-    </Swiper>
+            </Swiper>
             {/* <LoopModeInfinityLoop /> */}
         </CarouselContainer>
       </ProductCarouselContainer>

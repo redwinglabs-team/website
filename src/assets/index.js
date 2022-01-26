@@ -20,7 +20,11 @@ export { ReactComponent as BGPop } from './svg/bg-intro/bg-pop.svg';
 export { ReactComponent as BGEntertainment } from './svg/bg-intro/bg-entertainment.svg';
 
 // CAROUSEL
-
 export { ReactComponent as CarouselPms } from './svg/home/carousel/pms.svg';
 export { ReactComponent as CarouselFnb } from './svg/home/carousel/fnb.svg';
 
+// PRODUCTS LINK
+export { ReactComponent as ProductPms } from './svg/product/product-pms.svg';
+export { ReactComponent as ProductFnb } from './svg/product/product-fnb.svg';
+export { ReactComponent as ProductPop } from './svg/product/product-pop.svg';
+export { ReactComponent as ProductEntertainment } from './svg/product/product-entertainment.svg';
