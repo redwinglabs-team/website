@@ -1,8 +1,9 @@
 import React from 'react';
+import { QuadroEntertainmentMockup } from '../../../assets';
 import { QUADRO_DESCRIPTION_LIST } from '../../../constants/quadroDescriptionList';
 import { ROUTE_LIST } from '../../../constants/routesList';
 import Overview from '../../products/Overview';
-import { Container } from '../../shared/Containers';
+import { Container, ImageContainer } from '../../shared/Containers';
 import DescriptionQuadroList from '../../shared/DescriptionQuadroList';
 import IntroPages from '../../shared/IntroPages';
 import TitleDescriptionPage from '../../shared/TitleDescriptionPage';
@@ -28,6 +29,9 @@ const ProductsQuadroEntertainmentContainer = () => {
             image={QUADRO_DESCRIPTION_LIST.ENTERTAINMENT.BASE_DESCRIPTIONS_IMAGE}
         />
         {/* DESKTOP IMAGE */}
+        <ImageContainer>
+            <QuadroEntertainmentMockup/>
+        </ImageContainer>
         {/* OTHER DESCRIPTION */}
         <DescriptionQuadroList
             otherDescriptions={QUADRO_DESCRIPTION_LIST.ENTERTAINMENT.OTHER_DESCRIPTIONS}

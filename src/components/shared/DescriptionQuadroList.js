@@ -4,7 +4,7 @@ import LabeledDescription from './LabeledDescription';
 
 const DescriptionsMainContainer = styled.div`
     display:flex;
-    justify-content:center;
+    justify-content: space-between;
     align-items:center;
     flex-direction:row;
     margin: 32px 0px;
@@ -23,7 +23,7 @@ const DescriptionsMainContainer = styled.div`
     @media (max-width: ${({ theme: { mediaQueries } }) =>
         `${mediaQueries.mobilePixel + 1}px`}) {
             flex-direction:column;
-            padding:32px;
+            padding:16px;
             svg{
                 width: 100%;
                 height: 100%;
@@ -46,6 +46,7 @@ const Description = styled.div`
     justify-content:center;
     align-items:${({end})=>end ? 'end' : 'start'};
     flex-direction:column;
+    width:100%;
     &>*:not(:last-child){
         margin-bottom:24px;
     }

@@ -1,11 +1,13 @@
 import React from 'react';
+import { QuadroPmsTimeline } from '../../../assets';
 import { QUADRO_DESCRIPTION_LIST } from '../../../constants/quadroDescriptionList';
 import { ROUTE_LIST } from '../../../constants/routesList';
 import Overview from '../../products/Overview';
-import { Container } from '../../shared/Containers';
+import { Container, ImageContainer } from '../../shared/Containers';
 import DescriptionQuadroList from '../../shared/DescriptionQuadroList';
 import IntroPages from '../../shared/IntroPages';
 import TitleDescriptionPage from '../../shared/TitleDescriptionPage';
+
 
 const ProductsQuadroPmsContainer = () => {
     return (
@@ -27,6 +29,9 @@ const ProductsQuadroPmsContainer = () => {
                 image={QUADRO_DESCRIPTION_LIST.PMS.BASE_DESCRIPTIONS_IMAGE}
                 />
             {/* DESKTOP IMAGE */}
+            <ImageContainer>
+                <QuadroPmsTimeline/>
+            </ImageContainer>
             {/* OTHER DESCRIPTION */}
             <DescriptionQuadroList
                 otherDescriptions={QUADRO_DESCRIPTION_LIST.PMS.OTHER_DESCRIPTIONS}

@@ -34,3 +34,7 @@ export { ReactComponent as DescriptionQuadroEntertainment} from './svg/product/d
 export { ReactComponent as DescriptionQuadroEntertainmentTv} from './svg/product/desc-quadro-ent-tv.svg';
 export { ReactComponent as DescriptionQuadroPms } from './svg/product/desc-quadro-pms.svg';
 export { ReactComponent as DescriptionQuadroPmsMobile } from './svg/product/desc-quadro-pms-mobile.svg';
+export { ReactComponent as QuadroPmsTimeline } from './svg/product/quadro-timeline.svg';
+export { ReactComponent as QuadroPopInventory } from './svg/product/quadro-pop-inventory.svg';
+export { ReactComponent as QuadroFnbSpaces } from './svg/product/quadro-fnb-spaces.svg';
+export { ReactComponent as QuadroEntertainmentMockup } from './svg/product/quadro-ent-mockup.svg';

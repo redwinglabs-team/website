@@ -7,19 +7,23 @@ const StyledButton = styled.button`
   font-family: ${({ theme: { fontFamily } }) => fontFamily.bold} !important;
   font-size: ${({ fontSize }) =>
     fontSize ? `${fontSize} !important` : '16px !important'};
-  color: ${({ color,theme:{colors} }) =>
-    color ? `${color}` : colors.white};
+  color: ${({ color,inverted,theme:{colors} }) =>{
+    if(color) return color;
+    if (inverted) return colors.primaryColor;
+    return colors.white}};
   background: ${({
     disabled,
     background,
+    inverted,
     theme: { colors },
   }) => {
     if (background) return `${background}`;
     if (disabled) return 'transparent';
+    if (inverted) return `${colors.white}`;
     return `${colors.primaryColor}`;
   }};
   opacity: 1 ;
-  border: ${({ theme:{colors} }) =>`5px dashed ${colors.primaryColor}`};
+  border: ${({ border,theme:{colors} }) =>border ? `2px solid ${colors.primaryColor}` : 'none'};
   box-shadow: ${({ boxShadow }) => {
     if (boxShadow) return `${boxShadow}`;
     return 'none ';
@@ -43,6 +47,7 @@ const CustomButton = ({
   onClick,
   loading,
   hover,
+  inverted
 }) => {
   return (
     <StyledButton
@@ -57,6 +62,7 @@ const CustomButton = ({
       border={border}
       boxShadow={boxShadow}
       hover={hover}
+      inverted={inverted}
     >
       {children}
     </StyledButton>
