@@ -23,7 +23,7 @@ const TitleContainer = styled(Container)`
         margin: 8px 24px;
         padding:0px;
     }
-    border-bottom: 2px solid ${({theme:{colors}})=>colors.red};
+    border-bottom: ${({withoutBorderBottom, theme:{colors}})=> withoutBorderBottom ? 'none' : `2px solid ${colors.red}`};
 `
 
 const GridContainer = styled.div`
@@ -37,10 +37,10 @@ const GridContainer = styled.div`
 
 
 
-const TitleDescriptionPage = ({supTitle,title,withGrid}) => {
+const TitleDescriptionPage = ({supTitle,title,withGrid,withoutBorderBottom}) => {
     return (
         <MainContainer>
-            <TitleContainer>
+            <TitleContainer withoutBorderBottom={withoutBorderBottom}>
                 <TitleLight>{supTitle}</TitleLight>
                 <TitleBold>{title}</TitleBold>
                 {withGrid &&
