@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container } from '../shared/Containers';
 import { Label } from '../shared/Texts';
 
 const OverviewContainer = styled.div`

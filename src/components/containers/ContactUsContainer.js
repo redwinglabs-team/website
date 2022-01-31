@@ -13,7 +13,8 @@ const ContactUsContainer = () => {
             description={ROUTE_LIST.CONTACT.description}
         />
         {/* TITLE */}
-        <TitleDescriptionPage supTitle="GET IN TOUCH" title="CONTACT US" />
+        <TitleDescriptionPage title="CONTACT US" />
+        {/* FORM CONTAINER */}
     </Container>
     );
 };

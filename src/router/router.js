@@ -5,9 +5,9 @@ import {
  Route, Routes
 } from "react-router-dom";
 import styled from "styled-components/macro";
-import { ROUTE_CAREERS, ROUTE_CONTACT_US, ROUTE_INDEX, ROUTE_PRODUCTS, ROUTE_PRODUCTS_QUADRO_ENTERTAINMENT, ROUTE_PRODUCTS_QUADRO_FNB, ROUTE_PRODUCTS_QUADRO_PMS, ROUTE_PRODUCTS_QUADRO_POP, ROUTE_PRODUCTS_QUADRO_SUITE } from "./routes";
+import { ROUTE_PARTNERS, ROUTE_CONTACT_US, ROUTE_INDEX, ROUTE_PRODUCTS, ROUTE_PRODUCTS_QUADRO_ENTERTAINMENT, ROUTE_PRODUCTS_QUADRO_FNB, ROUTE_PRODUCTS_QUADRO_PMS, ROUTE_PRODUCTS_QUADRO_POP, ROUTE_PRODUCTS_QUADRO_SUITE } from "./routes";
 import HomeContainer from "../components/containers/HomeContainer";
-import CareersContainer from "../components/containers/CareersContainer";
+import CareersContainer from "../components/containers/PartnersContainer";
 import ContactUsContainer from "../components/containers/ContactUsContainer";
 import ProductsQuadroSuiteContainer from "../components/containers/products/ProductsQuadroSuiteContainer";
 import ProductsQuadroPmsContainer from "../components/containers/products/ProductsQuadroPmsContainer";
@@ -37,7 +37,7 @@ export const AppRouter = () => {
             element={<HomeContainer/>} />
             <Route
             exact
-              path={ROUTE_CAREERS}
+              path={ROUTE_PARTNERS}
               element={<CareersContainer/>}
             />
             <Route

@@ -4,9 +4,9 @@ export const WEBSITE_LINK_LIST = {
         title:"Home",
         link:"/"
     },
-    CAREERS:{
-        title:"Careers",
-        link:"/careers"
+    PARTNERS:{
+        title:"Partners",
+        link:"/partners"
     },
     PROJECTS:{
         title:"Products",

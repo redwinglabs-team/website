@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
-import { ROUTE_INDEX, ROUTE_PRODUCTS } from "../../router/routes";
+import { ROUTE_PRODUCTS } from "../../router/routes";
 import { matchPathname } from "../../utils/UtilStrings";
 
 const Item = styled.a`

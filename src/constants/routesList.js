@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import React from "react";
-import { ROUTE_CAREERS, ROUTE_CONTACT_US, ROUTE_INDEX, ROUTE_PRODUCTS } from "../router/routes";
+import { ROUTE_PARTNERS, ROUTE_CONTACT_US, ROUTE_INDEX, ROUTE_PRODUCTS } from "../router/routes";
 import BGHome from '../assets/svg/bg-intro/bg-home.svg';
 import BGProducts from '../assets/svg/bg-intro/bg-products.svg';
 import BGCareers from '../assets/svg/bg-intro/bg-careers.svg';
@@ -36,7 +36,7 @@ export const ROUTE_LIST = {
             1:"CURIOUS, AMBITIOUS, HUMBLE & HUNGRY",
             2:"SOUND LIKE YOU? WE WANT TO KNOW",
         },
-        route:ROUTE_CAREERS
+        route:ROUTE_PARTNERS
     },
     CONTACT:{
         title:'Contact Us',

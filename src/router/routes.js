@@ -1,5 +1,5 @@
 export const ROUTE_INDEX ="/";
-export const ROUTE_CAREERS ="/careers";
+export const ROUTE_PARTNERS ="/partners";
 export const ROUTE_CONTACT_US ="/contact-us";
 export const ROUTE_PRODUCTS ="/products";
 export const ROUTE_PRODUCTS_QUADRO_SUITE ="/products/quadro";
