@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { QuadroLogo, RedwingsLogo } from '../../../assets';
@@ -18,14 +18,13 @@ const Container = styled.div`
   .sticky {
     position:sticky;
     top: 0;
-    transition: all 0.5s ease;
-    animation: smoothScrollIn 1s forwards;
+    width: -webkit-fill-available;
+    transition: width 0.5s ease;
+    /* animation: smoothScrollIn 1s forwards; */
   }
 
   .out {
-    top: -56px;
-    transition: all 0.5s ease;
-    animation: smoothScrollOut 1s forwards;
+    width:0px;
   }
 
   @keyframes smoothScrollIn {
@@ -109,6 +108,12 @@ const DesktopHeader = ({ className, menuWithMarginBottom }) => {
   const navigate = useNavigate();
   const [quadroHeaderReveal, setQuadroHeaderReveal] = useState(false)
 
+
+  useEffect(()=>{
+    if(window.location.pathname === ROUTE_PRODUCTS_QUADRO_SUITE)
+    setQuadroHeaderReveal(true);
+  },[])
+
   const MAIN_LINK = {
     HOME:{
         title:"Home",
@@ -118,7 +123,7 @@ const DesktopHeader = ({ className, menuWithMarginBottom }) => {
     PRODUCTS:{
         title:"Products",
         link:ROUTE_PRODUCTS_QUADRO_SUITE,
-        onClick:()=>setQuadroHeaderReveal(true)
+        onClick:()=>{}
     },
     PARTNERS:{
         title:"Partners",
