@@ -57,9 +57,29 @@ const ImageProductContainer = styled.div`
     }
   }
 `;
-const IntroPages = ({ bgImage, description, productImage }) => {
+
+const DemoButtonContainer = styled.div`
+position: absolute;
+  background: ${({ theme: { colors } }) => colors.lightGreen};
+  color: ${({ theme: { colors } }) => colors.white};
+  font-family:${({ theme: { fontFamily } }) => fontFamily.bold};
+
+  left: -155px;
+  font-size:24px;
+  padding: 8px 100px;
+    transform: rotate(90deg);
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-decoration:underline;
+
+`;
+const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
   return (
     <IntroContainer id="intro" style={{ backgroundImage: `url(${bgImage})` }}>
+{haveDemoButton && <DemoButtonContainer className='mobile-none' onClick={()=>{}}>
+          Book a Demo!
+      </DemoButtonContainer>}
       <TitleContainer>
         {description[0] && <TitleLight>{description[0]}</TitleLight>}
         {description[1] && <TitleBold>{description[1]}</TitleBold>}
