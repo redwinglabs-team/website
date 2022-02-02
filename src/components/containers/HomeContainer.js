@@ -23,7 +23,7 @@ const HomeContainer = () => {
             <DescriptionSection />
             <Clients/>
             {/* PRODUCT CAROUSEL */}
-            <ProductCarousel/>
+            {/* <ProductCarousel/> */}
             {/* ABOUT US TITLE */}
             <TitleDescriptionPage supTitle="ABOUT" title="US" withGrid />
             {/* SECOND DESCRIPTION */}
