@@ -1,8 +1,29 @@
 import React from 'react';
+import styled from 'styled-components';
 import { ROUTE_LIST } from '../../constants/routesList';
+import ContactUsForm from '../contact/ContactUsForm';
 import { Container } from '../shared/Containers';
 import IntroPages from '../shared/IntroPages';
 import TitleDescriptionPage from '../shared/TitleDescriptionPage';
+import Map from '../contact/Map';
+import { GridPattern } from '../../assets';
+
+const GridContainer = styled.div`
+    position:absolute;
+    align-items:flex-start;
+    left:0px;
+    top:66%;
+    svg{
+        width:200px;
+        height:100px;
+    }
+
+    @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.desktopPixel + 1}px`}) {
+        left:0px;
+
+  }
+`
 
 const ContactUsContainer = () => {
     return (
@@ -13,7 +34,15 @@ const ContactUsContainer = () => {
             description={ROUTE_LIST.CONTACT.description}
         />
         {/* TITLE */}
-        <TitleDescriptionPage supTitle="GET IN TOUCH" title="CONTACT US" />
+        <TitleDescriptionPage title="CONTACT US" />
+        {/* FORM CONTAINER */}
+        <ContactUsForm/>
+
+        {/* MAP */}
+        <Map/>
+        <GridContainer className='mobile-none'>
+            <GridPattern/>
+        </GridContainer>
     </Container>
     );
 };

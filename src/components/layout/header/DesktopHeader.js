@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { QuadroLogo, RedwingsLogo } from '../../../assets';
-import { ROUTE_CAREERS, ROUTE_CONTACT_US, ROUTE_INDEX, ROUTE_PRODUCTS_QUADRO_ENTERTAINMENT, ROUTE_PRODUCTS_QUADRO_FNB, ROUTE_PRODUCTS_QUADRO_PMS, ROUTE_PRODUCTS_QUADRO_POP, ROUTE_PRODUCTS_QUADRO_SUITE } from '../../../router/routes';
+import { ROUTE_CONTACT_US, ROUTE_INDEX, ROUTE_PARTNERS, ROUTE_PRODUCTS_QUADRO_ENTERTAINMENT, ROUTE_PRODUCTS_QUADRO_FNB, ROUTE_PRODUCTS_QUADRO_PMS, ROUTE_PRODUCTS_QUADRO_POP, ROUTE_PRODUCTS_QUADRO_SUITE } from '../../../router/routes';
 import { matchPathname } from '../../../utils/UtilStrings';
 import RightHeaderItems from './RightHeaderItems';
 
@@ -120,9 +120,9 @@ const DesktopHeader = ({ className, menuWithMarginBottom }) => {
         link:ROUTE_PRODUCTS_QUADRO_SUITE,
         onClick:()=>setQuadroHeaderReveal(true)
     },
-    CAREERS:{
-        title:"Careers",
-        link:ROUTE_CAREERS,
+    PARTNERS:{
+        title:"Partners",
+        link:ROUTE_PARTNERS,
         onClick:()=>{}
     },
     CONTACT:{
