@@ -6,13 +6,16 @@ import { Label, TextLight, TitleBold } from '../shared/Texts';
 const KnowMoreContainer = styled(Container)`
     background-color:${({theme:{colors}})=>colors.primaryColor};
     color:${({theme:{colors}})=>colors.white};
-    width:100%;
+    width: -webkit-fill-available;
     height:fit-content;
     margin-top:32px;
-    padding: 32px 0px;
+    padding: 32px 170PX;
     &>span{
         text-align:center !important;
     }
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+      padding:24px;
+  }
 `
 
 const KnowMore = () => {
@@ -25,7 +28,9 @@ const KnowMore = () => {
                 KNOW MORE?
             </TitleBold>
             <Label>
-            LEARN HOW PRODUCTS CAN HELP YOU BECOME A LEADER IN HOSPITALITY <br/>TECHNOLOGY
+                LEARN HOW YOUR BUSINESS CAN UNLOCK ROI BY EHHANCING THE GUEST EXPERIENCE,
+                INCREASING REVENUES, AND LOWER OPERATING COSTS THROUGH AN INTUITIVE AND INTELLIGENTLY
+                DESIGNE HOSPITALITY PRODUCT SUITE
             </Label>
         </KnowMoreContainer>
     );

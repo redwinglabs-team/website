@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { RedwingsLogo } from '../../../assets';
+import { AmericanFlagIcon, ItalianFlagIcon, RedwingsLogo } from '../../../assets';
 import {theme} from '../../../styles/theme';
 import { Container } from '../../shared/Containers';
 import IconList from './IconList';
@@ -19,6 +19,10 @@ const FooterContainer = styled.div`
   justify-content: center;
   width: -webkit-fill-available; 
   padding: 32px 170px 0px;
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.desktopPixel + 1}px`}) {
+    padding:32px;
+  }
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
     padding:24px;
@@ -64,6 +68,12 @@ const Text = styled.p`
   text-align:left;
   font-size:16px;
   margin: 0;
+  display: flex;
+    align-items: center;
+    svg{
+        width:auto;
+        margin: 0px 8px;
+    }
   &>span {
     font-family: ${({theme:{fontFamily}})=>fontFamily.regular};
   }
@@ -128,7 +138,7 @@ const Footer = () => {
                 <FooterContent isInverted={isIndex()}>
                     <FooterColumn >
                         <RedwingsLogo style={{marginBottom:24}}/>
-                        <Text>
+                        <Text style={{maxWidth: 200}}>
                         Creators of next generation hospitality management system
                         </Text>
                     </FooterColumn>
@@ -136,11 +146,11 @@ const Footer = () => {
                         <BoldText style={{marginBottom:24}}>
                             Contacts
                         </BoldText>
-                        <Text style={{marginBottom:16}}>
-                            <span>Address:</span> C.da Pettolecchia SNC Savelletri di Fasano, 72015
+                        <Text style={{marginBottom:16,whiteSpace:"nowrap"}}>
+                            <span>Offices:</span><ItalianFlagIcon/> Fasano, Apulia <AmericanFlagIcon/> Brooklyn, NY.
                         </Text>
                         <Text style={{marginBottom:16}}>
-                        <span>Phone:</span> +39 080 482 9200
+                        <span>Phone:</span><ItalianFlagIcon/> +39 080 482 9200 <AmericanFlagIcon/> +1917664032
                         </Text>
                         <Text>
                         <span>Email:</span> info@redwinglabs.com

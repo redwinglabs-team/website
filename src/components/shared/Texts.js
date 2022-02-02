@@ -28,6 +28,7 @@ export const TextLight = styled.span`
     margin:0px;
     width: 100%;
     text-align:center;
+    line-height: 1.5;
     @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.desktopPixel + 1}px`}) {
         font-size:16px;
@@ -42,7 +43,9 @@ export const Label = styled.span`
     font-size:${({fontSize})=>fontSize || '16px'};
     margin:0px;
     width: 100%;
+    line-height: 1.5;
     text-align:left; `
+
     /* @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.desktopPixel + 1}px`}) {
         font-size:16px;

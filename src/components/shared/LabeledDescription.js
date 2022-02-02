@@ -32,6 +32,7 @@ const TextContainer = styled.div`
     font-family: ${({ theme: { fontFamily } }) => fontFamily.light};
     font-size:16px;
     margin-top:16px;
+    line-height: 1.5;
     text-align:${({textRight})=>textRight ? 'right' : 'left'};
 `
 

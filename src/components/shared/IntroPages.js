@@ -24,6 +24,12 @@ const TitleContainer = styled.div`
   flex-direction: column;
   padding-left: 170px;
   max-width: fit-content;
+  &>span:last-child{
+    white-space:nowrap;
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
+      white-space:normal;
+  }
+  }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     width: 100%;
     padding: 24px;
@@ -57,7 +63,7 @@ const IntroPages = ({ bgImage, description, productImage }) => {
       <TitleContainer>
         {description[0] && <TitleLight>{description[0]}</TitleLight>}
         {description[1] && <TitleBold>{description[1]}</TitleBold>}
-        {description[2] && <TitleLight>{description[2]}</TitleLight>}
+        {description[2] && <TitleLight >{description[2]}</TitleLight>}
       </TitleContainer>
       {productImage && <ImageProductContainer className="mobile-none">{productImage}</ImageProductContainer>}
     </IntroContainer>
