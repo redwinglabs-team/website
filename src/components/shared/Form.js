@@ -21,7 +21,7 @@ const FormContent = styled.div`
   align-items: center;
   flex-direction: column;
   & > *:not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: 4px;
   }
 `;
 
@@ -32,10 +32,10 @@ const Input = styled.input`
 `;
 const TextArea = styled.textarea`
   display: flex;
-  resize:vertical;
+  resize: vertical;
   width: -webkit-fill-available;
   padding: 8px;
-
+  font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
 `;
 
 const Row = styled.div`
@@ -54,15 +54,27 @@ const Row = styled.div`
   }
 `;
 
+const ErrorMessage = styled(Label)`
+display: block;
+min-height:12px;
+font-size:12px;
+color: ${({ theme: { colors } }) => colors.white};
+`
+const Field = styled.div`
+  display: flex;
+  flex-direction:column;
+  width: -webkit-fill-available;
+`
+
 const Form = () => {
   const validationSchema = Yup.object().shape({
-    name: Yup.string().required('required'),
+    name: Yup.string().required('Required'),
     email: Yup.string().email('Invalid email address').required('Required'),
     subject: Yup.string(),
     message: Yup.string()
   });
 
-  const {  touched, errors,  handleChange, handleSubmit } = useFormik({
+  const { touched, errors, handleChange, handleSubmit } = useFormik({
     enableReinitialize: true,
     initialValues: {
       name: '',
@@ -83,7 +95,11 @@ const Form = () => {
           Write us
         </Label>
         <Row>
-          <Input id="name" name="name" onChange={handleChange} error={touched.name && !!errors.name} placeholder="Your Name (required)" />
+          <Field>
+            <Input id="name" name="name" onChange={handleChange} error={touched.name && !!errors.name} placeholder="Your Name (required)" />
+            {errors.name && touched.name ? <ErrorMessage bold>{errors.name}</ErrorMessage> : <ErrorMessage> </ErrorMessage>}
+          </Field>
+          <Field>
           <Input
             id="email"
             name="email"
@@ -92,16 +108,24 @@ const Form = () => {
             error={touched.email && !!errors.email}
             type="email"
           />
+            {errors.email && touched.email ? <ErrorMessage bold>{errors.email}</ErrorMessage> : <ErrorMessage> </ErrorMessage>}
+          </Field>
         </Row>
-        <Input id="subject" name="subject" onChange={handleChange} error={touched.subject && !!errors.subject} placeholder="Subject" />
-        <TextArea
-          type="textarea"
-          id="message"
-          name="message"
-          onChange={handleChange}
-          error={touched.message && !!errors.message}
-          placeholder="Message"
-        />
+        <Field>
+          <Input id="subject" name="subject" onChange={handleChange} error={touched.subject && !!errors.subject} placeholder="Subject" />
+          {errors.subject && touched.subject ? <ErrorMessage bold>{errors.subject}</ErrorMessage> : <ErrorMessage> </ErrorMessage>}
+        </Field>
+        <Field>
+          <TextArea
+            type="textarea"
+            id="message"
+            name="message"
+            onChange={handleChange}
+            error={touched.message && !!errors.message}
+            placeholder="Message"
+          />
+          {errors.message && touched.message ? <ErrorMessage bold>{errors.message}</ErrorMessage> : <ErrorMessage> </ErrorMessage>}
+        </Field>
         <Label fontSize="32px" bold style={{ color: theme.colors.white, textDecoration: 'underline', cursor: 'pointer' }} onClick={handleSubmit}>
           Submit
         </Label>

@@ -7,8 +7,9 @@ const MainContainerMap = styled.div`
   align-items: center;
   margin-right: auto;
   margin-left: auto;
-  padding: 48px 120px;
+  padding: 24px 120px 48px;
   width: -webkit-fill-available;
+  z-index:1;
 
   max-width: inherit;
   img{

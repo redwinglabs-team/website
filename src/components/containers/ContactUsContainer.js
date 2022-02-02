@@ -9,11 +9,10 @@ import Map from '../contact/Map';
 import { GridPattern } from '../../assets';
 
 const GridContainer = styled.div`
-    position:relative;
+    position:absolute;
     align-items:flex-start;
-    left:-224px;
-    bottom:0px;
-    max-width:0px;
+    left:0px;
+    top:66%;
     svg{
         width:200px;
         height:100px;
@@ -38,11 +37,12 @@ const ContactUsContainer = () => {
         <TitleDescriptionPage title="CONTACT US" />
         {/* FORM CONTAINER */}
         <ContactUsForm/>
-        {/* <GridContainer className='mobile-none'>
-            <GridPattern/>
-        </GridContainer> */}
+
         {/* MAP */}
         <Map/>
+        <GridContainer className='mobile-none'>
+            <GridPattern/>
+        </GridContainer>
     </Container>
     );
 };
