@@ -7,7 +7,6 @@ const DescriptionsMainContainer = styled.div`
     justify-content: space-between;
     align-items:center;
     flex-direction:row;
-    margin: 32px 0px;
     margin-right: auto;
     margin-left: auto;
     padding:64px 170px;
@@ -21,7 +20,7 @@ const DescriptionsMainContainer = styled.div`
         }
     max-width: inherit;
     @media (max-width: ${({ theme: { mediaQueries } }) =>
-        `${mediaQueries.mobilePixel + 1}px`}) {
+        `${mediaQueries.desktopPixel + 1}px`}) {
             flex-direction:column;
             padding:16px;
             svg{

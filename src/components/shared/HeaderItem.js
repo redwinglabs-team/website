@@ -44,7 +44,7 @@ const HeaderItem = ({
   onClick
 }) => {
   const [isHover, setIsHover] = useState(false);
-  console.log(`${children}`,href === window.location.pathname && matchPathname("products"))
+  // console.log(`${children}`,href === window.location.pathname && matchPathname("products"))
 
   const isSelectedItem = () => {
     // eslint-disable-next-line prefer-destructuring
