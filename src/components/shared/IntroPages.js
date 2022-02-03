@@ -24,7 +24,8 @@ const TitleContainer = styled.div`
   flex-direction: column;
   padding-left: 170px;
   max-width: fit-content;
-  &>span:last-child{
+
+  .nowrap{
     white-space:nowrap;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
       white-space:normal;
@@ -59,7 +60,7 @@ const ImageProductContainer = styled.div`
 `;
 
 const DemoButtonContainer = styled.div`
-position: absolute;
+position: fixed;
   background: ${({ theme: { colors } }) => colors.lightGreen};
   color: ${({ theme: { colors } }) => colors.white};
   font-family:${({ theme: { fontFamily } }) => fontFamily.bold};
@@ -83,9 +84,9 @@ const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
       <TitleContainer>
         {description[0] && <TitleLight>{description[0]}</TitleLight>}
         {description[1] && <TitleBold>{description[1]}</TitleBold>}
-        {description[2] && <TitleLight >{description[2]}</TitleLight>}
+        {description[2] && <TitleLight className='nowrap'>{description[2]}</TitleLight>}
       </TitleContainer>
-      {productImage && <ImageProductContainer className="mobile-none">{productImage}</ImageProductContainer>}
+      {productImage && <ImageProductContainer className="mobile-none ">{productImage}</ImageProductContainer>}
     </IntroContainer>
   );
 };

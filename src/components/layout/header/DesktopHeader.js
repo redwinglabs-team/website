@@ -90,6 +90,7 @@ const BottomHeader = styled.div`
 const LeftContainer = styled.div`
   display: flex;
   align-items: center;
+
   /* & > *:not(:last-child) {
     margin-right: 25px;
   } */
@@ -170,7 +171,7 @@ const QUADRO_LINK = {
       <TopHeader>
       <LeftContainer>
         <RedwingsLogo
-          style={{ cursor: 'pointer',height:20 }}
+          style={{ cursor: 'pointer',height:20,width:'auto' }}
           onClick={() => navigate(ROUTE_INDEX)}
         />
       </LeftContainer>
@@ -185,7 +186,7 @@ const QUADRO_LINK = {
         style={{display: matchPathname('products') || quadroHeaderReveal ? 'flex' : 'none'}}
         className={matchPathname('products') || quadroHeaderReveal ? 'sticky' : 'out'}
         >
-        <QuadroLogo className="mobile-none" style={{ cursor: 'pointer',height:32 }}
+        <QuadroLogo className="mobile-none" style={{ cursor: 'pointer',height:32,width:'auto' }}
           onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_SUITE)}/>
         <RightHeaderItems
           itemsLink={QUADRO_LINK}

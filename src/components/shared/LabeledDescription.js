@@ -1,3 +1,5 @@
+/* eslint-disable no-else-return */
+/* eslint-disable consistent-return */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -40,15 +42,25 @@ const LabeledDescription = ({title,description,containerStyle,textRight}) => {
 
     const alternateFontWeight = (text)=>{
         const sp = text.split(" ");
-        const alternateTitle = sp.map((tl,index)=>
-            index%2===0 ? (<LabeledTitleBold key={index}>
-                {tl}
-            </LabeledTitleBold>) :
-            (
-                <LabeledTitleRegular key={index}>
-                    {tl}
-                </LabeledTitleRegular>
-            )
+        // eslint-disable-next-line array-callback-return
+        const alternateTitle = sp.map((tl,index)=>{
+            if(tl==='&') return ( <LabeledTitleBold key={index}>{tl}</LabeledTitleBold>)
+            else if(sp[index-1]==='&') return (<LabeledTitleRegular key={index}>{tl}</LabeledTitleRegular>)
+            else if(index%2===0) return (<LabeledTitleBold key={index}>{tl}</LabeledTitleBold>)
+            else return (<LabeledTitleRegular key={index}>{tl}</LabeledTitleRegular>)
+        //     if(index%2===0 || tl ==="&") return (
+        //     <LabeledTitleBold key={index}>
+        //         {tl}
+        //     </LabeledTitleBold>)
+        // if(sp[index-1]==="&") return (
+        //     <LabeledTitleRegular key={index}>
+        //             {tl}
+        //         </LabeledTitleRegular>)
+        // return (
+        //     <LabeledTitleRegular key={index}>
+        //             {tl}
+        //         </LabeledTitleRegular>)
+        }
         )
         return alternateTitle
     }

@@ -53,11 +53,11 @@ export const QUADRO_DESCRIPTION_LIST = {
     ENTERTAINMENT:{
         BASE_DESCRIPTIONS:{
             0:{
-                title: "TV-& Entertainment",
+                title: "TV & Entertainment",
                 description:`Watch live TV or enjoy the latest binge-worthy content and on-demand entertainment services.`,
             },
             1:{
-                title:"Airplay-& Casting",
+                title:"Airplay & Casting",
                 description:`Customers can cast content from thousands of apps on their smart device to the in-room Quadro Entertainment system, instantly making use of the in-room TV monitor. Simply connect to Wi-Fi and go. `,
             },
             2:{

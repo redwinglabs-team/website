@@ -7,7 +7,7 @@ const MainContainerMap = styled.div`
   align-items: center;
   margin-right: auto;
   margin-left: auto;
-  padding: 24px 120px 48px;
+  padding: 24px 170px 48px;
   width: -webkit-fill-available;
   z-index:1;
 
