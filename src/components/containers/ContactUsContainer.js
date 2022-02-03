@@ -12,7 +12,7 @@ const GridContainer = styled.div`
     position:absolute;
     align-items:flex-start;
     left:0px;
-    top:66%;
+    top:67%;
     svg{
         width:200px;
         height:100px;

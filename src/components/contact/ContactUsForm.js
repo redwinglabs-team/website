@@ -10,7 +10,7 @@ const MainContainerContactForm = styled.div`
   flex-direction: column;
   margin-right: auto;
   margin-left: auto;
-  padding: 48px 120px 24px;
+  padding: 48px 170px 24px;
   width: -webkit-fill-available;
 
   max-width: inherit;

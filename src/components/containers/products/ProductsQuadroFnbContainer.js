@@ -16,6 +16,7 @@ const ProductsQuadroFnbContainer = () => {
             bgImage={ROUTE_LIST.PRODUCTS.backgroundImage}
             description={ROUTE_LIST.FNB.description}
             productImage={ROUTE_LIST.FNB.productImage}
+            haveDemoButton
         />
         {/* TITLE */}
         <TitleDescriptionPage supTitle="QUADRO" title="FNB" />

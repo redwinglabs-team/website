@@ -10,7 +10,7 @@ const MainContainerPartnersForm = styled.div`
   flex-direction: column;
   margin-right: auto;
   margin-left: auto;
-  padding: 48px 120px;
+  padding: 48px 170px;
   width: -webkit-fill-available;
 
   max-width: inherit;

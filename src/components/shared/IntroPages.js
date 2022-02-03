@@ -24,6 +24,13 @@ const TitleContainer = styled.div`
   flex-direction: column;
   padding-left: 170px;
   max-width: fit-content;
+
+  .nowrap{
+    white-space:nowrap;
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
+      white-space:normal;
+  }
+  }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     width: 100%;
     padding: 24px;
@@ -51,15 +58,35 @@ const ImageProductContainer = styled.div`
     }
   }
 `;
-const IntroPages = ({ bgImage, description, productImage }) => {
+
+const DemoButtonContainer = styled.div`
+position: fixed;
+  background: ${({ theme: { colors } }) => colors.lightGreen};
+  color: ${({ theme: { colors } }) => colors.white};
+  font-family:${({ theme: { fontFamily } }) => fontFamily.bold};
+
+  left: -155px;
+  font-size:24px;
+  padding: 8px 100px;
+    transform: rotate(90deg);
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-decoration:underline;
+
+`;
+const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
   return (
     <IntroContainer id="intro" style={{ backgroundImage: `url(${bgImage})` }}>
+{haveDemoButton && <DemoButtonContainer className='mobile-none' onClick={()=>{}}>
+          Book a Demo!
+      </DemoButtonContainer>}
       <TitleContainer>
         {description[0] && <TitleLight>{description[0]}</TitleLight>}
         {description[1] && <TitleBold>{description[1]}</TitleBold>}
-        {description[2] && <TitleLight>{description[2]}</TitleLight>}
+        {description[2] && <TitleLight className='nowrap'>{description[2]}</TitleLight>}
       </TitleContainer>
-      {productImage && <ImageProductContainer className="mobile-none">{productImage}</ImageProductContainer>}
+      {productImage && <ImageProductContainer className="mobile-none ">{productImage}</ImageProductContainer>}
     </IntroContainer>
   );
 };
