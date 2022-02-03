@@ -30,8 +30,13 @@ const StyledButton = styled.button`
   }};
   white-space:nowrap;
   margin-top:16px;
-  padding:12px 24px;
+  padding:16px 32px;
   border-radius:2px;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
+    padding: 16px 24px;
+    font-size:16px !important
+  }
 `;
 
 const CustomButton = ({

@@ -17,6 +17,7 @@ const HomeContainer = () => {
             <IntroPages
                 bgImage={ROUTE_LIST.HOME.backgroundImage}
                 description={ROUTE_LIST.HOME.description}
+                haveDemoButton
             />
             {/* TITLE */}
             <TitleDescriptionPage supTitle="WE ARE" title="REDWING LABS" />

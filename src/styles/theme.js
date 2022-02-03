@@ -26,7 +26,7 @@ export const theme = {
   colors: {
     primaryColor: '#232323',
     white:'#FFFFFF',
-    lightGreen: '#6FC551',
+    lightGreen: '#73B783',
     darkGreen: '#11AA67',
     lighterGreen: '#E2F4DC',
     orange: '#F6B502',

@@ -19,6 +19,7 @@ const ProductsQuadroPopContainer = () => {
             bgImage={ROUTE_LIST.PRODUCTS.backgroundImage}
             description={ROUTE_LIST.POP.description}
             productImage={ROUTE_LIST.POP.productImage}
+            haveDemoButton
         />
         {/* TITLE */}
         <TitleDescriptionPage supTitle="QUADRO" title="POP" />

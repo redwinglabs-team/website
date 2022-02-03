@@ -5,8 +5,13 @@ import { Container } from '../shared/Containers';
 import LabeledDescription from '../shared/LabeledDescription';
 import { TextLight } from '../shared/Texts';
 
-const DescriptionSectionContainer = styled(Container)`
-    padding:64px 150px;
+const DescriptionSectionContainer = styled.div`
+    width:100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-flow:column;
+    padding:64px 170px;
     flex-direction:row;
     width: fit-content;
     max-height:600px;
@@ -27,11 +32,17 @@ const DescriptionSectionContainer = styled(Container)`
 
 `
 const LeftContainer = styled(Container)`
+position:relative;
+    height: -webkit-fill-available;
 background-color: ${({theme:{colors}})=>colors.lightGreyBackground};
 margin-right:64px;
-max-width: 400px;
-max-height:550px;
-padding: 24px;
+max-width: 300px;
+padding: 32px;
+&>span{
+  height: 100%;
+    display: flex;
+    align-items: center;
+}
 @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
     margin:0px;
@@ -40,7 +51,6 @@ padding: 24px;
 `
 const RightContainer = styled(Container)`
 margin:16px;
-height:100%;
 justify-content:space-between;
 &>div:not(:last-child){
  margin-bottom:32px !important;
@@ -53,9 +63,9 @@ justify-content:space-between;
 `
 
 const GridContainer = styled.div`
-    position:relative;
-    left:-224px;
-    bottom:-200px;
+    position: absolute;
+    left: -102px;
+    top: 90%;
     transform: rotate(90deg);
     svg{
         width:200px;
@@ -73,7 +83,7 @@ const DescriptionSection = () => {
     return (
         <DescriptionSectionContainer >
             <LeftContainer>
-                <TextLight>
+                <TextLight fontSize="24px">
                 “Building technology that increases revenue, lowers operating costs, and enhances
                     the customer experience.”
                 </TextLight>

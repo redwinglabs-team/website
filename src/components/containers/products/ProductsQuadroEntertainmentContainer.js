@@ -16,6 +16,7 @@ const ProductsQuadroEntertainmentContainer = () => {
             bgImage={ROUTE_LIST.PRODUCTS.backgroundImage}
             description={ROUTE_LIST.ENTERTAINMENT.description}
             productImage={ROUTE_LIST.ENTERTAINMENT.productImage}
+            haveDemoButton
         />
         {/* TITLE */}
         <TitleDescriptionPage supTitle="QUADRO" title="ENTERTAINMENT" />

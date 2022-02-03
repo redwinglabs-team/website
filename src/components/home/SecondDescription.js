@@ -25,7 +25,7 @@ height:fit-content;
 justify-content:flex-start;
 margin-bottom:32px;
 @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
+      `${mediaQueries.desktopPixel + 1}px`}) {
         flex-direction:column;
   }
 `;
@@ -33,9 +33,9 @@ margin-bottom:32px;
 const GridColumn = styled(Container)`
 height:fit-content;
 width:33%;
-margin-left: ${({withMoreMarginLeft})=>withMoreMarginLeft ? '240px' : '48px'};
+margin-left: ${({withMoreMarginLeft})=>withMoreMarginLeft ? '170px' : '48px'};
 @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
+      `${mediaQueries.desktopPixel + 1}px`}) {
         margin:32px;
         width:fit-content;
   }

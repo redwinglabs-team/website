@@ -28,14 +28,14 @@
       <feComposite operator="in" in2="blur-4"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="app_bar" x="103" y="158" width="420" height="101" filterUnits="userSpaceOnUse">
+    <filter id="app_bar-pms-mobile" x="103" y="158" width="420" height="101" filterUnits="userSpaceOnUse">
       <feOffset dy="2" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="7.5" result="blur-5"/>
       <feFlood flood-opacity="0.149"/>
       <feComposite operator="in" in2="blur-5"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="app_bar-2" x="103" y="102" width="420" height="101" filterUnits="userSpaceOnUse">
+    <filter id="app_bar-2-pms-mobile" x="103" y="102" width="420" height="101" filterUnits="userSpaceOnUse">
       <feOffset dy="2" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="7.5" result="blur-6"/>
       <feFlood flood-opacity="0.149"/>
@@ -121,8 +121,8 @@
         <rect id="Rettangolo_5805" data-name="Rettangolo 5805" width="4" height="24" rx="2" transform="translate(-5669 -5638)" fill="#be3144"/>
       </g>
       <g id="AppBar" transform="translate(-5957 -5904)">
-        <g transform="matrix(1, 0, 0, 1, -125.5, -178.5)" filter="url(#app_bar)">
-          <path id="app_bar-3" data-name="app_bar" d="M375,0H0V56H375Z" transform="translate(125.5 178.5)" fill="#fff" fill-rule="evenodd"/>
+        <g transform="matrix(1, 0, 0, 1, -125.5, -178.5)" filter="url(#app_bar-pms-mobile)">
+          <path id="app_bar-3-pms-mobile" data-name="app_bar" d="M375,0H0V56H375Z" transform="translate(125.5 178.5)" fill="#fff" fill-rule="evenodd"/>
         </g>
         <g id="Print_Button" data-name="Print Button" transform="translate(213 10)">
           <g id="Rettangolo_25" data-name="Rettangolo 25" transform="translate(-33)" fill="#3a4750" stroke="#3a4750" stroke-miterlimit="10" stroke-width="1">
@@ -138,8 +138,8 @@
         </g>
       </g>
       <g id="AppBar-2" data-name="AppBar" transform="translate(-5957 -5960)">
-        <g transform="matrix(1, 0, 0, 1, -125.5, -122.5)" filter="url(#app_bar-2)">
-          <path id="app_bar-4" data-name="app_bar" d="M375,0H0V56H375Z" transform="translate(125.5 122.5)" fill="#3a4750" fill-rule="evenodd"/>
+        <g transform="matrix(1, 0, 0, 1, -125.5, -122.5)" filter="url(#app_bar-2-pms-mobile)">
+          <path id="app_bar-4-pms-mobile" data-name="app_bar" d="M375,0H0V56H375Z" transform="translate(125.5 122.5)" fill="#3a4750" fill-rule="evenodd"/>
         </g>
         <g id="header_profilo" data-name="header profilo" transform="translate(176 10)">
           <path id="icona_notifiche" data-name="icona notifiche" d="M4715,187.218c0-3.149-1.642-5.785-4.5-6.482v-.7a1.5,1.5,0,1,0-3,0v.7c-2.869.7-4.5,3.323-4.5,6.482v5.128l-2,2.051v1.026h16V194.4l-2-2.051Zm-6,11.282a1.688,1.688,0,0,0,.4-.041,2.042,2.042,0,0,0,1.441-1.21,2.112,2.112,0,0,0,.149-.8h-4A2.041,2.041,0,0,0,4709,198.5Z" transform="translate(-4596 -170.5)" fill="#eff1f3"/>

@@ -17,6 +17,7 @@ const ProductsQuadroPmsContainer = () => {
                     bgImage={ROUTE_LIST.PRODUCTS.backgroundImage}
                     description={ROUTE_LIST.PMS.description}
                     productImage={ROUTE_LIST.PMS.productImage}
+                    haveDemoButton
             />
             {/* TITLE */}
             <TitleDescriptionPage supTitle="QUADRO" title="PMS" />
