@@ -25,6 +25,8 @@ export { ReactComponent as BGEntertainment } from './svg/bg-intro/bg-entertainme
 // CAROUSEL
 export { ReactComponent as CarouselPms } from './svg/home/carousel/pms.svg';
 export { ReactComponent as CarouselFnb } from './svg/home/carousel/fnb.svg';
+export { ReactComponent as CarouselPop } from './svg/home/carousel/pop.svg';
+export { ReactComponent as CarouselEntertainment } from './svg/home/carousel/entertainment.svg';
 
 // PRODUCTS LINK
 export { ReactComponent as ProductPms } from './svg/product/product-pms.svg';

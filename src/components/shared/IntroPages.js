@@ -61,6 +61,7 @@ const ImageProductContainer = styled.div`
 
 const DemoButtonContainer = styled.div`
 position: fixed;
+z-index:2;
   background: ${({ theme: { colors } }) => colors.lightGreen};
   color: ${({ theme: { colors } }) => colors.white};
   font-family:${({ theme: { fontFamily } }) => fontFamily.bold};

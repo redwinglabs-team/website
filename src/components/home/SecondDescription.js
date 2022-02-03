@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DigitPattern, QuadroRedLogo } from '../../assets';
+import { QuadroRedLogo } from '../../assets';
 import { Container } from '../shared/Containers';
 import { Label } from '../shared/Texts';
 
 const SecondDescriptionContainer = styled(Container)`
     background:linear-gradient(90deg,#BE3144 62%, #232323 62%);
     padding: 48px 0px;    
-    z-index:1;
     height:min-content;
     width: -webkit-fill-available;
     @media (max-width: ${({ theme: { mediaQueries } }) =>
