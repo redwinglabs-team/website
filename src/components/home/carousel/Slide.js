@@ -6,16 +6,17 @@ import { Label } from '../../shared/Texts';
 const SlideContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   width: -webkit-fill-available;
   width: -moz-available;
-  padding: 32px;
+  padding: 0px 32px;
   margin: 0px 72px;
   height: min-content;
 `;
 
 const LeftSlideContainer = styled.div`
+position:relative;
   height: -webkit-fill-available;
   height: -moz-available;
   display: flex;
@@ -23,8 +24,10 @@ const LeftSlideContainer = styled.div`
   /* justify-content: flex-start; */
   justify-content: space-between;
   flex-direction: column;
-  max-width: min-content;
+  max-width: -webkit-fill-available;
+  max-width: -moz-available;
   max-height: 450px;
+  min-height:350px;
 `;
 const RightSlideContainer = styled.div`
   svg {
@@ -32,8 +35,8 @@ const RightSlideContainer = styled.div`
     height: 100%;
   }
   img {
-    width:600px;
-    height: 100%;
+    width:700px;
+    height:500px;
   }
 `;
 const TitleContainer = styled.div`
@@ -45,15 +48,22 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 260px;
-  max-width: min-content;
+  min-height: 220px;
+  max-width: fit-content;
+  button {
+    max-width:200px;
+  }
 `;
+
+
+
 
 const Slide = ({ title, subtitle, description, image }) => {
   return (
     <SlideContainer className="swiper-slide">
       <LeftSlideContainer>
         <TitleContainer>
+
           <Label bold fontSize="32px">
             {title}
           </Label>

@@ -65,22 +65,30 @@ z-index:2;
   background: ${({ theme: { colors } }) => colors.lightGreen};
   color: ${({ theme: { colors } }) => colors.white};
   font-family:${({ theme: { fontFamily } }) => fontFamily.bold};
-
+border-radius: 10px 10px 0px 0px;
   left: -155px;
   font-size:24px;
-  padding: 8px 100px;
+  padding: 12px 100px;
     transform: rotate(90deg);
   display: flex;
   justify-content: center;
   align-self: center;
+  cursor:pointer;
+-webkit-box-shadow:  0px 5px 40px 0px #60986D80;
+-moz-box-shadow:  0px 5px 40px 0px #60986D80;
+-o-box-shadow:  0px 5px 40px 0px #60986D80;
+box-shadow:  0px 5px 40px 0px #60986D80;
+span {
+  margin-left:6px;
   text-decoration:underline;
+}
 
 `;
 const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
   return (
     <IntroContainer id="intro" style={{ backgroundImage: `url(${bgImage})` }}>
 {haveDemoButton && <DemoButtonContainer className='mobile-none' onClick={()=>{}}>
-          Book a Demo!
+          Book a <span>Demo!</span>
       </DemoButtonContainer>}
       <TitleContainer>
         {description[0] && <TitleLight>{description[0]}</TitleLight>}

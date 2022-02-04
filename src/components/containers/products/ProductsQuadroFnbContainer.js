@@ -4,37 +4,47 @@ import { QUADRO_DESCRIPTION_LIST } from '../../../constants/quadroDescriptionLis
 import { ROUTE_LIST } from '../../../constants/routesList';
 import Overview from '../../products/Overview';
 import { Container, ImageContainer } from '../../shared/Containers';
+import CustomDivider from '../../shared/CustomDivider';
 import DescriptionQuadroList from '../../shared/DescriptionQuadroList';
 import IntroPages from '../../shared/IntroPages';
 import TitleDescriptionPage from '../../shared/TitleDescriptionPage';
 
 const ProductsQuadroFnbContainer = () => {
-    return (
-        <Container>
-        {/* INTRO */}
-        <IntroPages
-            bgImage={ROUTE_LIST.PRODUCTS.backgroundImage}
-            description={ROUTE_LIST.FNB.description}
-            productImage={ROUTE_LIST.FNB.productImage}
-            haveDemoButton
-        />
-        {/* TITLE */}
-        <TitleDescriptionPage supTitle="QUADRO" title="FNB" />
-        <Overview description="All-in-one intuitively-designed restaurant management system providing restaurateurs with
+  return (
+    <Container>
+      {/* INTRO */}
+      <IntroPages
+        bgImage={ROUTE_LIST.PRODUCTS.backgroundImage}
+        description={ROUTE_LIST.FNB.description}
+        productImage={ROUTE_LIST.FNB.productImage}
+        haveDemoButton
+      />
+      {/* TITLE */}
+      <TitleDescriptionPage supTitle="QUADRO" title="FNB" />
+      <Overview
+        description="All-in-one intuitively-designed restaurant management system providing restaurateurs with
                  the capabilities to run front-of-house, kitchen, and back-office operations from a single
-                cloud-based platform across any device."/>
-        {/* DESKTOP IMAGE */}
-        <ImageContainer>
-             <QuadroFnbSpaces/>
-        </ImageContainer>
-        {/* BASE DESCRIPTION */}
-        <DescriptionQuadroList
-            baseDescriptions={QUADRO_DESCRIPTION_LIST.FNB.BASE_DESCRIPTIONS}
-            otherDescriptions={QUADRO_DESCRIPTION_LIST.FNB.OTHER_DESCRIPTIONS}
-            />
+                cloud-based platform across any device."
+      />
+      <CustomDivider red />
 
+      {/* BASE DESCRIPTION */}
+      <DescriptionQuadroList
+        baseDescriptions={QUADRO_DESCRIPTION_LIST.FNB.BASE_DESCRIPTIONS}
+        image={QUADRO_DESCRIPTION_LIST.FNB.BASE_DESCRIPTIONS_IMAGE}
+      />
+      {/* DESKTOP IMAGE */}
+      <ImageContainer>
+        <QuadroFnbSpaces />
+      </ImageContainer>
+      {/* OTHER DESCRIPTION */}
+
+      <DescriptionQuadroList
+        otherDescriptions={QUADRO_DESCRIPTION_LIST.FNB.OTHER_DESCRIPTIONS}
+        image={QUADRO_DESCRIPTION_LIST.FNB.OTHER_DESCRIPTIONS_IMAGE}
+      />
     </Container>
-    );
+  );
 };
 
 export default ProductsQuadroFnbContainer;

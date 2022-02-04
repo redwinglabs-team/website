@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="783" height="739" viewBox="0 0 783 739">
+  <defs>
+    <filter id="Base-desc-fnb" x="190" y="0" width="593" height="479" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="42.5" result="blur"/>
+      <feFlood flood-color="#989898" flood-opacity="0.404"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Base-2-desc-fnb" x="190" y="260" width="593" height="479" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="42.5" result="blur-2"/>
+      <feFlood flood-color="#989898" flood-opacity="0.404"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Base-3-desc-fnb" x="0" y="89" width="594" height="558" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="42.5" result="blur-3"/>
+      <feFlood flood-color="#989898" flood-opacity="0.404"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Raggruppa_52240" data-name="Raggruppa 52240" transform="translate(-980.5 -2038.5)">
+    <g id="Card_Arrivals_1" data-name="Card Arrivals 1" transform="translate(1300 2156)">
+      <g transform="matrix(1, 0, 0, 1, -319.5, -117.5)" filter="url(#Base-desc-fnb)">
+        <rect id="Base-4-desc-fnb" data-name="Base" width="338" height="224" transform="translate(315.5 122.5)" fill="#fff"/>
+      </g>
+      <path id="Icon_metro-more-vert" data-name="Icon metro-more-vert" d="M17.924,12.712a2.5,2.5,0,1,0-2.5-2.5A2.5,2.5,0,0,0,17.924,12.712Zm0,2.5a2.5,2.5,0,1,0,2.5,2.5A2.5,2.5,0,0,0,17.924,15.212Zm0,7.5a2.5,2.5,0,1,0,2.5,2.5A2.5,2.5,0,0,0,17.924,22.712Z" transform="translate(297.576 17.288)" fill="#3a4750" opacity="0.5"/>
+      <text id="_name_" data-name="{name}" transform="translate(12 43)" fill="#3a4750" font-size="24" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Restaurant Beach</tspan></text>
+      <g id="Raggruppa_42403" data-name="Raggruppa 42403" transform="translate(-4 5)">
+        <g id="PAX" transform="translate(9.798 97)">
+          <g id="Adulti">
+            <g id="icona">
+              <path id="ic_adults" d="M947.749,344.637H936.208a.37.37,0,0,1-.358-.367c-.021-.527-.024-1.8.391-2.218l.115-.123a3.7,3.7,0,0,1,2.561-1.212c1.285-.2,1.508-.766,1.582-.952l.006-.018c-.009-.207-.022-.438-.03-.6a2.876,2.876,0,0,1-.9-1.169.919.919,0,0,1-.623-.835l-.015-.111a.39.39,0,0,1-.005-.089,2.529,2.529,0,0,1,.43-1.461.562.562,0,0,1,.274-.147,5.527,5.527,0,0,1,.028-.884c.091-.945.494-1.561,1.105-1.682l.188-.039.017-.027a.511.511,0,0,1,.46-.2l.61-.131a1.193,1.193,0,0,1,.917.5c.03.033.071.079.1.112a.942.942,0,0,1,.509,0c.826.166.8,1.12.794,1.528,0,.069,0,.138,0,.207a2.127,2.127,0,0,1,.019.641.526.526,0,0,0,.069,0h0a.575.575,0,0,1,.47.225,2.271,2.271,0,0,1,.173,1.48,1.136,1.136,0,0,1-.639.8l-.1.064a3.715,3.715,0,0,1-.8,1.256c-.018.179-.046.477-.056.6v.015c.021.613.875.835,1.38.915a3.766,3.766,0,0,1,2.6,1.231l.1.107a4.431,4.431,0,0,1,.52,2.177.4.4,0,0,1-.1.285A.349.349,0,0,1,947.749,344.637Zm-11.186-.767h10.8a3.594,3.594,0,0,0-.273-1.265l-.114-.123a3.116,3.116,0,0,0-2.193-1.008c-1.694-.262-1.977-1.143-1.995-1.643.007-.22.071-.87.071-.87a.4.4,0,0,1,.12-.247,2.941,2.941,0,0,0,.754-1.179.378.378,0,0,1,.148-.194l.214-.137c.273-.172.276-.181.3-.292a2.441,2.441,0,0,0,0-.781.828.828,0,0,1-.64-.255.568.568,0,0,1-.106-.477,1.45,1.45,0,0,0,.006-.561,2.53,2.53,0,0,1-.009-.343c.013-.537-.037-.72-.2-.753a.869.869,0,0,0-.178-.021.5.5,0,0,1-.325.04.9.9,0,0,1-.5-.358c-.1-.107-.24-.268-.325-.268l-.561.128a.418.418,0,0,1-.243.158,2.213,2.213,0,0,1-.41.107c-.391.078-.5.733-.523,1.012a5.121,5.121,0,0,0-.022.857.583.583,0,0,1-.107.463.629.629,0,0,1-.43.235,2.853,2.853,0,0,0-.166.854c.005.037.009.072.013.1a.755.755,0,0,0,.018.111.781.781,0,0,0,.3.169.376.376,0,0,1,.2.219,2.109,2.109,0,0,0,.828,1.056.386.386,0,0,1,.172.3s.032.537.047.915a.405.405,0,0,1-.074.25,2.5,2.5,0,0,1-2.133,1.4,3.055,3.055,0,0,0-2.149.989c-.048.053-.093.1-.138.147A3.257,3.257,0,0,0,936.562,343.87Zm3.2-7.773h0Zm4.589-.533h0Zm-4.707-.077a.108.108,0,0,0,0,.018Z" transform="translate(-929.64 -326.752)" fill="#55595c"/>
+            </g>
+            <text id="_8" data-name="8" transform="translate(25 18)" fill="#55595c" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">8</tspan></text>
+          </g>
+          <g id="Kids" transform="translate(57)">
+            <g id="icona-2" data-name="icona">
+              <rect id="Base-5-desc-fnb" data-name="Base" width="25" height="24" fill="#fff"/>
+              <path id="ic_kids" d="M1018.85,340.207a2.055,2.055,0,0,1-2.281,0,.5.5,0,0,0-.711-.04.516.516,0,0,0-.039.722,2.955,2.955,0,0,0,3.784,0,.512.512,0,0,0-.042-.707.506.506,0,0,0-.706.024ZM1014.989,338a.6.6,0,1,0,1.209,0h0a.6.6,0,1,0-1.209,0Zm4.231,0a.6.6,0,1,0,1.209,0h0a.6.6,0,1,0-1.209,0Zm4.04,1.022h0c-.01,0-.049-.006-.057-.006a.5.5,0,0,0-.543.418,5.021,5.021,0,0,1-9.9,0,.544.544,0,0,0-.539-.409h-.051a.512.512,0,0,1-.011-1.023h0c.008,0,.048.007.056.007a.5.5,0,0,0,.544-.418,5.087,5.087,0,0,1,2.535-3.559,3.15,3.15,0,0,0,2.872,2.583h.028a.5.5,0,0,0,.484-.373c0-.008.235-.794.828-.966a.513.513,0,0,0,.347-.632.5.5,0,0,0-.623-.352h0a2.281,2.281,0,0,0-1.36,1.255,2.3,2.3,0,0,1-1.632-1.921,5.008,5.008,0,0,1,6.278,3.364,5.086,5.086,0,0,1,.144.6.5.5,0,0,0,.543.417s.042,0,.059-.008a.457.457,0,0,1,.492.42h0a.474.474,0,0,1,0,.089.508.508,0,0,1-.494.516Zm.307-2.015a6.021,6.021,0,0,0-11.715,0,1.538,1.538,0,0,0,0,3,6.02,6.02,0,0,0,11.715,0,1.533,1.533,0,0,0,1.195-1.5,1.469,1.469,0,0,0-1.195-1.5Z" transform="translate(-1005.375 -326.596)" fill="#55595c"/>
+            </g>
+            <text id="_2" data-name="2" transform="translate(25 18)" fill="#55595c" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">2</tspan></text>
+          </g>
+        </g>
+        <g id="Raggruppa_42126" data-name="Raggruppa 42126" transform="translate(16 60)">
+          <text id="Lunch" transform="translate(0 17)" fill="#55595c" font-size="16" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Lunch</tspan></text>
+          <text id="_10_" data-name="(10)" transform="translate(52 17)" fill="#55595c" font-size="16" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">(10)</tspan></text>
+        </g>
+      </g>
+      <g id="Raggruppa_42487" data-name="Raggruppa 42487" transform="translate(-4 -11)">
+        <g id="Raggruppa_42400" data-name="Raggruppa 42400" transform="translate(16 154)">
+          <text id="Dinner" transform="translate(0 17)" fill="#55595c" font-size="16" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Dinner</tspan></text>
+          <text id="_34_" data-name="(34)" transform="translate(55 17)" fill="#55595c" font-size="16" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">(34)</tspan></text>
+        </g>
+        <g id="PAX-2" data-name="PAX" transform="translate(16 191)">
+          <g id="Adulti-2" data-name="Adulti" transform="translate(-6.202)">
+            <g id="icona-3" data-name="icona">
+              <path id="ic_adults-2" data-name="ic_adults" d="M947.749,344.637H936.208a.37.37,0,0,1-.358-.367c-.021-.527-.024-1.8.391-2.218l.115-.123a3.7,3.7,0,0,1,2.561-1.212c1.285-.2,1.508-.766,1.582-.952l.006-.018c-.009-.207-.022-.438-.03-.6a2.876,2.876,0,0,1-.9-1.169.919.919,0,0,1-.623-.835l-.015-.111a.39.39,0,0,1-.005-.089,2.529,2.529,0,0,1,.43-1.461.562.562,0,0,1,.274-.147,5.527,5.527,0,0,1,.028-.884c.091-.945.494-1.561,1.105-1.682l.188-.039.017-.027a.511.511,0,0,1,.46-.2l.61-.131a1.193,1.193,0,0,1,.917.5c.03.033.071.079.1.112a.942.942,0,0,1,.509,0c.826.166.8,1.12.794,1.528,0,.069,0,.138,0,.207a2.127,2.127,0,0,1,.019.641.526.526,0,0,0,.069,0h0a.575.575,0,0,1,.47.225,2.271,2.271,0,0,1,.173,1.48,1.136,1.136,0,0,1-.639.8l-.1.064a3.715,3.715,0,0,1-.8,1.256c-.018.179-.046.477-.056.6v.015c.021.613.875.835,1.38.915a3.766,3.766,0,0,1,2.6,1.231l.1.107a4.431,4.431,0,0,1,.52,2.177.4.4,0,0,1-.1.285A.349.349,0,0,1,947.749,344.637Zm-11.186-.767h10.8a3.594,3.594,0,0,0-.273-1.265l-.114-.123a3.116,3.116,0,0,0-2.193-1.008c-1.694-.262-1.977-1.143-1.995-1.643.007-.22.071-.87.071-.87a.4.4,0,0,1,.12-.247,2.941,2.941,0,0,0,.754-1.179.378.378,0,0,1,.148-.194l.214-.137c.273-.172.276-.181.3-.292a2.441,2.441,0,0,0,0-.781.828.828,0,0,1-.64-.255.568.568,0,0,1-.106-.477,1.45,1.45,0,0,0,.006-.561,2.53,2.53,0,0,1-.009-.343c.013-.537-.037-.72-.2-.753a.869.869,0,0,0-.178-.021.5.5,0,0,1-.325.04.9.9,0,0,1-.5-.358c-.1-.107-.24-.268-.325-.268l-.561.128a.418.418,0,0,1-.243.158,2.213,2.213,0,0,1-.41.107c-.391.078-.5.733-.523,1.012a5.121,5.121,0,0,0-.022.857.583.583,0,0,1-.107.463.629.629,0,0,1-.43.235,2.853,2.853,0,0,0-.166.854c.005.037.009.072.013.1a.755.755,0,0,0,.018.111.781.781,0,0,0,.3.169.376.376,0,0,1,.2.219,2.109,2.109,0,0,0,.828,1.056.386.386,0,0,1,.172.3s.032.537.047.915a.405.405,0,0,1-.074.25,2.5,2.5,0,0,1-2.133,1.4,3.055,3.055,0,0,0-2.149.989c-.048.053-.093.1-.138.147A3.257,3.257,0,0,0,936.562,343.87Zm3.2-7.773h0Zm4.589-.533h0Zm-4.707-.077a.108.108,0,0,0,0,.018Z" transform="translate(-929.64 -326.752)" fill="#55595c"/>
+            </g>
+            <text id="_27" data-name="27" transform="translate(25 18)" fill="#55595c" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">27</tspan></text>
+          </g>
+          <g id="Kids-2" data-name="Kids" transform="translate(57)">
+            <g id="icona-4" data-name="icona">
+              <rect id="Base-6-desc-fnb" data-name="Base" width="25" height="24" fill="#fff"/>
+              <path id="ic_kids-2" data-name="ic_kids" d="M1018.85,340.207a2.055,2.055,0,0,1-2.281,0,.5.5,0,0,0-.711-.04.516.516,0,0,0-.039.722,2.955,2.955,0,0,0,3.784,0,.512.512,0,0,0-.042-.707.506.506,0,0,0-.706.024ZM1014.989,338a.6.6,0,1,0,1.209,0h0a.6.6,0,1,0-1.209,0Zm4.231,0a.6.6,0,1,0,1.209,0h0a.6.6,0,1,0-1.209,0Zm4.04,1.022h0c-.01,0-.049-.006-.057-.006a.5.5,0,0,0-.543.418,5.021,5.021,0,0,1-9.9,0,.544.544,0,0,0-.539-.409h-.051a.512.512,0,0,1-.011-1.023h0c.008,0,.048.007.056.007a.5.5,0,0,0,.544-.418,5.087,5.087,0,0,1,2.535-3.559,3.15,3.15,0,0,0,2.872,2.583h.028a.5.5,0,0,0,.484-.373c0-.008.235-.794.828-.966a.513.513,0,0,0,.347-.632.5.5,0,0,0-.623-.352h0a2.281,2.281,0,0,0-1.36,1.255,2.3,2.3,0,0,1-1.632-1.921,5.008,5.008,0,0,1,6.278,3.364,5.086,5.086,0,0,1,.144.6.5.5,0,0,0,.543.417s.042,0,.059-.008a.457.457,0,0,1,.492.42h0a.474.474,0,0,1,0,.089.508.508,0,0,1-.494.516Zm.307-2.015a6.021,6.021,0,0,0-11.715,0,1.538,1.538,0,0,0,0,3,6.02,6.02,0,0,0,11.715,0,1.533,1.533,0,0,0,1.195-1.5,1.469,1.469,0,0,0-1.195-1.5Z" transform="translate(-1005.375 -326.596)" fill="#55595c"/>
+            </g>
+            <text id="_7" data-name="7" transform="translate(25 18)" fill="#55595c" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">7</tspan></text>
+          </g>
+        </g>
+      </g>
+      <path id="Colour_restaurant" d="M0,0H338V8H0Z" transform="translate(-4 221)" fill="#f39b13"/>
+    </g>
+    <g id="Card_Arrivals_1-2" data-name="Card Arrivals 1" transform="translate(1300 2416)">
+      <g transform="matrix(1, 0, 0, 1, -319.5, -377.5)" filter="url(#Base-2-desc-fnb)">
+        <rect id="Base-7-desc-fnb" data-name="Base" width="338" height="224" transform="translate(315.5 382.5)" fill="#fff"/>
+      </g>
+      <path id="Icon_metro-more-vert-2" data-name="Icon metro-more-vert" d="M17.924,12.712a2.5,2.5,0,1,0-2.5-2.5A2.5,2.5,0,0,0,17.924,12.712Zm0,2.5a2.5,2.5,0,1,0,2.5,2.5A2.5,2.5,0,0,0,17.924,15.212Zm0,7.5a2.5,2.5,0,1,0,2.5,2.5A2.5,2.5,0,0,0,17.924,22.712Z" transform="translate(297.576 17.288)" fill="#3a4750" opacity="0.5"/>
+      <text id="_name_2" data-name="{name}" transform="translate(12 43)" fill="#3a4750" font-size="24" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Tai Restaurant</tspan></text>
+      <g id="Raggruppa_42403-2" data-name="Raggruppa 42403" transform="translate(-4 5)">
+        <g id="PAX-3" data-name="PAX" transform="translate(9.798 97)">
+          <g id="Adulti-3" data-name="Adulti">
+            <g id="icona-5" data-name="icona">
+              <path id="ic_adults-3" data-name="ic_adults" d="M947.749,344.637H936.208a.37.37,0,0,1-.358-.367c-.021-.527-.024-1.8.391-2.218l.115-.123a3.7,3.7,0,0,1,2.561-1.212c1.285-.2,1.508-.766,1.582-.952l.006-.018c-.009-.207-.022-.438-.03-.6a2.876,2.876,0,0,1-.9-1.169.919.919,0,0,1-.623-.835l-.015-.111a.39.39,0,0,1-.005-.089,2.529,2.529,0,0,1,.43-1.461.562.562,0,0,1,.274-.147,5.527,5.527,0,0,1,.028-.884c.091-.945.494-1.561,1.105-1.682l.188-.039.017-.027a.511.511,0,0,1,.46-.2l.61-.131a1.193,1.193,0,0,1,.917.5c.03.033.071.079.1.112a.942.942,0,0,1,.509,0c.826.166.8,1.12.794,1.528,0,.069,0,.138,0,.207a2.127,2.127,0,0,1,.019.641.526.526,0,0,0,.069,0h0a.575.575,0,0,1,.47.225,2.271,2.271,0,0,1,.173,1.48,1.136,1.136,0,0,1-.639.8l-.1.064a3.715,3.715,0,0,1-.8,1.256c-.018.179-.046.477-.056.6v.015c.021.613.875.835,1.38.915a3.766,3.766,0,0,1,2.6,1.231l.1.107a4.431,4.431,0,0,1,.52,2.177.4.4,0,0,1-.1.285A.349.349,0,0,1,947.749,344.637Zm-11.186-.767h10.8a3.594,3.594,0,0,0-.273-1.265l-.114-.123a3.116,3.116,0,0,0-2.193-1.008c-1.694-.262-1.977-1.143-1.995-1.643.007-.22.071-.87.071-.87a.4.4,0,0,1,.12-.247,2.941,2.941,0,0,0,.754-1.179.378.378,0,0,1,.148-.194l.214-.137c.273-.172.276-.181.3-.292a2.441,2.441,0,0,0,0-.781.828.828,0,0,1-.64-.255.568.568,0,0,1-.106-.477,1.45,1.45,0,0,0,.006-.561,2.53,2.53,0,0,1-.009-.343c.013-.537-.037-.72-.2-.753a.869.869,0,0,0-.178-.021.5.5,0,0,1-.325.04.9.9,0,0,1-.5-.358c-.1-.107-.24-.268-.325-.268l-.561.128a.418.418,0,0,1-.243.158,2.213,2.213,0,0,1-.41.107c-.391.078-.5.733-.523,1.012a5.121,5.121,0,0,0-.022.857.583.583,0,0,1-.107.463.629.629,0,0,1-.43.235,2.853,2.853,0,0,0-.166.854c.005.037.009.072.013.1a.755.755,0,0,0,.018.111.781.781,0,0,0,.3.169.376.376,0,0,1,.2.219,2.109,2.109,0,0,0,.828,1.056.386.386,0,0,1,.172.3s.032.537.047.915a.405.405,0,0,1-.074.25,2.5,2.5,0,0,1-2.133,1.4,3.055,3.055,0,0,0-2.149.989c-.048.053-.093.1-.138.147A3.257,3.257,0,0,0,936.562,343.87Zm3.2-7.773h0Zm4.589-.533h0Zm-4.707-.077a.108.108,0,0,0,0,.018Z" transform="translate(-929.64 -326.752)" fill="#55595c"/>
+            </g>
+            <text id="_30" data-name="30" transform="translate(25 18)" fill="#55595c" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">30</tspan></text>
+          </g>
+          <g id="Kids-3" data-name="Kids" transform="translate(57)">
+            <g id="icona-6" data-name="icona">
+              <rect id="Base-8-desc-fnb" data-name="Base" width="25" height="24" fill="#fff"/>
+              <path id="ic_kids-3" data-name="ic_kids" d="M1018.85,340.207a2.055,2.055,0,0,1-2.281,0,.5.5,0,0,0-.711-.04.516.516,0,0,0-.039.722,2.955,2.955,0,0,0,3.784,0,.512.512,0,0,0-.042-.707.506.506,0,0,0-.706.024ZM1014.989,338a.6.6,0,1,0,1.209,0h0a.6.6,0,1,0-1.209,0Zm4.231,0a.6.6,0,1,0,1.209,0h0a.6.6,0,1,0-1.209,0Zm4.04,1.022h0c-.01,0-.049-.006-.057-.006a.5.5,0,0,0-.543.418,5.021,5.021,0,0,1-9.9,0,.544.544,0,0,0-.539-.409h-.051a.512.512,0,0,1-.011-1.023h0c.008,0,.048.007.056.007a.5.5,0,0,0,.544-.418,5.087,5.087,0,0,1,2.535-3.559,3.15,3.15,0,0,0,2.872,2.583h.028a.5.5,0,0,0,.484-.373c0-.008.235-.794.828-.966a.513.513,0,0,0,.347-.632.5.5,0,0,0-.623-.352h0a2.281,2.281,0,0,0-1.36,1.255,2.3,2.3,0,0,1-1.632-1.921,5.008,5.008,0,0,1,6.278,3.364,5.086,5.086,0,0,1,.144.6.5.5,0,0,0,.543.417s.042,0,.059-.008a.457.457,0,0,1,.492.42h0a.474.474,0,0,1,0,.089.508.508,0,0,1-.494.516Zm.307-2.015a6.021,6.021,0,0,0-11.715,0,1.538,1.538,0,0,0,0,3,6.02,6.02,0,0,0,11.715,0,1.533,1.533,0,0,0,1.195-1.5,1.469,1.469,0,0,0-1.195-1.5Z" transform="translate(-1005.375 -326.596)" fill="#55595c"/>
+            </g>
+            <text id="_0" data-name="0" transform="translate(25 18)" fill="#55595c" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">0</tspan></text>
+          </g>
+        </g>
+        <g id="Raggruppa_42126-2" data-name="Raggruppa 42126" transform="translate(16 60)">
+          <text id="Lunch-2" data-name="Lunch" transform="translate(0 17)" fill="#55595c" font-size="16" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Lunch</tspan></text>
+          <text id="_30_" data-name="(30)" transform="translate(52 17)" fill="#55595c" font-size="16" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">(30)</tspan></text>
+        </g>
+      </g>
+      <g id="Raggruppa_42487-2" data-name="Raggruppa 42487" transform="translate(-4 -11)">
+        <g id="Raggruppa_42400-2" data-name="Raggruppa 42400" transform="translate(16 154)">
+          <text id="Dinner-2" data-name="Dinner" transform="translate(0 17)" fill="#55595c" font-size="16" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Dinner</tspan></text>
+          <text id="_72_" data-name="(72)" transform="translate(55 17)" fill="#55595c" font-size="16" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">(72)</tspan></text>
+        </g>
+        <g id="PAX-4" data-name="PAX" transform="translate(16 191)">
+          <g id="Adulti-4" data-name="Adulti" transform="translate(-6.202)">
+            <g id="icona-7" data-name="icona">
+              <path id="ic_adults-4" data-name="ic_adults" d="M947.749,344.637H936.208a.37.37,0,0,1-.358-.367c-.021-.527-.024-1.8.391-2.218l.115-.123a3.7,3.7,0,0,1,2.561-1.212c1.285-.2,1.508-.766,1.582-.952l.006-.018c-.009-.207-.022-.438-.03-.6a2.876,2.876,0,0,1-.9-1.169.919.919,0,0,1-.623-.835l-.015-.111a.39.39,0,0,1-.005-.089,2.529,2.529,0,0,1,.43-1.461.562.562,0,0,1,.274-.147,5.527,5.527,0,0,1,.028-.884c.091-.945.494-1.561,1.105-1.682l.188-.039.017-.027a.511.511,0,0,1,.46-.2l.61-.131a1.193,1.193,0,0,1,.917.5c.03.033.071.079.1.112a.942.942,0,0,1,.509,0c.826.166.8,1.12.794,1.528,0,.069,0,.138,0,.207a2.127,2.127,0,0,1,.019.641.526.526,0,0,0,.069,0h0a.575.575,0,0,1,.47.225,2.271,2.271,0,0,1,.173,1.48,1.136,1.136,0,0,1-.639.8l-.1.064a3.715,3.715,0,0,1-.8,1.256c-.018.179-.046.477-.056.6v.015c.021.613.875.835,1.38.915a3.766,3.766,0,0,1,2.6,1.231l.1.107a4.431,4.431,0,0,1,.52,2.177.4.4,0,0,1-.1.285A.349.349,0,0,1,947.749,344.637Zm-11.186-.767h10.8a3.594,3.594,0,0,0-.273-1.265l-.114-.123a3.116,3.116,0,0,0-2.193-1.008c-1.694-.262-1.977-1.143-1.995-1.643.007-.22.071-.87.071-.87a.4.4,0,0,1,.12-.247,2.941,2.941,0,0,0,.754-1.179.378.378,0,0,1,.148-.194l.214-.137c.273-.172.276-.181.3-.292a2.441,2.441,0,0,0,0-.781.828.828,0,0,1-.64-.255.568.568,0,0,1-.106-.477,1.45,1.45,0,0,0,.006-.561,2.53,2.53,0,0,1-.009-.343c.013-.537-.037-.72-.2-.753a.869.869,0,0,0-.178-.021.5.5,0,0,1-.325.04.9.9,0,0,1-.5-.358c-.1-.107-.24-.268-.325-.268l-.561.128a.418.418,0,0,1-.243.158,2.213,2.213,0,0,1-.41.107c-.391.078-.5.733-.523,1.012a5.121,5.121,0,0,0-.022.857.583.583,0,0,1-.107.463.629.629,0,0,1-.43.235,2.853,2.853,0,0,0-.166.854c.005.037.009.072.013.1a.755.755,0,0,0,.018.111.781.781,0,0,0,.3.169.376.376,0,0,1,.2.219,2.109,2.109,0,0,0,.828,1.056.386.386,0,0,1,.172.3s.032.537.047.915a.405.405,0,0,1-.074.25,2.5,2.5,0,0,1-2.133,1.4,3.055,3.055,0,0,0-2.149.989c-.048.053-.093.1-.138.147A3.257,3.257,0,0,0,936.562,343.87Zm3.2-7.773h0Zm4.589-.533h0Zm-4.707-.077a.108.108,0,0,0,0,.018Z" transform="translate(-929.64 -326.752)" fill="#55595c"/>
+            </g>
+            <text id="_56" data-name="56" transform="translate(25 18)" fill="#55595c" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">56</tspan></text>
+          </g>
+          <g id="Kids-4" data-name="Kids" transform="translate(57)">
+            <g id="icona-8" data-name="icona">
+              <rect id="Base-9-desc-fnb" data-name="Base" width="25" height="24" fill="#fff"/>
+              <path id="ic_kids-4" data-name="ic_kids" d="M1018.85,340.207a2.055,2.055,0,0,1-2.281,0,.5.5,0,0,0-.711-.04.516.516,0,0,0-.039.722,2.955,2.955,0,0,0,3.784,0,.512.512,0,0,0-.042-.707.506.506,0,0,0-.706.024ZM1014.989,338a.6.6,0,1,0,1.209,0h0a.6.6,0,1,0-1.209,0Zm4.231,0a.6.6,0,1,0,1.209,0h0a.6.6,0,1,0-1.209,0Zm4.04,1.022h0c-.01,0-.049-.006-.057-.006a.5.5,0,0,0-.543.418,5.021,5.021,0,0,1-9.9,0,.544.544,0,0,0-.539-.409h-.051a.512.512,0,0,1-.011-1.023h0c.008,0,.048.007.056.007a.5.5,0,0,0,.544-.418,5.087,5.087,0,0,1,2.535-3.559,3.15,3.15,0,0,0,2.872,2.583h.028a.5.5,0,0,0,.484-.373c0-.008.235-.794.828-.966a.513.513,0,0,0,.347-.632.5.5,0,0,0-.623-.352h0a2.281,2.281,0,0,0-1.36,1.255,2.3,2.3,0,0,1-1.632-1.921,5.008,5.008,0,0,1,6.278,3.364,5.086,5.086,0,0,1,.144.6.5.5,0,0,0,.543.417s.042,0,.059-.008a.457.457,0,0,1,.492.42h0a.474.474,0,0,1,0,.089.508.508,0,0,1-.494.516Zm.307-2.015a6.021,6.021,0,0,0-11.715,0,1.538,1.538,0,0,0,0,3,6.02,6.02,0,0,0,11.715,0,1.533,1.533,0,0,0,1.195-1.5,1.469,1.469,0,0,0-1.195-1.5Z" transform="translate(-1005.375 -326.596)" fill="#55595c"/>
+            </g>
+            <text id="_16" data-name="16" transform="translate(25 18)" fill="#55595c" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">16</tspan></text>
+          </g>
+        </g>
+      </g>
+      <path id="Colour_restaurant-2" data-name="Colour_restaurant" d="M0,0H338V8H0Z" transform="translate(-4 221)" fill="#1372f3"/>
+    </g>
+    <g id="Raggruppa_52239" data-name="Raggruppa 52239" transform="translate(-58 -10)">
+      <g transform="matrix(1, 0, 0, 1, 1038.5, 2048.5)" filter="url(#Base-3-desc-fnb)">
+        <rect id="Base-10-desc-fnb" data-name="Base" width="339" height="303" transform="translate(125.5 211.5)" fill="#fff"/>
+      </g>
+      <g id="Button_Link" data-name="Button Link" transform="translate(1404 2506)">
+        <text id="Detail" transform="translate(25 20)" fill="#3a4750" font-size="19" font-family="Roboto-Medium, Roboto" font-weight="500" text-decoration="underline"><tspan x="-24.455" y="0">Detail</tspan></text>
+      </g>
+      <text id="Guest_1" data-name="Guest 1" transform="translate(1183 2475)" fill="#3a4750" font-size="16" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Restaurant Beach</tspan></text>
+      <g id="Check-in" transform="translate(1183.303 2419.246)">
+        <text id="_03_02_2022" data-name="03/02/2022" transform="translate(23.698 14.754)" fill="#3a4750" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">03/02/2022</tspan></text>
+        <g id="ic_check-in" transform="translate(0)">
+          <rect id="Rettangolo_3507" data-name="Rettangolo 3507" width="20" height="20" transform="translate(-0.302 -0.246)" fill="#fff"/>
+          <g id="Raggruppa_42593" data-name="Raggruppa 42593" transform="translate(3.619 3.619)">
+            <path id="Path_33207" data-name="Path 33207" d="M525.232,236.967a.284.284,0,0,0-.282-.282h-.566a.285.285,0,0,0-.284.282v.848h1.132Z" transform="translate(-521.823 -236.685)" fill="#3a4750"/>
+            <path id="Path_33208" data-name="Path 33208" d="M530.517,236.967a.284.284,0,0,0-.282-.282h-.566a.284.284,0,0,0-.282.284v.847h1.13Z" transform="translate(-520.732 -236.685)" fill="#3a4750"/>
+            <path id="Tracciato_33336" data-name="Tracciato 33336" d="M533.115,237.622H532v.848a.283.283,0,0,1-.284.282h-.565a.285.285,0,0,1-.284-.282v-.848H525.62v.848a.282.282,0,0,1-.282.282h-.566a.283.283,0,0,1-.282-.282v-.848h-1.117a1.206,1.206,0,0,0-1.159,1.243v8.448a1.206,1.206,0,0,0,1.159,1.243h9.743a1.207,1.207,0,0,0,1.161-1.243v-8.448A1.207,1.207,0,0,0,533.115,237.622Zm.233,9.318a.6.6,0,0,1-.58.621H523.72a.6.6,0,0,1-.579-.621v-5.59a.24.24,0,0,1,.232-.249h9.743a.242.242,0,0,1,.233.249Z" transform="translate(-522.212 -236.492)" fill="#3a4750"/>
+          </g>
+        </g>
+      </g>
+      <g id="Check-in-2" data-name="Check-in" transform="translate(1302.737 2419.246)">
+        <text id="_20:30" data-name="20:30" transform="translate(24.263 14.754)" fill="#3a4750" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">20:30</tspan></text>
+        <g id="ic_check-in-2" data-name="ic_check-in" transform="translate(0)">
+          <rect id="Rettangolo_3507-2" data-name="Rettangolo 3507" width="19" height="20" transform="translate(0.263 -0.246)" fill="#fff"/>
+          <g id="Icon_feather-clock" data-name="Icon feather-clock" transform="translate(3.619 3.621)">
+            <g id="Path_33209" data-name="Path 33209" transform="translate(0 0)">
+              <path id="Unione_106" data-name="Unione 106" d="M0,6.032a6.032,6.032,0,1,1,6.032,6.032A6.039,6.039,0,0,1,0,6.032Zm1.1,0A4.935,4.935,0,1,0,6.032,1.1,4.941,4.941,0,0,0,1.1,6.032ZM7.98,7.619l-2.193-1.1a.546.546,0,0,1-.3-.49V2.741a.548.548,0,0,1,1.1,0V5.693l1.89.946a.548.548,0,0,1-.491.981Z" fill="#3a4750" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="Pax-5" data-name="Pax" transform="translate(1183.302 2390.292)">
+        <text id="_2_PAX" data-name="2 PAX" transform="translate(23.697 14.708)" fill="#3a4750" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">2 PAX</tspan></text>
+        <g id="ic_pax">
+          <rect id="Rettangolo_3639" data-name="Rettangolo 3639" width="20" height="20" transform="translate(-0.303 -0.292)" fill="#fff"/>
+          <path id="ic_pax-2" data-name="ic_pax" d="M12.121,11.9a2.011,2.011,0,1,0-1.974-2.011A2,2,0,0,0,12.121,11.9Zm-5.264,0A2.011,2.011,0,1,0,4.882,9.886,2,2,0,0,0,6.856,11.9Zm0,1.474c-1.547,0-4.606.771-4.606,2.346v1.81h9.307v-1.81C11.557,14.142,8.4,13.371,6.856,13.371Zm5.264.369a3.388,3.388,0,0,0-.564.033,2.014,2.014,0,0,1,1.034,1.944v1.81h4.136v-1.81C16.727,14.142,13.667,13.74,12.121,13.74Z" transform="translate(0.163 -3.049)" fill="#3a4750"/>
+        </g>
+      </g>
+      <text id="RES_283" data-name="RES 283" transform="translate(1183 2376)" fill="#b5b5b5" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">RES 283</tspan></text>
+      <path id="Icon_metro-more-vert-3" data-name="Icon metro-more-vert" d="M18.44,13.744a3.016,3.016,0,1,0-3.016-3.016A3.015,3.015,0,0,0,18.44,13.744Zm0,3.016a3.016,3.016,0,1,0,3.016,3.016A3.015,3.015,0,0,0,18.44,16.76Zm0,9.048a3.016,3.016,0,1,0,3.016,3.016A3.015,3.015,0,0,0,18.44,25.808Z" transform="translate(1462.242 2276.416)" fill="#3a4750" opacity="0.5"/>
+      <text id="_name_3" data-name="{name}" transform="translate(1183 2306)" fill="#3a4750" font-size="29" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">Angela Ellis</tspan></text>
+      <g id="Raggruppa_42590" data-name="Raggruppa 42590" transform="translate(1265.338 2390.292)">
+        <g id="Raggruppa_42191" data-name="Raggruppa 42191" transform="translate(0 0)">
+          <rect id="Rettangolo_3639-2" data-name="Rettangolo 3639" width="20" height="20" transform="translate(-0.338 -0.292)" fill="#fff"/>
+        </g>
+        <g id="Raggruppa_42192" data-name="Raggruppa 42192" transform="translate(3.619 3.619)">
+          <path id="Icon_material-person" data-name="Icon material-person" d="M12.032,12.032A3.016,3.016,0,1,0,9.016,9.016,3.015,3.015,0,0,0,12.032,12.032Zm0,1.508C10.019,13.54,6,14.55,6,16.556v1.508H18.064V16.556C18.064,14.55,14.045,13.54,12.032,13.54Z" transform="translate(-6 -6)" fill="#3a4750"/>
+        </g>
+        <text id="_name_4" data-name="{name}" transform="translate(19.662 14.708)" fill="#3a4750" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">2</tspan></text>
+      </g>
+      <g id="Raggruppa_42592" data-name="Raggruppa 42592" transform="translate(1302.737 2390.292)">
+        <text id="_name_5" data-name="{name}" transform="translate(19.264 14.708)" fill="#3a4750" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">0</tspan></text>
+        <g id="Raggruppa_42591" data-name="Raggruppa 42591" transform="translate(0 0)">
+          <g id="Raggruppa_42384" data-name="Raggruppa 42384">
+            <rect id="Rettangolo_3639-3" data-name="Rettangolo 3639" width="19" height="20" transform="translate(0.264 -0.292)" fill="#fff"/>
+          </g>
+          <path id="Unione_93" data-name="Unione 93" d="M2.764,8.956a5.1,5.1,0,0,1-1.19-1.646A2.257,2.257,0,0,1,.033,5.5a2.166,2.166,0,0,1,0-.752A2.249,2.249,0,0,1,1.574,2.945a5.08,5.08,0,0,1,1.2-1.658,4.764,4.764,0,0,1,6.514,0,5.176,5.176,0,0,1,1.2,1.658,2.256,2.256,0,0,1,1.541,1.806,2.162,2.162,0,0,1,0,.752A2.251,2.251,0,0,1,10.5,7.309a5.164,5.164,0,0,1-1.19,1.646,4.768,4.768,0,0,1-6.542,0Zm.06-1.646a3.752,3.752,0,0,0,6.416,0,4.17,4.17,0,0,0,.472-1.06,1.554,1.554,0,0,0,.159.017,1.14,1.14,0,0,0,0-2.279,1.463,1.463,0,0,0-.159.017,4.164,4.164,0,0,0-.472-1.06,3.752,3.752,0,0,0-6.416,0,4.159,4.159,0,0,0-.471,1.06,1.484,1.484,0,0,0-.159-.017,1.14,1.14,0,0,0,0,2.279,1.578,1.578,0,0,0,.159-.017A4.165,4.165,0,0,0,2.824,7.309Zm.74-1.043H8.5A2.692,2.692,0,0,1,6.032,7.976,2.692,2.692,0,0,1,3.564,6.267ZM6.718,4.273a.686.686,0,1,1,.685.712A.7.7,0,0,1,6.718,4.273Zm-2.742,0a.686.686,0,1,1,.686.712A.7.7,0,0,1,3.976,4.273Z" transform="translate(3.619 4.222)" fill="#3a4750"/>
+        </g>
+      </g>
+      <g id="Print_Button" data-name="Print Button" transform="translate(1183.302 2500.075)">
+        <g id="Rettangolo_25" data-name="Rettangolo 25" transform="translate(-0.303 -0.075)" fill="#b54756" stroke="#b54756" stroke-miterlimit="10" stroke-width="1">
+          <rect width="192" height="44" rx="4" stroke="none"/>
+          <rect x="0.5" y="0.5" width="191" height="43" rx="3.5" fill="none"/>
+        </g>
+        <g id="Raggruppa_41763" data-name="Raggruppa 41763" transform="translate(54.288 10.858)">
+          <text id="Guest_Arrived" data-name="Guest Arrived" transform="translate(58.409 18.067)" fill="#eceef0" font-size="19" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="-58.512" y="0">Guest Arrived</tspan></text>
+        </g>
+        <path id="Icon_awesome-check-double" data-name="Icon awesome-check-double" d="M24.986,7.824,23.027,6.051a1.272,1.272,0,0,0-1.677,0L9.5,16.772,3.987,11.781a1.272,1.272,0,0,0-1.677,0L.345,13.558a1,1,0,0,0,0,1.522L8.658,22.6a1.272,1.272,0,0,0,1.677,0L24.982,9.346A1.008,1.008,0,0,0,24.986,7.824ZM8.94,12.569a.845.845,0,0,0,1.118,0L20.35,3.249a.671.671,0,0,0,0-1.012L18.114.21A.845.845,0,0,0,17,.21L9.5,6.991,6.758,4.507a.845.845,0,0,0-1.118,0L3.4,6.535a.671.671,0,0,0,0,1.012Z" transform="translate(19.306 10.859)" fill="#eceef0"/>
+      </g>
+      <g id="Tag_Status" data-name="Tag Status" transform="translate(1183.302 2322.733)">
+        <rect id="Rettangolo_3698" data-name="Rettangolo 3698" width="62" height="29" rx="14.5" transform="translate(-0.303 0.267)" fill="rgba(21,157,247,0.2)"/>
+        <text id="Open" transform="translate(9.697 21.267)" fill="#159df7" font-size="18" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Open</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
