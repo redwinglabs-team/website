@@ -125,4 +125,17 @@ export default createGlobalStyle`
     .ui.dropdown .menu {
       width: 100%;
     }
+
+    .w-full {
+      width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+
+    }
+
+    .max-w-full {
+      max-width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    max-width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    max-width: fill-available;
+    }
 `;

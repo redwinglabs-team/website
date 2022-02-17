@@ -19,6 +19,7 @@ const LeftSlideContainer = styled.div`
 position:relative;
   height: -webkit-fill-available;
   height: -moz-available;
+  height: -moz-;
   display: flex;
   align-items: flex-start;;
   /* justify-content: flex-start; */

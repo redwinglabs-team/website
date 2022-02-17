@@ -1,0 +1,134 @@
+import React from 'react';
+import SlideDown from 'react-slidedown';
+import styled from 'styled-components';
+import { PlusIcon } from '../../../assets';
+import { theme } from '../../../styles/theme';
+import { Container } from '../Containers';
+import CustomButton from '../CustomButton';
+import { Label, TitleBold } from '../Texts';
+
+const MainContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 16px;
+`;
+
+const Content = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`;
+
+const ProductContainer = styled(Container)`
+  border: ${({ principal, theme: { colors } }) => (principal ? `2px solid ${colors.red}` : 'none')};
+  border-radius: 10px;
+  padding: 16px;
+`;
+
+const PricingRow = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: ${({ bgColored, theme: { colors } }) => (bgColored ? colors.tableColor : colors.white)};
+  svg {
+    width: 36px;
+  }
+`;
+const LabelContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+const MobilePricingList = ({ features, openedAccordion, setOpenedAccordion }) => {
+  return (
+    <MainContainer className="w-full max-w-full">
+      <ProductContainer className="w-full">
+        <TitleBold>Essentials</TitleBold>
+        <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
+        {features
+          .filter((feature) => feature.essentials)
+          .map((feature, index) => (
+            <PricingRow bgColored={index % 2 === 0} className="w-full">
+              <Content>
+                <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
+                <LabelContainer className="w-full">
+                  <Label bold>{feature.feature}</Label>
+                  {typeof feature.essentials === 'string' && <Label>{feature.essentials}</Label>}
+                </LabelContainer>
+              </Content>
+              <SlideDown className="my-dropdown-slidedown">
+                {openedAccordion === index ? (
+                  <div style={{ padding: 20 }}>
+                    <Label fontSize="12px">{feature.description}</Label>
+                  </div>
+                ) : null}
+              </SlideDown>
+            </PricingRow>
+          ))}
+        <CustomButton boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius inverted>
+          REQUEST QUOTE
+        </CustomButton>
+      </ProductContainer>
+      <ProductContainer className="w-full" principal style={{ marginTop: 24 }}>
+        <TitleBold >PRO</TitleBold>
+        <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
+        {features
+          .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')
+          .map((feature, index) => (
+            <PricingRow bgColored={index % 2 === 0} className="w-full">
+              <Content>
+                <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
+                <LabelContainer className="w-full">
+                  <Label bold>{feature.feature}</Label>
+                  {typeof feature.pro === 'string' && <Label>{feature.pro}</Label>}
+                </LabelContainer>
+              </Content>
+              <SlideDown className="my-dropdown-slidedown">
+                {openedAccordion === index ? (
+                  <div style={{ padding: 20 }}>
+                    <Label fontSize="12px">{feature.description}</Label>
+                  </div>
+                ) : null}
+              </SlideDown>
+            </PricingRow>
+          ))}
+        <CustomButton boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius>
+          REQUEST QUOTE
+        </CustomButton>
+      </ProductContainer>
+      <ProductContainer className="w-full">
+        <TitleBold style={{ marginTop: 24 }}>Enterprise</TitleBold>
+        <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
+        {features
+          .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')
+          .map((feature, index) => (
+            <PricingRow bgColored={index % 2 === 0} className="w-full">
+              <Content>
+                <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
+                <LabelContainer className="w-full">
+                  <Label bold>{feature.feature}</Label>
+                  {typeof feature.enterprise === 'string' && <Label>{feature.enterprise}</Label>}
+                </LabelContainer>
+              </Content>
+              <SlideDown className="my-dropdown-slidedown">
+                {openedAccordion === index ? (
+                  <div style={{ padding: 20 }}>
+                    <Label fontSize="12px">{feature.description}</Label>
+                  </div>
+                ) : null}
+              </SlideDown>
+            </PricingRow>
+          ))}
+        <CustomButton boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius inverted>
+          REQUEST QUOTE
+        </CustomButton>
+      </ProductContainer>
+    </MainContainer>
+  );
+};
+
+export default MobilePricingList;

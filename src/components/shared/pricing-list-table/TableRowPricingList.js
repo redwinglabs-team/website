@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { CheckIcon, PlusIcon } from '../../../assets';
 import { Label } from '../Texts';
 
-const TabelRow = styled.tr`
+const TableRow = styled.tr`
   background-color: ${({ bgColored, theme: { colors } }) => (bgColored ? colors.tableColor : colors.white)};
   svg {
     width: 36px;
@@ -19,7 +19,7 @@ const ContentTd = styled.tr`
 
 const TableRowPricingList = ({ title, description, essentials, pro, enterprise, openedAccordion, setOpenedAccordion, index, bgColored }) => {
   return (
-    <TabelRow bgColored={bgColored}>
+    <TableRow bgColored={bgColored}>
       <td>
         <ContentTd>
           <PlusIcon onClick={() => setOpenedAccordion(index)} style={{marginRight:8}}/>
@@ -33,16 +33,16 @@ const TableRowPricingList = ({ title, description, essentials, pro, enterprise, 
           ) : null}
         </SlideDown>
       </td>
-      <td className="left-shadow">
+      <td style={{ position: 'relative' }} className="left-shadow">
         <ContentTd>{typeof essentials === 'boolean' ? [essentials ? <CheckIcon /> : null] : <Label style={{textAlign:"center"}} >{essentials}</Label>}</ContentTd>
       </td>
       <td style={{ position: 'relative' }} className="x-shadow">
         <ContentTd>{typeof pro === 'boolean' ? [pro ? <CheckIcon /> : null] : <Label style={{textAlign:"center"}}>{pro}</Label>}</ContentTd>
       </td>
-      <td className="right-shadow" style={{}}>
+      <td className="right-shadow" style={{ position: 'relative' }}>
         <ContentTd>{typeof enterprise === 'boolean' ? [enterprise ? <CheckIcon /> : null] : <Label style={{textAlign:"center"}}>{enterprise}</Label>}</ContentTd>
       </td>
-    </TabelRow>
+    </TableRow>
   );
 };
 
