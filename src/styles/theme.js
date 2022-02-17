@@ -46,7 +46,8 @@ export const theme = {
     dividerColor: '#E2E2E3',
     blue: '#1E82C8',
     dodgerBlue: '#159DF7',
-    overbookingColor: '#FF8787'
+    overbookingColor: '#FF8787',
+    tableColor:'#A2A2A232'
   },
   mediaQueries: {
     mobileBreakpoint: '48rem',

@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import React from "react";
 
-import { DescriptionQuadroEntertainment, DescriptionQuadroEntertainmentTv, DescriptionQuadroPms, DescriptionQuadroPmsMobile } from "../assets";
+import { DescriptionQuadroEntertainment, DescriptionQuadroEntertainmentTv, DescriptionQuadroFnb, DescriptionQuadroFnbSpaces, DescriptionQuadroPms, DescriptionQuadroPmsMobile, DescriptionQuadroPop, DescriptionQuadroPopAddress } from "../assets";
 
 export const QUADRO_DESCRIPTION_LIST = {
     PMS:{
@@ -100,6 +100,7 @@ export const QUADRO_DESCRIPTION_LIST = {
                 `,
             },
         },
+        BASE_DESCRIPTIONS_IMAGE:<DescriptionQuadroFnb/>,
         OTHER_DESCRIPTIONS:{
             0:{
                 title: "100% Responsive",
@@ -117,6 +118,7 @@ export const QUADRO_DESCRIPTION_LIST = {
                 description:`An integration library  with simple plug and play functionality designed to provide seamless connectivity with best-in-class partners across all industry verticals.`,
             },
         },
+        OTHER_DESCRIPTIONS_IMAGE:<DescriptionQuadroFnbSpaces/>
     },
     POP:{
         BASE_DESCRIPTIONS:{
@@ -129,6 +131,7 @@ export const QUADRO_DESCRIPTION_LIST = {
                 description:`Whether a single store with multiple sales points, or multiple warehouses with a single sales point, the POP scalable  architecture is designed to provide a flexible interface rightsized for a wide range of business requirements.`,
             }
         },
+        BASE_DESCRIPTIONS_IMAGE:<DescriptionQuadroPop/>,
         OTHER_DESCRIPTIONS:{
             0:{
                 title: "Customer Managment",
@@ -141,6 +144,7 @@ export const QUADRO_DESCRIPTION_LIST = {
                 description:`A benchmarking and analytics tool designed to drive strategy, build customer loyalty, and elevate productivity. Run forecast and budget reports with bespoke metrics or choose from out of the box solutions tailored to industry best practices.`,
             }
         },
+        OTHER_DESCRIPTIONS_IMAGE:<DescriptionQuadroPopAddress/>
     }
 
 }

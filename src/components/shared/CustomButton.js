@@ -31,7 +31,10 @@ const StyledButton = styled.button`
   white-space:nowrap;
   margin-top:16px;
   padding:16px 32px;
-  border-radius:2px;
+  border-radius:${({ widthBorderRadius }) => {
+    if (widthBorderRadius) return '10px';
+    return '2px ';
+  }};
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     padding: 16px 24px;
@@ -52,7 +55,8 @@ const CustomButton = ({
   onClick,
   loading,
   hover,
-  inverted
+  inverted,
+  widthBorderRadius
 }) => {
   return (
     <StyledButton
@@ -68,6 +72,7 @@ const CustomButton = ({
       boxShadow={boxShadow}
       hover={hover}
       inverted={inverted}
+      widthBorderRadius={widthBorderRadius}
     >
       {children}
     </StyledButton>

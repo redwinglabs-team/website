@@ -3,6 +3,8 @@ export { ReactComponent as RedwingsLogo } from './svg/redwinglabs_logo.svg';
 export { ReactComponent as QuadroLogo } from './svg/quadro_logo.svg';
 export { ReactComponent as TopUpIcon } from './svg/go_top.svg';
 export { ReactComponent as BackIcon } from './svg/home/back-icon.svg';
+export { ReactComponent as CheckIcon } from './svg/home/check.svg';
+export { ReactComponent as PlusIcon } from './svg/home/plus.svg';
 export { ReactComponent as ForwardIcon } from './svg/home/forward-icon.svg';
 export { ReactComponent as GridPattern } from './svg/grid-pattern.svg';
 export { ReactComponent as ItalianFlagIcon } from './svg/italian-flag-footer.svg';
@@ -25,6 +27,8 @@ export { ReactComponent as BGEntertainment } from './svg/bg-intro/bg-entertainme
 // CAROUSEL
 export { ReactComponent as CarouselPms } from './svg/home/carousel/pms.svg';
 export { ReactComponent as CarouselFnb } from './svg/home/carousel/fnb.svg';
+export { ReactComponent as CarouselPop } from './svg/home/carousel/pop.svg';
+export { ReactComponent as CarouselEntertainment } from './svg/home/carousel/entertainment.svg';
 
 // PRODUCTS LINK
 export { ReactComponent as ProductPms } from './svg/product/product-pms.svg';
@@ -37,6 +41,11 @@ export { ReactComponent as DescriptionQuadroEntertainment} from './svg/product/d
 export { ReactComponent as DescriptionQuadroEntertainmentTv} from './svg/product/desc-quadro-ent-tv.svg';
 export { ReactComponent as DescriptionQuadroPms } from './svg/product/desc-quadro-pms.svg';
 export { ReactComponent as DescriptionQuadroPmsMobile } from './svg/product/desc-quadro-pms-mobile.svg';
+export { ReactComponent as DescriptionQuadroFnb } from './svg/product/desc-quadro-fnb.svg';
+export { ReactComponent as DescriptionQuadroFnbSpaces } from './svg/product/desc-quadro-fnb-spaces.svg';
+export { ReactComponent as DescriptionQuadroPop } from './svg/product/desc-quadro-pop.svg';
+export { ReactComponent as DescriptionQuadroPopAddress } from './svg/product/desc-quadro-pop-address.svg';
+
 export { ReactComponent as QuadroPmsTimeline } from './svg/product/quadro-timeline.svg';
 export { ReactComponent as QuadroPopInventory } from './svg/product/quadro-pop-inventory.svg';
 export { ReactComponent as QuadroFnbSpaces } from './svg/product/quadro-fnb-spaces.svg';
