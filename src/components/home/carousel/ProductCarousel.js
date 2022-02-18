@@ -17,17 +17,27 @@ import Slide from './Slide';
 
 const ProductCarouselContainer = styled.div`
   margin: 32px;
-  width: -webkit-fill-available;
-  width: -moz-available;
 `;
 
 const TitleContainer = styled(Container)`
-  width: -webkit-fill-available;
-  width: -moz-available;
   height: min-content;
   flex-direction: row;
   padding: 32px 130px;
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    flex-flow: column;
+  }
+
+  &>span {
+    text-align:right;
+    @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    text-align:center;
+  }
+  }
+
 `;
+
 const MainTitleContainer = styled(Container)`
   flex-direction: column;
 `;
@@ -37,6 +47,7 @@ const CarouselContainer = styled(Container)`
   .swiper-container {
     width: -webkit-fill-available;
     width: -moz-available;
+    width: fill-available;
     height: min-content;
     overflow: hidden;
     margin: 0px 32px;
@@ -44,6 +55,7 @@ const CarouselContainer = styled(Container)`
   .swiper-slide {
     width: -webkit-fill-available !important;
     width: -moz-available !important;
+    width: fill-available !important;
     height: min-content;
   }
 `;
@@ -83,14 +95,14 @@ const ProductCarousel = () => {
   };
 
   return (
-    <ProductCarouselContainer>
+    <ProductCarouselContainer className="w-full">
       <CarouselContainer>
-        <TitleContainer>
+        <TitleContainer className="w-full">
           <MainTitleContainer>
             <TitleLight>OUR</TitleLight>
             <TitleBold>PRODUCTS</TitleBold>
           </MainTitleContainer>
-          <Label style={{ textAlign: 'right' }}>
+          <Label>
             Redwing Labs is actively developing tools that lead to greater decision making capabilities for our clients, and more tailored guest
             experiences for their patrons.
           </Label>
