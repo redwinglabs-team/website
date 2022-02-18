@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {theme} from '../../../styles/theme';
+import { theme } from '../../../styles/theme';
 import { Label } from '../Texts';
 import TableHeadCategoryPricingList from './TableHeadCategoryPricingList';
 import TableRowPricingList from './TableRowPricingList';
@@ -29,11 +29,13 @@ const PricingTable = styled.table`
   }
   th,
   td {
-    max-width: 200px;
+    max-width:${({isSingleColumn})=> isSingleColumn ? '400px' : '200px'};
   }
 
   td:before,
-  td:after,th:before,th:after {
+  td:after,
+  th:before,
+  th:after {
     content: ' ';
     height: 100%;
     position: absolute;
@@ -71,23 +73,23 @@ td:after {
     left: -15px;
   }
   .x-shadow:after {
-      box-shadow: ${({ theme: { colors } }) => `5px 0 5px -5px inset ${colors.primaryColor}62 `};
-      right: -15px;
-    }
+    box-shadow: ${({ theme: { colors } }) => `5px 0 5px -5px inset ${colors.primaryColor}62 `};
+    right: -15px;
+  }
   .top-right-shadow {
     box-shadow: ${({ theme: { colors } }) => `0 -5px 5px 0px ${colors.primaryColor}22`};
   }
   .top-right-shadow:after {
-      box-shadow: ${({ theme: { colors } }) => `5px 0 5px -5px inset ${colors.primaryColor}22 `};
-      right: -15px;
-    }
+    box-shadow: ${({ theme: { colors } }) => `5px 0 5px -5px inset ${colors.primaryColor}22 `};
+    right: -15px;
+  }
   .bottom-right-shadow {
     box-shadow: ${({ theme: { colors } }) => `0 5px 5px -5px ${colors.primaryColor}22`};
   }
   .bottom-right-shadow:after {
-      box-shadow: ${({ theme: { colors } }) => `5px 0 5px -5px inset ${colors.primaryColor}22 `};
-      right: -15px;
-    }
+    box-shadow: ${({ theme: { colors } }) => `5px 0 5px -5px inset ${colors.primaryColor}22 `};
+    right: -15px;
+  }
   .top-left-shadow {
     box-shadow: ${({ theme: { colors } }) => `0 -5px 5px 0px ${colors.primaryColor}22`};
   }
@@ -120,82 +122,98 @@ td:after {
     /* box-shadow: ${({ theme: { colors } }) => `5px 0 5px -5px ${colors.primaryColor}22`}; */
   }
   .right-shadow:after {
-      box-shadow: ${({ theme: { colors } }) => `5px 0 5px -5px inset ${colors.primaryColor}22 `};
-      right: -15px;
-    }
+    box-shadow: ${({ theme: { colors } }) => `5px 0 5px -5px inset ${colors.primaryColor}22 `};
+    right: -15px;
+  }
 
   .all {
     box-shadow: 0 0 5px #00000022;
   }
 `;
 
-const DesktopPricingList = ({features,openedAccordion, setOpenedAccordion}) => {
-    return (
-        <MainContainer>
-        <PricingTable border="none" cellSpacing={0} cellPadding={20}>
-          <thead style={{ fontFamily: theme.fontFamily.regular }}>
-            <tr>
-              <PackagesMadeContainer>
-                <Label fontSize="32px">Packages made</Label>
-                <Label>to fit any property size, and budget.</Label>
-              </PackagesMadeContainer>
-              <TableHeadCategoryPricingList
-                className="top-left-shadow"
-                title="Essentials"
-                description="Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum"
-              />
-              <TableHeadCategoryPricingList
-                principal
-                className="x-shadow"
-                title="Pro"
-                description="Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum"
-              />
-              <TableHeadCategoryPricingList
-                className="top-right-shadow"
-                title="Enterprise"
-                description="Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum"
-              />
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <Label fontSize="32px">Features</Label>
-              </td>
-              <td className="left-shadow"> </td>
+const DesktopPricingList = ({ features, categories, productName, productDescription, openedAccordion, setOpenedAccordion }) => {
+  return (
+    <MainContainer>
+      <PricingTable border="none" cellSpacing={0} cellPadding={20} isSingleColumn={categories.length === 1}>
+        <thead style={{ fontFamily: theme.fontFamily.regular }}>
+          <tr>
+            <PackagesMadeContainer>
+              <Label fontSize="32px">{productName}</Label>
+              <Label>{productDescription}</Label>
+            </PackagesMadeContainer>
+            {categories.length === 1 ? (
+              <TableHeadCategoryPricingList principal className="x-shadow" title={categories[0].name} description={categories[0].description} />
+            ) : (
+              <>
+                <TableHeadCategoryPricingList className="top-left-shadow" title={categories[0].name} description={categories[0].description} />
+                <TableHeadCategoryPricingList principal className="x-shadow" title={categories[1].name} description={categories[1].description} />
+                <TableHeadCategoryPricingList className="top-right-shadow" title={categories[2].name} description={categories[2].description} />
+              </>
+            )}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <Label fontSize="32px">Features</Label>
+            </td>
+            {categories.length === 1 ? (
               <td style={{ position: 'relative' }} className="x-shadow">
                 {' '}
               </td>
-              <td className="right-shadow"> </td>
-            </tr>
-            {features.map((feature, index) => (
-              <TableRowPricingList
-                key={index}
-                index={index}
-                title={feature.feature}
-                description={feature.description}
-                essentials={feature.essentials}
-                pro={feature.pro}
-                enterprise={feature.enterprise}
-                openedAccordion={openedAccordion}
-                setOpenedAccordion={setOpenedAccordion}
-                bgColored={index % 2 === 0}
-              />
-            ))}
-            <tr>
-              <td>
-                <Label fontSize="32px"> </Label>
-              </td>
-              <td className="bottom-left-shadow"> </td>
+            ) : (
+              <>
+                <td className="left-shadow"> </td>
+                <td style={{ position: 'relative' }} className="x-shadow">
+                  {' '}
+                </td>
+                <td className="right-shadow"> </td>
+              </>
+            )}
+          </tr>
+          {features.map((feature, index) => (
+            <TableRowPricingList
+              key={index}
+              index={index}
+              title={feature.feature}
+              description={feature.description}
+              essentials={feature.essentials}
+              pro={feature.pro}
+              enterprise={feature.enterprise}
+              connect={feature.connect}
+              openedAccordion={openedAccordion}
+              setOpenedAccordion={setOpenedAccordion}
+              bgColored={index % 2 === 0}
+            />
+          ))}
+          <tr>
+            <td>
+              <Label fontSize="32px"> </Label>
+            </td>
+            {categories.length === 1 ? (
               <td style={{ position: 'relative' }} className="x-shadow">
-                <div style={{ position: 'absolute', background: 'white', bottom: -12, left: 0, width: '100%', height: 20 }} className="footer-shadow" />
+                <div
+                  style={{ position: 'absolute', background: 'white', bottom: -12, left: 0, width: '100%', height: 20 }}
+                  className="footer-shadow"
+                />
               </td>
-              <td className="bottom-right-shadow"> </td>
-            </tr>
-          </tbody>
-        </PricingTable>
-      </MainContainer>
-    );
+            ) : (
+              <>
+                <td className="bottom-left-shadow"> </td>
+                <td style={{ position: 'relative' }} className="x-shadow">
+                  <div
+                    style={{ position: 'absolute', background: 'white', bottom: -12, left: 0, width: '100%', height: 20 }}
+                    className="footer-shadow"
+                  />
+                </td>
+                <td className="bottom-right-shadow"> </td>
+              </>
+            )}
+          </tr>
+        </tbody>
+      </PricingTable>
+    </MainContainer>
+  );
 };
 
 export default DesktopPricingList;
