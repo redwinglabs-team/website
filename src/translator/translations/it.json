@@ -1,1 +1,19 @@
-{}
+{
+  "home": "home",
+  "products": "products",
+  "partners": "partners",
+  "contact-us": "contact us",
+  "book-a-demo": "book a Demo!",
+  "overview": "overview",
+  "overview-description": "An intuitive solution for hoteliers, designed to increase efficiency through actionable data and automation, while providing an elevated experience to their guests.",
+  "reservation": "reservation",
+  "management": "management",
+  "reservation-management": "reservation management",
+  "reservation-management-description": "Manage reservation requests for all accommodations and rentable spaces in one intuitively designed and highly customizable space. Quadro PMS features simple access to space status, reservation status, guest companion profiles, and individual or group billing.",
+  "booking-engine": "booking engine",
+  "booking-engine-description": "No need to pay fees to OTA’s. The built-in booking engine provides a direct booking channel, analytics data for price setting, and a simple widget for direct integration to property websites.",
+  "secure-payments": "secure payments",
+  "secure-payments-description": "Stripe integration provides a dedicated payment gateway, payment processing, and tokenization of credit cards, providing a secure simple, and comprehensive payment suite.",
+  "100-responsive": "100% responsive",
+  "100-responsive-description": "Say goodbye to irritating zooming, scrolling or resizing with a fully responsive website application that rescales itself to preserve the user experience and aesthetic across any device."
+}

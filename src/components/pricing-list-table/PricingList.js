@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'react-slidedown/lib/slidedown.css';
-import useWindowSize from '../../../hooks/useWindowSize';
-import { theme } from '../../../styles/theme';
+import useWindowSize from '../../hooks/useWindowSize';
+import { theme } from '../../styles/theme';
 import DesktopPricingList from './DesktopPricingList';
 import MobilePricingList from './MobilePricingList';
 

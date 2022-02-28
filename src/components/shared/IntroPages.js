@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { TitleBold, TitleLight } from './Texts';
+import Label from './Label';
 
 const IntroContainer = styled.div`
   position: relative;
@@ -25,11 +25,11 @@ const TitleContainer = styled.div`
   padding-left: 170px;
   max-width: fit-content;
 
-  .nowrap{
-    white-space:nowrap;
+  .nowrap {
+    white-space: nowrap;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
-      white-space:normal;
-  }
+      white-space: normal;
+    }
   }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     width: 100%;
@@ -60,40 +60,53 @@ const ImageProductContainer = styled.div`
 `;
 
 const DemoButtonContainer = styled.div`
-position: fixed;
-z-index:2;
+  position: fixed;
+  z-index: 2;
   background: ${({ theme: { colors } }) => colors.lightGreen};
   color: ${({ theme: { colors } }) => colors.white};
-  font-family:${({ theme: { fontFamily } }) => fontFamily.bold};
-border-radius: 10px 10px 0px 0px;
+  font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
+  border-radius: 10px 10px 0px 0px;
   left: -155px;
-  font-size:24px;
+  font-size: 24px;
   padding: 12px 100px;
-    transform: rotate(90deg);
+  transform: rotate(90deg);
   display: flex;
   justify-content: center;
   align-self: center;
-  cursor:pointer;
--webkit-box-shadow:  0px 5px 40px 0px #60986D80;
--moz-box-shadow:  0px 5px 40px 0px #60986D80;
--o-box-shadow:  0px 5px 40px 0px #60986D80;
-box-shadow:  0px 5px 40px 0px #60986D80;
-span {
-  margin-left:6px;
-  text-decoration:underline;
-}
-
+  cursor: pointer;
+  -webkit-box-shadow: 0px 5px 40px 0px #60986d80;
+  -moz-box-shadow: 0px 5px 40px 0px #60986d80;
+  -o-box-shadow: 0px 5px 40px 0px #60986d80;
+  box-shadow: 0px 5px 40px 0px #60986d80;
+  span {
+    margin-left: 6px;
+    text-decoration: underline;
+  }
 `;
 const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
   return (
     <IntroContainer id="intro" style={{ backgroundImage: `url(${bgImage})` }}>
-{haveDemoButton && <DemoButtonContainer className='mobile-none' onClick={()=>{}}>
-          Book a <span>Demo!</span>
-      </DemoButtonContainer>}
+      {haveDemoButton && (
+        <DemoButtonContainer className="mobile-none" onClick={() => {}}>
+          <Label fontFamily="bold">book-a-demo</Label>
+        </DemoButtonContainer>
+      )}
       <TitleContainer>
-        {description[0] && <TitleLight>{description[0]}</TitleLight>}
-        {description[1] && <TitleBold>{description[1]}</TitleBold>}
-        {description[2] && <TitleLight className='nowrap'>{description[2]}</TitleLight>}
+        {description[0] && (
+          <Label fontFamily="light" size="medium" className="w-100 uppercase">
+            {description[0]}
+          </Label>
+        )}
+        {description[1] && (
+          <Label fontFamily="bold" size="big" className="w-100 uppercase">
+            {description[1]}
+          </Label>
+        )}
+        {description[2] && (
+          <Label fontFamily="light" size="medium" className="w-100 nowrap uppercase">
+            {description[2]}
+          </Label>
+        )}
       </TitleContainer>
       {productImage && <ImageProductContainer className="mobile-none ">{productImage}</ImageProductContainer>}
     </IntroContainer>

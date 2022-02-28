@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import CustomButton from '../../shared/CustomButton';
-import { Label } from '../../shared/Texts';
+import Label from '../../shared/Label';
 
 const SlideContainer = styled.div`
   display: flex;
@@ -66,16 +66,16 @@ const Slide = ({ title, subtitle, description, image }) => {
     <SlideContainer className="swiper-slide w-full">
       <LeftSlideContainer className="h-full max-w-full">
         <TitleContainer>
-          <Label bold fontSize="32px">
+          <Label fontFamily="bold" fontSize={32}>
             {title}
           </Label>
-          <Label regular fontSize="24px">
+          <Label fontFamily="regular" fontSize={24}>
             {subtitle}
           </Label>
         </TitleContainer>
         <ContentContainer>
-          <Label>{description}</Label>
-          <CustomButton>Request a demo</CustomButton>
+          <Label className="line-height">{description}</Label>
+          <CustomButton>request-a-demo</CustomButton>
         </ContentContainer>
       </LeftSlideContainer>
       <RightSlideContainer>{image}</RightSlideContainer>

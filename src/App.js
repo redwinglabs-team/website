@@ -1,15 +1,18 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import  {AppRouter}  from './router/router';
+import { LanguageProvider } from './context/LanguageContext';
+import { AppRouter } from './router/router';
 import GlobalStyles from './styles/globalStyle';
-import {theme} from './styles/theme';
+import { theme } from './styles/theme';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <AppRouter />
-    </ThemeProvider>
+    <LanguageProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <AppRouter />
+      </ThemeProvider>
+    </LanguageProvider>
   );
 }
 

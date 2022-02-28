@@ -8,7 +8,7 @@ import { Container, ImageContainer } from '../../shared/Containers';
 import CustomDivider from '../../shared/CustomDivider';
 import DescriptionQuadroList from '../../shared/DescriptionQuadroList';
 import IntroPages from '../../shared/IntroPages';
-import PricingList from '../../shared/pricing-list-table/PricingList';
+import PricingList from '../../pricing-list-table/PricingList';
 import TitleDescriptionPage from '../../shared/TitleDescriptionPage';
 
 const ProductsQuadroPmsContainer = () => {
@@ -23,11 +23,7 @@ const ProductsQuadroPmsContainer = () => {
       />
       {/* TITLE */}
       <TitleDescriptionPage supTitle="QUADRO" title="PMS" />
-      <Overview
-        description="An intuitive solution for hoteliers,
-            designed to increase efficiency through actionable data and automation,
-            while providing an elevated experience to their guests."
-      />
+      <Overview description="overview-description" />
       <CustomDivider red />
       {/* BASE DESCRIPTION */}
       <DescriptionQuadroList

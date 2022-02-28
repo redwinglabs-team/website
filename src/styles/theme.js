@@ -1,21 +1,27 @@
-export const theme = {
-  layout: {
-    desktopWidth: '80%',
-    mobileWidth: '95%',
-    mainContentPadding: 24
+export const configuration = {
+  fontSizes: {
+    big: { desktop: 58, tablet: 40, mobile: 40 },
+    medium: { desktop: 32, tablet: 24, mobile: 24 },
+    normal: { desktop: 32, tablet: 16, mobile: 16 }
   },
+  lineHeight: {
+    huge: { desktop: 70, tablet: 50, mobile: 31.25 },
+    big: { desktop: 50, tablet: 30, mobile: 25 },
+    large: { desktop: 42.5, tablet: 36, mobile: 33 },
+    medium: { desktop: 37.5, tablet: 30, mobile: 18.75 },
+    normal: { desktop: 35, tablet: 30, mobile: 17.5 },
+    small: { desktop: 26.25, tablet: 30, mobile: 17.5 },
+    tiny: { desktop: 22.75, tablet: 30, mobile: 17.5 },
+    nano: { desktop: 21, tablet: 20, mobile: 17.5 }
+  }
+};
+
+export const theme = {
   header: {
     height: 56,
     sectionsHeight: 104
   },
-  sidebar: {
-    closed: 64,
-    opened: 204
-  },
-  footer: {
-    desktopHeight: 193,
-    mobileHeight: 329
-  },
+  ...configuration,
   fontFamily: {
     light: 'roboto-light',
     italic: 'roboto-italic',
@@ -25,7 +31,7 @@ export const theme = {
   },
   colors: {
     primaryColor: '#232323',
-    white:'#FFFFFF',
+    white: '#FFFFFF',
     lightGreen: '#73B783',
     darkGreen: '#11AA67',
     lighterGreen: '#E2F4DC',
@@ -47,7 +53,7 @@ export const theme = {
     blue: '#1E82C8',
     dodgerBlue: '#159DF7',
     overbookingColor: '#FF8787',
-    tableColor:'#A2A2A232'
+    tableColor: '#A2A2A232'
   },
   mediaQueries: {
     mobileBreakpoint: '48rem',
@@ -55,11 +61,7 @@ export const theme = {
     desktopPixel: 1024,
     footerMinWidth: '50rem'
   },
-  fontSizes: {
-    small: '1em',
-    medium: '2em',
-    large: '3em'
-  },
+
   searchbarHeight: 35,
   breadcrumbHeight: 56,
   boxShadow: '2px 5px 15px #00000029',

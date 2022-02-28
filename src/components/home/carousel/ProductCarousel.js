@@ -4,16 +4,15 @@ import styled from 'styled-components';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
 import { Lazy } from 'swiper/js/swiper.esm';
-
 import { Container } from '../../shared/Containers';
 import { BackIcon, ForwardIcon } from '../../../assets';
 import carouselPms from '../../../assets/images/pms.png';
 import carouselFnb from '../../../assets/images/fnb.png';
 import carouselPop from '../../../assets/images/pop.png';
 import carouselEntertainment from '../../../assets/images/entertainment.png';
-import { Label, TitleBold, TitleLight } from '../../shared/Texts';
 import { theme } from '../../../styles/theme';
 import Slide from './Slide';
+import Label from '../../shared/Label';
 
 const ProductCarouselContainer = styled.div`
   margin: 32px;
@@ -103,13 +102,14 @@ const ProductCarousel = () => {
       <CarouselContainer>
         <TitleContainer className="w-full">
           <MainTitleContainer>
-            <TitleLight>OUR</TitleLight>
-            <TitleBold>PRODUCTS</TitleBold>
+            <Label size="medium" className="uppercase">
+              our
+            </Label>
+            <Label size="medium" fontFamily="bold" className="uppercase">
+              products
+            </Label>
           </MainTitleContainer>
-          <Label>
-            Redwing Labs is actively developing tools that lead to greater decision making capabilities for our clients, and more tailored guest
-            experiences for their patrons.
-          </Label>
+          <Label className="line-height">rwl-carousel-description</Label>
         </TitleContainer>
         <Divider
           style={{
@@ -120,31 +120,13 @@ const ProductCarousel = () => {
         />
         <RedBox />
         <Swiper {...params}>
-          <Slide
-            title="QUADRO"
-            subtitle="PROPERTY MANAGEMENT SYSTEM"
-            description="Designed for modern hoteliers to automate and simplify their properties operations,
-                     while at the same time enhancing the guest experience. "
-            image={<img src={carouselPms} alt="pms" />}
-          />
-          <Slide
-            title="QUADRO"
-            subtitle="Food and Beverage"
-            description="All-in-one restaurant management system
-                     that provides restaurateurs with the ability to run front-of-house,
-                     kitchen, and back-office operations from a single cloud-based platform. "
-            image={<img src={carouselFnb} alt="fnb" />}
-          />
-          <Slide
-            title="QUADRO"
-            subtitle="Point of Purchase"
-            description="Easy-to-navigate and highly intuitive point of purchase system for retail stores, restaurants & bars. "
-            image={<img src={carouselPop} alt="pop" />}
-          />
+          <Slide title="QUADRO" subtitle="PROPERTY MANAGEMENT SYSTEM" description="pms-description" image={<img src={carouselPms} alt="pms" />} />
+          <Slide title="QUADRO" subtitle="Food and Beverage" description="fnb-description" image={<img src={carouselFnb} alt="fnb" />} />
+          <Slide title="QUADRO" subtitle="Point of Purchase" description="pos-description" image={<img src={carouselPop} alt="pop" />} />
           <Slide
             title="QUADRO"
             subtitle="Entertainment"
-            description="The latest in hotel​ In-room Entertainment and business-to-guest communication technology."
+            description="entertainment-description"
             image={<img src={carouselEntertainment} alt="entertainment" />}
           />
         </Swiper>

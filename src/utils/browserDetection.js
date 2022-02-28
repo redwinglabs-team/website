@@ -15,7 +15,7 @@ const browserDetection = () => {
     return 'FIREFOX';
   }
   if (navigator.userAgent.indexOf('MSIE') !== -1 || !!document.documentMode === true) {
-    //IF IE > 10
+    // IF IE > 10
     return 'IE';
   }
   return 'UNKNOWN';

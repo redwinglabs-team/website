@@ -8,13 +8,14 @@
         "extensions": [".js", ".jsx"]
       }
     ],
+
     "linebreak-style": "off",
     "no-shadow": "warn",
     "react/jsx-one-expression-per-line": 0,
     // "react/jsx-indent": 0,
     "react/prop-types": 0,
     "no-trailing-spaces": "error",
-    "no-console":"warn",
+    "no-console": "off",
     "no-underscore-dangle": 0,
     "import/imports-first": ["error", "absolute-first"],
     "import/newline-after-import": "error",
@@ -48,14 +49,9 @@
     "Blob": true,
     "navigator": true,
     "fetch": true
+  },
+  "parserOptions": {
+    // Required for certain syntax usages
+    "ecmaVersion": 2020
   }
-  // "parser": "babel-eslint"
-  // "overrides": [
-  //   {
-  //     "files": ["**/*.js?(x)"],
-  //     "rules": {
-  //       "react-hooks/exhaustive-deps": "off"
-  //     }
-  //   }
-  // ]
 }

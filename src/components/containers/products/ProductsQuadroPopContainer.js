@@ -8,7 +8,7 @@ import { Container, ImageContainer } from '../../shared/Containers';
 import CustomDivider from '../../shared/CustomDivider';
 import DescriptionQuadroList from '../../shared/DescriptionQuadroList';
 import IntroPages from '../../shared/IntroPages';
-import PricingList from '../../shared/pricing-list-table/PricingList';
+import PricingList from '../../pricing-list-table/PricingList';
 import TitleDescriptionPage from '../../shared/TitleDescriptionPage';
 
 const ProductsQuadroPopContainer = () => {

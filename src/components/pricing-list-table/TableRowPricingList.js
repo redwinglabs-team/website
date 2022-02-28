@@ -1,8 +1,8 @@
 import React from 'react';
 import SlideDown from 'react-slidedown';
 import styled from 'styled-components';
-import { CheckIcon, PlusIcon } from '../../../assets';
-import { Label } from '../Texts';
+import { CheckIcon, PlusIcon } from '../../assets';
+import { Label } from '../shared/Texts';
 
 const TableRow = styled.tr`
   background-color: ${({ bgColored, theme: { colors } }) => (bgColored ? colors.tableColor : colors.white)};

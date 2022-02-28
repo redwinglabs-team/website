@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import CustomButton from '../CustomButton';
-import CustomDivider from '../CustomDivider';
-import { Label } from '../Texts';
+import CustomButton from '../shared/CustomButton';
+import CustomDivider from '../shared/CustomDivider';
+import { Label } from '../shared/Texts';
 
 const PricingCategory = styled.th`
   max-width: 240px;

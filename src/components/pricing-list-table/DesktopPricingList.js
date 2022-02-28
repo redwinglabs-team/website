@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { theme } from '../../../styles/theme';
-import browserDetection from '../../../utils/browserDetection';
-import { Label } from '../Texts';
+import { theme } from '../../styles/theme';
+import browserDetection from '../../utils/browserDetection';
+import { Label } from '../shared/Texts';
 import TableHeadCategoryPricingList from './TableHeadCategoryPricingList';
 import TableRowPricingList from './TableRowPricingList';
 

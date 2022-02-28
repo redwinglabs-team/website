@@ -1,11 +1,10 @@
 import React from 'react';
 import SlideDown from 'react-slidedown';
 import styled from 'styled-components';
-import { PlusIcon } from '../../../assets';
-import { theme } from '../../../styles/theme';
-import { Container } from '../Containers';
-import CustomButton from '../CustomButton';
-import { Label, TitleBold } from '../Texts';
+import { PlusIcon } from '../../assets';
+import { Container } from '../shared/Containers';
+import CustomButton from '../shared/CustomButton';
+import { Label, TitleBold } from '../shared/Texts';
 
 const MainContainer = styled.div`
   display: flex;

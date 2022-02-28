@@ -7,9 +7,8 @@ import carrubeImage from '../../assets/images/home/Masseria Le Carrube.png';
 import sandomenicoImage from '../../assets/images/home/Masseria San Domenico.png';
 import golfImage from '../../assets/images/home/San Domenico Golf.png';
 import houseImage from '../../assets/images/home/San Domenico House.png';
-import ourClientSVG from '../../assets/svg/home/our-clients.svg';
 import { theme } from '../../styles/theme';
-import { Label } from '../shared/Texts';
+import Label from '../shared/Label';
 
 const ClientsContainer = styled(Container)`
   background-color: ${({ theme: { colors } }) => colors.lightGreyBackground};
@@ -17,6 +16,7 @@ const ClientsContainer = styled(Container)`
   z-index: 1;
   height: min-content;
   width: -webkit-fill-available;
+  position: relative;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 32px 64px;
   }
@@ -32,12 +32,12 @@ const ClientsTextContainer = styled(Container)`
     margin-bottom: 32px !important;
   }
 
-  .description-clients{
+  .description-clients {
     display: flex;
     margin: 0px 48px;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-        margin: 0px 16px;
-  }
+      margin: 0px 16px;
+    }
   }
 `;
 
@@ -69,8 +69,7 @@ const TitleContainer = styled(Container)`
   font-size: 48px;
   margin: 0px;
   flex-wrap: wrap;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     background-size: cover;
   }
@@ -92,15 +91,26 @@ const Clients = () => {
   return (
     <ClientsContainer>
       <ClientsTextContainer>
-        <TitleContainer style={{ backgroundImage: `url(${ourClientSVG})` }}>
-          <LabeledTitleRegular>OUR</LabeledTitleRegular>
-          <LabeledTitleBold>CLIENTS</LabeledTitleBold>
+        <TitleContainer>
+          <Label className="uppercase w-unset">our</Label>&nbsp;
+          <Label fontFamily="bold" className="uppercase w-unset">
+            clients
+          </Label>
+          <div style={{ position: 'absolute', display: 'flex' }}>
+            <Label fontSize={132} color="#2323231a" className="uppercase w-unset">
+              our
+            </Label>
+            &nbsp;
+            <Label fontFamily="bold" fontSize={132} color="#2323231a" className="uppercase w-unset">
+              clients
+            </Label>
+          </div>
         </TitleContainer>
-        <div className='description-clients'>
-        <Label style={{textAlign:"center"}} fontSize="24px">
-          We work directly with multiple upscale brands to develop our products. This enables us to obtain valuable analytics and real-time user
-          feedback, that is critical to the innovation process.
-        </Label>
+
+        <div className="description-clients">
+          <Label fontSize={24} className="text-center">
+            our-clients-description
+          </Label>
         </div>
       </ClientsTextContainer>
       <Divider

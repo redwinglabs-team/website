@@ -8,7 +8,7 @@ import { Container, ImageContainer } from '../../shared/Containers';
 import CustomDivider from '../../shared/CustomDivider';
 import DescriptionQuadroList from '../../shared/DescriptionQuadroList';
 import IntroPages from '../../shared/IntroPages';
-import PricingList from '../../shared/pricing-list-table/PricingList';
+import PricingList from '../../pricing-list-table/PricingList';
 import TitleDescriptionPage from '../../shared/TitleDescriptionPage';
 
 const ProductsQuadroEntertainmentContainer = () => {
@@ -23,10 +23,7 @@ const ProductsQuadroEntertainmentContainer = () => {
       />
       {/* TITLE */}
       <TitleDescriptionPage supTitle="QUADRO" title="ENTERTAINMENT" />
-      <Overview
-        description="Quadro Entertainment delivers on functionality, intuitive design, and aesthetic intelligence."
-        subDescription="The first in-room entertainment solution to efficiently incorporate, TV and on-demand channels, native apps, streaming and casting services, voice control, hotel amenity access, and business-to-guest communications."
-      />
+      <Overview title="overview-entertainment-title" description="overview-entertainment-description" />
       <CustomDivider red />
 
       {/* BASE DESCRIPTION */}
