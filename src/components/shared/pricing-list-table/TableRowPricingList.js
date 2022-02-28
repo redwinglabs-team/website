@@ -8,6 +8,7 @@ const TableRow = styled.tr`
   background-color: ${({ bgColored, theme: { colors } }) => (bgColored ? colors.tableColor : colors.white)};
   svg {
     width: 36px;
+    height: fit-content;
   }
 `;
 const ContentTd = styled.tr`

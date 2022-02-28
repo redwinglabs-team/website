@@ -19,6 +19,7 @@ const MainContainer = styled.div`
   flex-direction: column;
   padding: 24px 170px;
   position: relative;
+  margin-bottom: 120px;
 `;
 
 const PricingTable = styled.table`
@@ -41,7 +42,7 @@ const DesktopPricingList = ({ features, categories, productName, productDescript
       <div
         style={{
           boxShadow: '0px 0px 99px #00000029',
-          height: 'calc(100% + 24px)',
+          height: 'calc(100% + 48px)',
           top: -24,
           width: 280,
           left: 730,
@@ -50,6 +51,10 @@ const DesktopPricingList = ({ features, categories, productName, productDescript
       />
 
       <div style={{ position: 'absolute', background: 'white', top: -24, left: 730, width: 280, height: 24, zIndex: 1 }} className="header-shadow" />
+      <div
+        style={{ position: 'absolute', background: 'white', bottom: -24, left: 730, width: 280, height: 24, zIndex: 1 }}
+        className="header-shadow"
+      />
 
       <div
         style={{

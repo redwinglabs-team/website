@@ -20,11 +20,13 @@ const TableHeadCategoryPricingList = ({ title, description, className, principal
   return (
     <PricingCategory className={className}>
       <Content>
-        <Label style={{ textAlign: 'center', marginBottom: 24 }} fontSize="32px" bold={principal}>
-          {title}
-        </Label>
-        <CustomDivider red />
-        <Label style={{ textAlign: 'center', marginBottom: 24, maxWidth: 160 }}>{description}</Label>
+        <Content>
+          <Label style={{ textAlign: 'center', marginBottom: 24 }} fontSize="32px" bold={principal}>
+            {title}
+          </Label>
+          <CustomDivider red />
+          <Label style={{ textAlign: 'center', marginBottom: 24, maxWidth: 160 }}>{description}</Label>
+        </Content>
         <CustomButton inverted={!principal} boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius>
           REQUEST QUOTE
         </CustomButton>
