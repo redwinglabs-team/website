@@ -17,33 +17,49 @@ import Slide from './Slide';
 
 const ProductCarouselContainer = styled.div`
   margin: 32px;
-  width: -webkit-fill-available;
-  width: -moz-available;
 `;
 
 const TitleContainer = styled(Container)`
-  width: -webkit-fill-available;
-  width: -moz-available;
   height: min-content;
   flex-direction: row;
   padding: 32px 130px;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+    flex-flow: column;
+    padding: 32px;
+  }
+
+  & > span {
+    text-align: right;
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+      text-align: center;
+    }
+  }
 `;
+
 const MainTitleContainer = styled(Container)`
   flex-direction: column;
 `;
 
 const CarouselContainer = styled(Container)`
   background-color: ${({ theme: { colors } }) => colors.lightGreyBackground};
+  .swiper-wrapper {
+    margin-bottom: 36px;
+  }
   .swiper-container {
     width: -webkit-fill-available;
     width: -moz-available;
+    width: fill-available;
     height: min-content;
     overflow: hidden;
     margin: 0px 32px;
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+      margin: 0px;
+    }
   }
   .swiper-slide {
     width: -webkit-fill-available !important;
     width: -moz-available !important;
+    width: fill-available !important;
     height: min-content;
   }
 `;
@@ -51,12 +67,12 @@ const CarouselContainer = styled(Container)`
 const Divider = styled.hr``;
 
 const RedBox = styled.div`
-  position:absolute;
+  position: absolute;
   display: flex;
   background-color: ${({ theme: { colors } }) => colors.red};
-  max-width:300px;
+  max-width: 300px;
   height: 100px;
-  left:0;
+  left: 0;
 `;
 
 const ProductCarousel = () => {
@@ -83,14 +99,14 @@ const ProductCarousel = () => {
   };
 
   return (
-    <ProductCarouselContainer>
+    <ProductCarouselContainer className="w-full">
       <CarouselContainer>
-        <TitleContainer>
+        <TitleContainer className="w-full">
           <MainTitleContainer>
             <TitleLight>OUR</TitleLight>
             <TitleBold>PRODUCTS</TitleBold>
           </MainTitleContainer>
-          <Label style={{ textAlign: 'right' }}>
+          <Label>
             Redwing Labs is actively developing tools that lead to greater decision making capabilities for our clients, and more tailored guest
             experiences for their patrons.
           </Label>
@@ -102,7 +118,7 @@ const ProductCarousel = () => {
             height: 0.5
           }}
         />
-        <RedBox/>
+        <RedBox />
         <Swiper {...params}>
           <Slide
             title="QUADRO"
@@ -117,7 +133,7 @@ const ProductCarousel = () => {
             description="All-in-one restaurant management system
                      that provides restaurateurs with the ability to run front-of-house,
                      kitchen, and back-office operations from a single cloud-based platform. "
-            image={ <img src={carouselFnb} alt="fnb" />}
+            image={<img src={carouselFnb} alt="fnb" />}
           />
           <Slide
             title="QUADRO"

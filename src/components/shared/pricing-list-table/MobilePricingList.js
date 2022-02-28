@@ -43,21 +43,26 @@ const LabelContainer = styled.div`
   justify-content: space-between;
 `;
 
-const MobilePricingList = ({ features, openedAccordion, setOpenedAccordion }) => {
+const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAccordion }) => {
+  const QuoteButton = ({ inverted }) => (
+    <CustomButton boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius interved={inverted}>
+      REQUEST QUOTE
+    </CustomButton>
+  );
   return (
     <MainContainer className="w-full max-w-full">
-      <ProductContainer className="w-full">
-        <TitleBold>Essentials</TitleBold>
-        <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
-        {features
-          .filter((feature) => feature.essentials)
-          .map((feature, index) => (
+      {/* ENTERTAINMENT CASE */}
+      {categories.length === 1 ? (
+        <ProductContainer className="w-full" principal style={{ marginTop: 24 }}>
+          <TitleBold>{categories[0].name}</TitleBold>
+          <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
+          {features.map((feature, index) => (
             <PricingRow bgColored={index % 2 === 0} className="w-full">
               <Content>
                 <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
                 <LabelContainer className="w-full">
                   <Label bold>{feature.feature}</Label>
-                  {typeof feature.essentials === 'string' && <Label>{feature.essentials}</Label>}
+                  {typeof feature.connect === 'string' && <Label>{feature.connect}</Label>}
                 </LabelContainer>
               </Content>
               <SlideDown className="my-dropdown-slidedown">
@@ -69,64 +74,88 @@ const MobilePricingList = ({ features, openedAccordion, setOpenedAccordion }) =>
               </SlideDown>
             </PricingRow>
           ))}
-        <CustomButton boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius inverted>
-          REQUEST QUOTE
-        </CustomButton>
-      </ProductContainer>
-      <ProductContainer className="w-full" principal style={{ marginTop: 24 }}>
-        <TitleBold >PRO</TitleBold>
-        <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
-        {features
-          .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')
-          .map((feature, index) => (
-            <PricingRow bgColored={index % 2 === 0} className="w-full">
-              <Content>
-                <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
-                <LabelContainer className="w-full">
-                  <Label bold>{feature.feature}</Label>
-                  {typeof feature.pro === 'string' && <Label>{feature.pro}</Label>}
-                </LabelContainer>
-              </Content>
-              <SlideDown className="my-dropdown-slidedown">
-                {openedAccordion === index ? (
-                  <div style={{ padding: 20 }}>
-                    <Label fontSize="12px">{feature.description}</Label>
-                  </div>
-                ) : null}
-              </SlideDown>
-            </PricingRow>
-          ))}
-        <CustomButton boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius>
-          REQUEST QUOTE
-        </CustomButton>
-      </ProductContainer>
-      <ProductContainer className="w-full">
-        <TitleBold style={{ marginTop: 24 }}>Enterprise</TitleBold>
-        <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
-        {features
-          .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')
-          .map((feature, index) => (
-            <PricingRow bgColored={index % 2 === 0} className="w-full">
-              <Content>
-                <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
-                <LabelContainer className="w-full">
-                  <Label bold>{feature.feature}</Label>
-                  {typeof feature.enterprise === 'string' && <Label>{feature.enterprise}</Label>}
-                </LabelContainer>
-              </Content>
-              <SlideDown className="my-dropdown-slidedown">
-                {openedAccordion === index ? (
-                  <div style={{ padding: 20 }}>
-                    <Label fontSize="12px">{feature.description}</Label>
-                  </div>
-                ) : null}
-              </SlideDown>
-            </PricingRow>
-          ))}
-        <CustomButton boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius inverted>
-          REQUEST QUOTE
-        </CustomButton>
-      </ProductContainer>
+          <QuoteButton />
+        </ProductContainer>
+      ) : (
+        <>
+          {/* PMS,FNB,POP CASE */}
+          <ProductContainer className="w-full">
+            <TitleBold>Essentials</TitleBold>
+            <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
+            {features
+              .filter((feature) => feature.essentials)
+              .map((feature, index) => (
+                <PricingRow bgColored={index % 2 === 0} className="w-full">
+                  <Content>
+                    <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
+                    <LabelContainer className="w-full">
+                      <Label bold>{feature.feature}</Label>
+                      {typeof feature.essentials === 'string' && <Label>{feature.essentials}</Label>}
+                    </LabelContainer>
+                  </Content>
+                  <SlideDown className="my-dropdown-slidedown">
+                    {openedAccordion === index ? (
+                      <div style={{ padding: 20 }}>
+                        <Label fontSize="12px">{feature.description}</Label>
+                      </div>
+                    ) : null}
+                  </SlideDown>
+                </PricingRow>
+              ))}
+            <QuoteButton inverted />
+          </ProductContainer>
+          <ProductContainer className="w-full" principal style={{ marginTop: 24 }}>
+            <TitleBold>PRO</TitleBold>
+            <Label style={{ marginBottom: 24 }}>Includes everything in the Essentials plan, plus:</Label>
+            {features
+              .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')
+              .map((feature, index) => (
+                <PricingRow bgColored={index % 2 === 0} className="w-full">
+                  <Content>
+                    <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
+                    <LabelContainer className="w-full">
+                      <Label bold>{feature.feature}</Label>
+                      {typeof feature.pro === 'string' && <Label>{feature.pro}</Label>}
+                    </LabelContainer>
+                  </Content>
+                  <SlideDown className="my-dropdown-slidedown">
+                    {openedAccordion === index ? (
+                      <div style={{ padding: 20 }}>
+                        <Label fontSize="12px">{feature.description}</Label>
+                      </div>
+                    ) : null}
+                  </SlideDown>
+                </PricingRow>
+              ))}
+            <QuoteButton />
+          </ProductContainer>
+          <ProductContainer className="w-full">
+            <TitleBold style={{ marginTop: 24 }}>Enterprise</TitleBold>
+            <Label style={{ marginBottom: 24 }}>Includes everything in the Essentials plan, plus:</Label>
+            {features
+              .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')
+              .map((feature, index) => (
+                <PricingRow bgColored={index % 2 === 0} className="w-full">
+                  <Content>
+                    <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
+                    <LabelContainer className="w-full">
+                      <Label bold>{feature.feature}</Label>
+                      {typeof feature.enterprise === 'string' && <Label>{feature.enterprise}</Label>}
+                    </LabelContainer>
+                  </Content>
+                  <SlideDown className="my-dropdown-slidedown">
+                    {openedAccordion === index ? (
+                      <div style={{ padding: 20 }}>
+                        <Label fontSize="12px">{feature.description}</Label>
+                      </div>
+                    ) : null}
+                  </SlideDown>
+                </PricingRow>
+              ))}
+            <QuoteButton inverted />
+          </ProductContainer>
+        </>
+      )}
     </MainContainer>
   );
 };

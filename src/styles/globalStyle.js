@@ -133,9 +133,22 @@ export default createGlobalStyle`
 
     }
 
+    .h-full {
+      height: -moz-available;          /* WebKit-based browsers will ignore this. */
+      height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+      height: fill-available;
+
+    }
+
     .max-w-full {
       max-width: -moz-available;          /* WebKit-based browsers will ignore this. */
     max-width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
     max-width: fill-available;
+    }
+
+    .max-h-full {
+      max-height: -moz-available;          /* WebKit-based browsers will ignore this. */
+    max-height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    max-height: fill-available;
     }
 `;
