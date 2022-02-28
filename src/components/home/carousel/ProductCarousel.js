@@ -23,19 +23,17 @@ const TitleContainer = styled(Container)`
   height: min-content;
   flex-direction: row;
   padding: 32px 130px;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     flex-flow: column;
+    padding: 32px;
   }
 
-  &>span {
-    text-align:right;
-    @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    text-align:center;
+  & > span {
+    text-align: right;
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+      text-align: center;
+    }
   }
-  }
-
 `;
 
 const MainTitleContainer = styled(Container)`
@@ -44,6 +42,9 @@ const MainTitleContainer = styled(Container)`
 
 const CarouselContainer = styled(Container)`
   background-color: ${({ theme: { colors } }) => colors.lightGreyBackground};
+  .swiper-wrapper {
+    margin-bottom: 36px;
+  }
   .swiper-container {
     width: -webkit-fill-available;
     width: -moz-available;
@@ -51,6 +52,9 @@ const CarouselContainer = styled(Container)`
     height: min-content;
     overflow: hidden;
     margin: 0px 32px;
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+      margin: 0px;
+    }
   }
   .swiper-slide {
     width: -webkit-fill-available !important;
@@ -63,12 +67,12 @@ const CarouselContainer = styled(Container)`
 const Divider = styled.hr``;
 
 const RedBox = styled.div`
-  position:absolute;
+  position: absolute;
   display: flex;
   background-color: ${({ theme: { colors } }) => colors.red};
-  max-width:300px;
+  max-width: 300px;
   height: 100px;
-  left:0;
+  left: 0;
 `;
 
 const ProductCarousel = () => {
@@ -114,7 +118,7 @@ const ProductCarousel = () => {
             height: 0.5
           }}
         />
-        <RedBox/>
+        <RedBox />
         <Swiper {...params}>
           <Slide
             title="QUADRO"
@@ -129,7 +133,7 @@ const ProductCarousel = () => {
             description="All-in-one restaurant management system
                      that provides restaurateurs with the ability to run front-of-house,
                      kitchen, and back-office operations from a single cloud-based platform. "
-            image={ <img src={carouselFnb} alt="fnb" />}
+            image={<img src={carouselFnb} alt="fnb" />}
           />
           <Slide
             title="QUADRO"

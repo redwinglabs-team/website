@@ -29,7 +29,7 @@ const PricingTable = styled.table`
   }
   th,
   td {
-    max-width:${({isSingleColumn})=> isSingleColumn ? '400px' : '200px'};
+    max-width: ${({ isSingleColumn }) => (isSingleColumn ? '400px' : '200px')};
   }
 
   td:before,

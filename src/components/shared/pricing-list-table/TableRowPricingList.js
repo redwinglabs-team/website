@@ -17,7 +17,7 @@ const ContentTd = styled.tr`
   height: 100%;
 `;
 
-const TableRowPricingList = ({ title, description, essentials, pro, enterprise,connect, openedAccordion, setOpenedAccordion, index, bgColored }) => {
+const TableRowPricingList = ({ title, description, essentials, pro, enterprise, connect, openedAccordion, setOpenedAccordion, index, bgColored }) => {
   return (
     <TableRow bgColored={bgColored}>
       <td>
