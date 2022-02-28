@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../../../styles/theme';
+import browserDetection from '../../../utils/browserDetection';
 import { Label } from '../Texts';
 import TableHeadCategoryPricingList from './TableHeadCategoryPricingList';
 import TableRowPricingList from './TableRowPricingList';
@@ -69,7 +70,7 @@ const DesktopPricingList = ({ features, categories, productName, productDescript
 
       <PricingTable border="none" cellSpacing={0} cellPadding={20} isSingleColumn={categories.length === 1}>
         <thead style={{ fontFamily: theme.fontFamily.regular }}>
-          <tr>
+          <tr style={browserDetection() === 'CHROME' && { height: 1 }}>
             <PackagesMadeContainer>
               <Label fontSize="32px">{productName}</Label>
               <Label>{productDescription}</Label>

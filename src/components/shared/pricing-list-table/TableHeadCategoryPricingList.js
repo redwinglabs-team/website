@@ -8,6 +8,7 @@ const PricingCategory = styled.th`
   max-width: 240px;
   min-width: 240px;
   position: relative;
+  height: inherit;
 `;
 const Content = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ const Content = styled.div`
 const TableHeadCategoryPricingList = ({ title, description, className, principal }) => {
   return (
     <PricingCategory className={className}>
-      <Content>
+      <Content style={{ height: '100%', justifyContent: 'space-between' }}>
         <Content>
           <Label style={{ textAlign: 'center', marginBottom: 24 }} fontSize="32px" bold={principal}>
             {title}
