@@ -15,14 +15,15 @@ const ContentTd = styled.tr`
   justify-content: center;
   align-items: center;
   height: 100%;
+  cursor: pointer;
 `;
 
 const TableRowPricingList = ({ title, description, essentials, pro, enterprise, connect, openedAccordion, setOpenedAccordion, index, bgColored }) => {
   return (
     <TableRow bgColored={bgColored}>
       <td>
-        <ContentTd>
-          <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
+        <ContentTd onClick={() => setOpenedAccordion(index)}>
+          <PlusIcon style={{ marginRight: 8 }} />
           <Label>{title}</Label>
         </ContentTd>
         <SlideDown className="my-dropdown-slidedown">

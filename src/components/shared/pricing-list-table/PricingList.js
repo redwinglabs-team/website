@@ -8,6 +8,14 @@ import MobilePricingList from './MobilePricingList';
 const PricingList = ({ features, productName, productDescription, categories }) => {
   const [openedAccordion, setOpenedAccordion] = useState(null);
   const [width] = useWindowSize();
+
+  const handleAccordion = (id) => {
+    if (id === openedAccordion) {
+      setOpenedAccordion(null);
+    } else {
+      setOpenedAccordion(id);
+    }
+  };
   return width > theme.mediaQueries.desktopPixel ? (
     <DesktopPricingList
       features={features}
@@ -15,10 +23,10 @@ const PricingList = ({ features, productName, productDescription, categories }) 
       productDescription={productDescription}
       categories={categories}
       openedAccordion={openedAccordion}
-      setOpenedAccordion={setOpenedAccordion}
+      setOpenedAccordion={handleAccordion}
     />
   ) : (
-    <MobilePricingList features={features} categories={categories} openedAccordion={openedAccordion} setOpenedAccordion={setOpenedAccordion} />
+    <MobilePricingList features={features} categories={categories} openedAccordion={openedAccordion} setOpenedAccordion={handleAccordion} />
   );
 };
 
