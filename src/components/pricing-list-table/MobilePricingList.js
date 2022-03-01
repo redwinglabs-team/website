@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { PlusIcon } from '../../assets';
 import { Container } from '../shared/Containers';
 import CustomButton from '../shared/CustomButton';
-import { Label, TitleBold } from '../shared/Texts';
+import Label from '../shared/Label';
 
 const MainContainer = styled.div`
   display: flex;
@@ -53,7 +53,9 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
       {/* ENTERTAINMENT CASE */}
       {categories.length === 1 ? (
         <ProductContainer className="w-full" principal style={{ marginTop: 24 }}>
-          <TitleBold>{categories[0].name}</TitleBold>
+          <Label fontFamily="bold" size="big">
+            {categories[0].name}
+          </Label>
           <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
           {features.map((feature, index) => (
             <PricingRow bgColored={index % 2 === 0} className="w-full">
@@ -79,7 +81,7 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
         <>
           {/* PMS,FNB,POP CASE */}
           <ProductContainer className="w-full">
-            <TitleBold>Essentials</TitleBold>
+            <Label size="big">Essentials</Label>
             <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
             {features
               .filter((feature) => feature.essentials)
@@ -104,7 +106,7 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
             <QuoteButton inverted />
           </ProductContainer>
           <ProductContainer className="w-full" principal style={{ marginTop: 24 }}>
-            <TitleBold>PRO</TitleBold>
+            <Label size="big">PRO</Label>
             <Label style={{ marginBottom: 24 }}>Includes everything in the Essentials plan, plus:</Label>
             {features
               .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')
@@ -129,7 +131,9 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
             <QuoteButton />
           </ProductContainer>
           <ProductContainer className="w-full">
-            <TitleBold style={{ marginTop: 24 }}>Enterprise</TitleBold>
+            <Label size="big" style={{ marginTop: 24 }}>
+              Enterprise
+            </Label>
             <Label style={{ marginBottom: 24 }}>Includes everything in the Essentials plan, plus:</Label>
             {features
               .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')

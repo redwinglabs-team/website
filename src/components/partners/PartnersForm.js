@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Form from '../shared/Form';
-import { Label } from '../shared/Texts';
+import Label from '../shared/Label';
 
 const MainContainerPartnersForm = styled.div`
   display: flex;
@@ -58,26 +58,17 @@ const PartnersForm = () => {
   return (
     <MainContainerPartnersForm>
       <TitleContainer>
-        <Label bold fontSize="32px">
-          Interested in
+        <Label fontFamily="bold" fontSize={32}>
+          interested-in
         </Label>
-        <Label fontSize="32px">joining forces?</Label>
+        <Label fontSize={32}>joining-forces</Label>
       </TitleContainer>
       <Content>
         <TextContainer>
-          <Label>
-            The Redwing Labs Solutions Partner Program is designed for service providers seeking a unique opportunity to grow and scale their
-            business.
-          </Label>
-          <Label>
-            Join us in moving the world of hospitality forward, by providing operators with the best tools and services to enhance their business and
-            guest experience.
-          </Label>
-          <Label>
-            Thanks to a wide range of management solutions and comprehensive training courses, our Partners are prepared and well-positioned to engage
-            on multiple touchpoints across the value chain of their customers.
-          </Label>
-          <Label>If you want to accelerate your growth, we want to help.</Label>
+          <Label>partners-description-1</Label>
+          <Label>partners-description-2</Label>
+          <Label>partners-description-3</Label>
+          <Label>partners-description-4</Label>
         </TextContainer>
         <Form />
       </Content>

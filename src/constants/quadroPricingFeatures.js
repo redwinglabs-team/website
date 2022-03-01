@@ -1,9 +1,9 @@
 /* eslint-disable import/prefer-default-export */
 export const QUADRO_PRICING_CATEGORIES = {
   CLASSIC: [
-    { id: 'ESSENTIALS', name: 'Essentials', description: 'For small businesses.' },
-    { id: 'PRO', name: 'Pro', description: 'Ideal for medium to large businesses.' },
-    { id: 'ENTERPRISE', name: 'Enterprise', description: 'For all businesses looking to increase revenue across multiple properties and channels.' }
+    { id: 'ESSENTIALS', name: 'Essentials', description: 'essentials-description' },
+    { id: 'PRO', name: 'Pro', description: 'pro-description' },
+    { id: 'ENTERPRISE', name: 'Enterprise', description: 'enterprise-description' }
   ],
   ENTERTAINMENT: [{ id: 'CONNECT', name: 'Connect', description: 'Omnichannel guest entertainment and communication platform.' }]
 };
@@ -11,151 +11,148 @@ export const QUADRO_PRICING_CATEGORIES = {
 export const QUADRO_PRICING_FEATURES = {
   PMS: [
     {
-      feature: 'Management Dashboard',
-      description:
-        'Overview Dashboard that displays important events that affect the structure  of business operations on a daily basis (check-ins, check-outs, occupancy, spaces, and property alerts.',
+      feature: 'pricing-pms-managment-dashboard-title',
+      description: 'pricing-pms-managment-dashboard-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Operations Timeline',
-      description:
-        'Reservations timeline view,  includes a real-time overview of all reservations, status of reservations, companions associated with a reservation holder, and notes specific to that reservation.',
+      feature: 'pricing-pms-operations-timeline-title',
+      description: 'pricing-pms-operations-timeline-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Front Office Management',
-      description:
-        'Includes Check-in to check-out management, management of charges, profile management, permission management, and automated payments related to guests and guest activites.',
+      feature: 'pricing-pms-front-office-management-title',
+      description: 'pricing-pms-front-office-management-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Space Management*',
-      description:
-        'Includes real-time space status and management updates, overview of users  assigned to each space, and the ability to assign a user  to a space or multiple spaces in bulk.',
+      feature: 'pricing-pms-space-management-title',
+      description: 'pricing-pms-space-management-description',
       essentials: 'Up to 20',
       pro: '40 - 80',
       enterprise: '80+'
     },
     {
-      feature: 'User Roles',
-      description:
-        'Management module designed for defining specific roles and permissions that are then assigned to each user on the platform or for each department where a user may be assigned.  This feature also assigns a responsible employee for each created department, that will be notified when predefined selected actions that affect the department are triggered.',
+      feature: 'pricing-pms-user-roles-title',
+      description: 'pricing-pms-user-roles-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Promotional Codes',
-      description:
-        'Creation of promotional vouchers and promotional codes for companies and travel agencies that allow users with specific privileges to channel charges according to predefined rules.',
+      feature: 'pricing-pms-promotional-codes-title',
+      description: 'pricing-pms-promotional-codes-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Customer Managment ',
-      description:
-        'Collection of personal information, management of preferences, storage of documents and addresses, possibility to upload any kind of file related to that profile. Manage preferences, history, invoicing and billing, from a centralized module.',
+      feature: 'pricing-pms-customer-management-title',
+      description: 'pricing-pms-customer-management-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Payments Module',
-      description:
-        'Accept payments by applying a customer credit card as a payment method through the Payment Module via 3rd Party Integration with the Stripe API.',
+      feature: 'pricing-pms-payments-module-title',
+      description: 'pricing-pms-payments-module-description',
       essentials: false,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Hosted Booking Engine',
-      description:
-        'Direct integration into PMS, commission-free, provides flexibility in creation, management, and deployment of multiple bookable space and services structures, including promotional codes specific to each created bookable service. Fully integrated payment processing through the Payments Module.',
+      feature: 'pricing-pms-hosted-booking-engine-title',
+      description: 'pricing-pms-hosted-booking-engine-description',
       essentials: false,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Reports',
-      description: 'Reports section intended to provide relevant reports to view or print, detailed by specific organizational and product function.',
+      feature: 'pricing-pms-reports-title',
+      description: 'pricing-pms-reports-description',
       essentials: false,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Analytics',
-      description: '  Control module for all user actions that take place inside the system.',
+      feature: 'pricing-pms-scheduled-data-export-title',
+      description: 'pricing-pms-scheduled-data-export-description',
+      essentials: true,
+      pro: true,
+      enterprise: true
+    },
+    {
+      feature: 'pricing-pms-analytics-title',
+      description: 'pricing-pms-analytics-description',
       essentials: false,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Rate Management*',
-      description: 'Creation and customization of property rates when accounting for rules, offers, derivations and restrictions.',
+      feature: 'pricing-pms-rate-management-title',
+      description: 'pricing-pms-rate-management-description',
       essentials: 'Up to 3 Rates',
       pro: 'Up to 10 Rates',
       enterprise: 'Up to 20 Rates'
     },
     {
-      feature: 'Occupancy/Availability',
-      description: 'Overview of the occupancy and availability of your property segmented by space categories and date.',
+      feature: 'pricing-pms-occupancy-availability-management-title',
+      description: 'pricing-pms-occupancy-availability-management-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Alert Managment',
-      description: 'Management of internal alerts to the structure that can be viewed by department.',
+      feature: 'pricing-pms-alert-management-title',
+      description: 'pricing-pms-alert-management-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Task Managment',
-      description: 'Management of the activities that each employee must carry out within the structure.',
+      feature: 'pricing-pms-task-management-title',
+      description: 'pricing-pms-task-management-description',
       essentials: false,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Action Log',
-      description: 'Possibility to control all the actions carried out within the pms.',
+      feature: 'pricing-pms-action-log-title',
+      description: 'pricing-pms-action-log-description',
       essentials: '3 Months',
       pro: '6 Months',
       enterprise: '12 Months'
     },
     {
-      feature: 'Integrations Marketplace',
-      description:
-        'Wide choice of additions aimed at improving the operation of the structure, generating more revenue and improving the guest experience.',
+      feature: 'pricing-pms-integration-market-place-title',
+      description: 'pricing-pms-integration-market-place-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'API access and support',
-      description: 'API support to facilitate the integration of third party software with framework through our bees.',
+      feature: 'pricing-pms-api-access-support-title',
+      description: 'pricing-pms-api-access-support-description',
       essentials: false,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Multi-property',
-      description: 'Possibility to make reservations for all the structures belonging to a single group.',
+      feature: 'pricing-pms-multiproperty-advanced-capabilities-title',
+      description: 'pricing-pms-multiproperty-advanced-capabilities-description',
       essentials: false,
       pro: 'Up to 3',
       enterprise: 'Up to 5'
     },
     {
-      feature: 'Personalized settings',
-      description: 'Customized management of hotel preferences with automatic visibility on external platforms.',
+      feature: 'pricing-pms-personalized-property-settings-title',
+      description: 'pricing-pms-personalized-property-settings-description',
       essentials: true,
       pro: true,
       enterprise: true
@@ -163,72 +160,99 @@ export const QUADRO_PRICING_FEATURES = {
   ],
   FNB: [
     {
-      feature: 'Cashier Registry',
-      description:
-        'System where merchant calculates the amount owed by the customer, indicates that amount, may prepare an invoice for the customer, and indicates the options for the customer to make payment.',
+      feature: 'pricing-fnb-cashier-registry-title',
+      description: 'pricing-fnb-cashier-registry-description',
       essentials: '1 Outlet',
       pro: 'Up to 3 Outlet',
       enterprise: '3+ Outlet'
     },
     {
-      feature: 'Centralized Reservations',
-      description: 'This interactive interface offers all the tools for managing all reservations from one centralized summary dashboard.',
+      feature: 'pricing-fnb-centralized-reservation-title',
+      description: 'pricing-fnb-centralized-reservation-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Kitchen Management',
-      description: 'Section for the control of orders in the kitchen with real-time communication to the dining room staff.',
+      feature: 'pricing-fnb-kitchen-management-title',
+      description: 'pricing-fnb-kitchen-management-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Waiter Table-side ordering',
-      description: 'Mobile version for waiters to be able to send orders directly to the kitchen from a handheld device.',
+      feature: 'pricing-fnb-water-table-side-ordering-title',
+      description: 'pricing-fnb-water-table-side-ordering-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Customer Management',
-      description: 'Module in which a restaurant or business administers its interactions with customers.',
+      feature: 'pricing-fnb-compatible-with-any-device-title',
+      description: 'pricing-fnb-compatible-with-any-device-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Space Management',
-      description: 'Table management and sales under control in a few clicks and all from a single screen.',
+      feature: 'pricing-fnb-customer-relationship-module-title',
+      description: 'pricing-fnb-customer-relationship-module-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Revenue Management',
-      description: 'Management of all sales with export features, and segmented by revenue categories.',
+      feature: 'pricing-fnb-space-management-title',
+      description: 'pricing-fnb-space-management-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Inventory Management',
-      description: 'Optimize inventory control. Import all the products from the menu, save them and order them according to your preferred methods.',
+      feature: 'pricing-fnb-data-analysis-title',
+      description: 'pricing-fnb-data-analysis-description',
+      essentials: true,
+      pro: true,
+      enterprise: true
+    },
+    {
+      feature: 'pricing-fnb-revenue-management-title',
+      description: 'pricing-fnb-revenue-management-description',
+      essentials: true,
+      pro: true,
+      enterprise: true
+    },
+    {
+      feature: 'pricing-fnb-invetory-management-title',
+      description: 'pricing-fnb-invetory-management-description',
       essentials: false,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'PMS Integration',
-      description: 'Direct two way integration with Quadro PMS for the management and sharing of guests and connectivity for charges.',
+      feature: 'pricing-fnb-customer-relationship-module-title',
+      description: 'pricing-fnb-customer-relationship-module-description',
+      essentials: true,
+      pro: true,
+      enterprise: true
+    },
+    {
+      feature: 'pricing-fnb-multi-outlet-capabilities-title',
+      description: 'pricing-fnb-multi-outlet-capabilities-description',
+      essentials: true,
+      pro: true,
+      enterprise: true
+    },
+    {
+      feature: 'pricing-fnb-pms-integration-title',
+      description: 'pricing-fnb-pms-integration-description',
       essentials: false,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Personalized Settings',
-      description: 'Personalized management of outlet preferences with visibility on integrated external platforms.',
+      feature: 'pricing-fnb-personalized-settings-title',
+      description: 'pricing-fnb-personalized-settings-description',
       essentials: false,
       pro: true,
       enterprise: true
@@ -236,52 +260,51 @@ export const QUADRO_PRICING_FEATURES = {
   ],
   POP: [
     {
-      feature: 'Cashier Registry',
-      description:
-        'Module where merchant calculates the amount owed by the customer, indicates that amount, may prepare an invoice for the customer, and indicates the options for the customer to make payment.',
+      feature: 'pricing-pop-cashier-registry-title',
+      description: 'pricing-pop-cashier-registry-description',
       essentials: '1 Outlet',
       pro: 'Up to 3 Outlet',
       enterprise: '3+ Outlet'
     },
     {
-      feature: 'Universal Device Compatibility',
-      description: 'Compatible with any screen, from PC to tablet to smartphone.',
+      feature: 'pricing-pop-compatible-with-any-device-title',
+      description: 'pricing-pop-compatible-with-any-device-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Inventory Management',
-      description: 'Optimize inventory control. Import all the products from the menu, save them and order them according to your preferred methods.',
+      feature: 'pricing-pop-invetory-management-title',
+      description: 'pricing-pop-invetory-management-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Customer Management',
-      description: 'Module in which a restaurant or business administers its interactions with customers.',
+      feature: 'pricing-pop-customer-relationship-module-title',
+      description: 'pricing-pop-customer-relationship-module-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Multi Outlet Capabilities',
-      description: 'Centralized control with quick access to all your points of purchase.',
+      feature: 'pricing-pop-multi-outlet-capabilities-title',
+      description: 'pricing-pop-multi-outlet-capabilities-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'Revenue Management',
-      description: 'Management of all sales with export features, and segmented by revenue categories.',
+      feature: 'pricing-pop-revenue-management-title',
+      description: 'pricing-pop-revenue-management-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
 
     {
-      feature: 'Personalized Settings',
-      description: 'Personalized settings of outlet preferences with visibility on integrated external platforms.',
+      feature: 'pricing-pop-personalized-settings-title',
+      description: 'pricing-pop-personalized-settings-description',
       essentials: true,
       pro: true,
       enterprise: true
@@ -289,83 +312,84 @@ export const QUADRO_PRICING_FEATURES = {
   ],
   ENTERTAINMENT: [
     {
-      feature: 'Tv & On Demand Channels',
-      description: 'Wide choice of TV and on demand channels, including pay TV services.',
+      feature: 'pricing-entertainment-tv-on-demand-title',
+      description: 'pricing-entertainment-tv-on-demand-description',
       connect: true
     },
     {
-      feature: 'Casting & Airplay',
-      description: '',
+      feature: 'pricing-entertainment-casting-ariplay-title',
+      // description: 'pricing-entertainment-casting-ariplay-description',
       connect: true
     },
     {
-      feature: 'E-Commerce Services',
-      description: 'Management of sales services for goods and products.',
+      feature: 'pricing-entertainment-e-commerce-services-title',
+      description: 'pricing-entertainment-e-commerce-services-description',
       connect: true
     },
     {
-      feature: 'Native Apps w/ hard reset feature',
-      description: '',
+      feature: 'pricing-entertainment-native-apps-title',
+      // description: 'pricing-entertainment-native-apps-description',
       connect: true
     },
     {
-      feature: 'Maps & City guides',
-      description: 'Availability of guides and maps of the reference area always updated',
+      feature: 'pricing-entertainment-map-city-title',
+      description: 'pricing-entertainment-map-city-description',
       connect: true
     },
     {
-      feature: 'Guest Messaging',
-      description: '',
+      feature: 'pricing-entertainment-guest-messaging-title',
+      // description: 'pricing-entertainment-guest-messaging-description',
       connect: true
     },
     {
-      feature: 'Housekeeping Module',
-      description: 'Possibility to request the room cleaning service if necessary directly from the TV,',
+      feature: 'pricing-entertainment-housekeeping-module-title',
+      description: 'pricing-entertainment-housekeeping-module-description',
       connect: true
     },
     {
-      feature: 'Video and Music Library',
-      description: '',
+      feature: 'pricing-entertainment-video-and-music-title',
+      // description: 'pricing-entertainment-video-and-music-description',
       connect: true
     },
     {
-      feature: 'Weather',
-      description: 'Integration with a constantly updated weather tool.',
+      feature: 'pricing-entertainment-weather-title',
+      description: 'pricing-entertainment-weather-description',
       connect: true
     },
     {
-      feature: 'Live Airport Information',
-      description: 'Integration with the information system of local airports.',
+      feature: 'pricing-entertainment-live-airport-information-title',
+      description: 'pricing-entertainment-live-airport-information-description',
       connect: true
     },
     {
-      feature: 'Voice Commands',
-      description: 'Integration with amazon Alexa voice system.',
+      feature: 'pricing-entertainment-voice-commands-title',
+      description: 'pricing-entertainment-voice-commands-description',
       connect: true
     },
     {
-      feature: 'Kids Lock',
-      description: 'Parental control function through the use of a security code.',
+      feature: 'pricing-entertainment-kids-lock-title',
+      description: 'pricing-entertainment-kids-lock-description',
       connect: true
     },
     {
-      feature: 'IOT Capabilities',
-      description: '',
+      feature: 'pricing-entertainment-iot-capabilities-title',
+      // description: 'pricing-entertainment-iot-capabilities-description',
       connect: true
     },
     {
-      feature: 'System Dashboard',
-      description: '',
+      feature: 'pricing-entertainment-system-dashboard-title',
+      // description: 'pricing-entertainment-system-dashboard-description',
+      connect: true
+    },
+
+    {
+      feature: 'pricing-entertainment-fully-customizable-templates-title',
+      description: 'pricing-entertainment-fully-customizable-templates-description',
       connect: true
     },
     {
-      feature: 'Live Airport Information',
-      description: '',
-      connect: true
-    },
-    {
-      feature: 'Fully customizable templates',
-      description: 'Fully customizable user interface according to the needs of the facility.',
+      feature: 'pricing-entertainment-pms-integration-title',
+      description: 'pricing-entertainment-pms-integration-description',
       connect: true
     }
   ]

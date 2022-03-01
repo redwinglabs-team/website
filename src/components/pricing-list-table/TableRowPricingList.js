@@ -2,7 +2,7 @@ import React from 'react';
 import SlideDown from 'react-slidedown';
 import styled from 'styled-components';
 import { CheckIcon, PlusIcon } from '../../assets';
-import { Label } from '../shared/Texts';
+import Label from '../shared/Label';
 
 const TableRow = styled.tr`
   background-color: ${({ bgColored, theme: { colors } }) => (bgColored ? colors.tableColor : colors.white)};
@@ -25,35 +25,35 @@ const TableRowPricingList = ({ title, description, essentials, pro, enterprise, 
       <td>
         <ContentTd onClick={() => setOpenedAccordion(index)}>
           <PlusIcon style={{ marginRight: 8 }} />
-          <Label>{title}</Label>
+          <Label className="w-100">{title}</Label>
         </ContentTd>
         <SlideDown className="my-dropdown-slidedown">
           {openedAccordion === index ? (
             <div style={{ padding: 20 }}>
-              <Label fontSize="12px">{description}</Label>
+              <Label className="line-height" fontSize={12}>
+                {description}
+              </Label>
             </div>
           ) : null}
         </SlideDown>
       </td>
       {connect ? (
         <td style={{ position: 'relative' }} className="x-shadow">
-          <ContentTd>
-            {typeof connect === 'boolean' ? [connect ? <CheckIcon /> : null] : <Label style={{ textAlign: 'center' }}>{connect}</Label>}
-          </ContentTd>
+          <ContentTd>{typeof connect === 'boolean' ? [connect ? <CheckIcon /> : null] : <Label className="text-center">{connect}</Label>}</ContentTd>
         </td>
       ) : (
         <>
           <td style={{ position: 'relative' }} className="left-shadow">
             <ContentTd>
-              {typeof essentials === 'boolean' ? [essentials ? <CheckIcon /> : null] : <Label style={{ textAlign: 'center' }}>{essentials}</Label>}
+              {typeof essentials === 'boolean' ? [essentials ? <CheckIcon /> : null] : <Label className="text-center">{essentials}</Label>}
             </ContentTd>
           </td>
           <td style={{ position: 'relative' }} className="x-shadow">
-            <ContentTd>{typeof pro === 'boolean' ? [pro ? <CheckIcon /> : null] : <Label style={{ textAlign: 'center' }}>{pro}</Label>}</ContentTd>
+            <ContentTd>{typeof pro === 'boolean' ? [pro ? <CheckIcon /> : null] : <Label className="text-center">{pro}</Label>}</ContentTd>
           </td>
           <td className="right-shadow" style={{ position: 'relative' }}>
             <ContentTd>
-              {typeof enterprise === 'boolean' ? [enterprise ? <CheckIcon /> : null] : <Label style={{ textAlign: 'center' }}>{enterprise}</Label>}
+              {typeof enterprise === 'boolean' ? [enterprise ? <CheckIcon /> : null] : <Label className="text-center">{enterprise}</Label>}
             </ContentTd>
           </td>
         </>

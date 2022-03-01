@@ -46,6 +46,9 @@ const STYText = styled.span`
   &.text-center {
     text-align: center;
   }
+  &.text-left {
+    text-align: left;
+  }
 
   &.align-fs {
     align-items: flex-start;

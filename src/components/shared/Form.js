@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Label } from './Texts';
-import { theme } from '../../styles/theme';
+import Label from './Label';
 
 const FormContainer = styled.div`
   display: flex;
@@ -55,16 +54,14 @@ const Row = styled.div`
 `;
 
 const ErrorMessage = styled(Label)`
-display: block;
-min-height:12px;
-font-size:12px;
-color: ${({ theme: { colors } }) => colors.white};
-`
+  display: block;
+  min-height: 12px;
+`;
 const Field = styled.div`
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   width: -webkit-fill-available;
-`
+`;
 
 const Form = () => {
   const validationSchema = Yup.object().shape({
@@ -91,29 +88,47 @@ const Form = () => {
   return (
     <FormContainer>
       <FormContent>
-        <Label style={{ color: theme.colors.white }} bold fontSize="32px">
-          Write us
+        <Label color="#ffff" fontFamily="bold" fontSize={32}>
+          write-us
         </Label>
         <Row>
           <Field>
             <Input id="name" name="name" onChange={handleChange} error={touched.name && !!errors.name} placeholder="Your Name (required)" />
-            {errors.name && touched.name ? <ErrorMessage bold>{errors.name}</ErrorMessage> : <ErrorMessage> </ErrorMessage>}
+            {errors.name && touched.name ? (
+              <ErrorMessage fontFamily="bold" fontSize={12} color="#fff">
+                {errors.name}
+              </ErrorMessage>
+            ) : (
+              <ErrorMessage> </ErrorMessage>
+            )}
           </Field>
           <Field>
-          <Input
-            id="email"
-            name="email"
-            placeholder="Your Email (required)"
-            onChange={handleChange}
-            error={touched.email && !!errors.email}
-            type="email"
-          />
-            {errors.email && touched.email ? <ErrorMessage bold>{errors.email}</ErrorMessage> : <ErrorMessage> </ErrorMessage>}
+            <Input
+              id="email"
+              name="email"
+              placeholder="Your Email (required)"
+              onChange={handleChange}
+              error={touched.email && !!errors.email}
+              type="email"
+            />
+            {errors.email && touched.email ? (
+              <ErrorMessage fontFamily="bold" fontSize={12} color="#fff">
+                {errors.email}
+              </ErrorMessage>
+            ) : (
+              <ErrorMessage> </ErrorMessage>
+            )}
           </Field>
         </Row>
         <Field>
           <Input id="subject" name="subject" onChange={handleChange} error={touched.subject && !!errors.subject} placeholder="Subject" />
-          {errors.subject && touched.subject ? <ErrorMessage bold>{errors.subject}</ErrorMessage> : <ErrorMessage> </ErrorMessage>}
+          {errors.subject && touched.subject ? (
+            <ErrorMessage fontFamily="bold" fontSize={12} color="#fff">
+              {errors.subject}
+            </ErrorMessage>
+          ) : (
+            <ErrorMessage> </ErrorMessage>
+          )}
         </Field>
         <Field>
           <TextArea
@@ -124,10 +139,16 @@ const Form = () => {
             error={touched.message && !!errors.message}
             placeholder="Message"
           />
-          {errors.message && touched.message ? <ErrorMessage bold>{errors.message}</ErrorMessage> : <ErrorMessage> </ErrorMessage>}
+          {errors.message && touched.message ? (
+            <ErrorMessage fontFamily="bold" fontSize={12} color="#fff">
+              {errors.message}
+            </ErrorMessage>
+          ) : (
+            <ErrorMessage> </ErrorMessage>
+          )}
         </Field>
-        <Label fontSize="32px" bold style={{ color: theme.colors.white, textDecoration: 'underline', cursor: 'pointer' }} onClick={handleSubmit}>
-          Submit
+        <Label fontSize={32} fontFamily="bold" color="#fff" style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={handleSubmit}>
+          submit
         </Label>
       </FormContent>
     </FormContainer>

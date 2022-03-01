@@ -45,8 +45,8 @@ const DesktopPricingList = ({ features, categories, productName, productDescript
           boxShadow: '0px 0px 99px #00000029',
           height: 'calc(100% + 48px)',
           top: -24,
-          width: 280,
-          left: 730,
+          width: categories.length > 1 ? 280 : 425,
+          left: categories.length > 1 ? 730 : 625,
           position: 'absolute'
         }}
       />
@@ -57,16 +57,18 @@ const DesktopPricingList = ({ features, categories, productName, productDescript
         className="header-shadow"
       />
 
-      <div
-        style={{
-          boxShadow: '0px 0px 99px #00000029',
-          height: '100%',
-          top: 0,
-          width: 840,
-          left: 450,
-          position: 'absolute'
-        }}
-      />
+      {categories.length > 1 && (
+        <div
+          style={{
+            boxShadow: '0px 0px 99px #00000029',
+            height: '100%',
+            top: 0,
+            width: 840,
+            left: 450,
+            position: 'absolute'
+          }}
+        />
+      )}
 
       <PricingTable border="none" cellSpacing={0} cellPadding={20} isSingleColumn={categories.length === 1}>
         <thead style={{ fontFamily: theme.fontFamily.regular }}>
@@ -75,7 +77,7 @@ const DesktopPricingList = ({ features, categories, productName, productDescript
               <Label fontSize={32} className="uppercase">
                 {productName}
               </Label>
-              <Label className="line-height">{productDescription}</Label>
+              <Label className="line-height text-left">{productDescription}</Label>
             </PackagesMadeContainer>
             {categories.length === 1 ? (
               <TableHeadCategoryPricingList principal title={categories[0].name} description={categories[0].description} />
@@ -91,7 +93,7 @@ const DesktopPricingList = ({ features, categories, productName, productDescript
         <tbody>
           <tr>
             <td>
-              <Label fontSize={32}>Features</Label>
+              <Label fontSize={32}>features</Label>
             </td>
           </tr>
           {features.map((feature, index) => (

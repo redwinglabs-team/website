@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Form from '../shared/Form';
-import { Label } from '../shared/Texts';
+import Label from '../shared/Label';
 
 const MainContainerContactForm = styled.div`
   display: flex;
@@ -54,29 +54,25 @@ const ContactsContainer = styled.div`
     padding: 16px;
   }
 
-  .has-margin{
-      margin:32px 0px 48px;
+  .has-margin {
+    margin: 32px 0px 48px;
   }
 `;
-
-
-
 
 const ContactUsForm = () => {
   return (
     <MainContainerContactForm>
       <Content>
         <ContactsContainer>
-          <Label>Offices:</Label>
+          <Label>footer-offices</Label>
           <Label>(IT) Fasano, Apulia.</Label>
           <Label>(USA) Brooklyn, NY.</Label>
-          <Label className='has-margin'>info@redwinglabs.com</Label>
+          <Label className="has-margin">info@redwinglabs.com</Label>
           <Label>+19132939433</Label>
           <Label>+39 080 482 9200</Label>
         </ContactsContainer>
 
         <Form />
-
       </Content>
     </MainContainerContactForm>
   );

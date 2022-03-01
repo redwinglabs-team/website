@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CustomButton from '../shared/CustomButton';
 import CustomDivider from '../shared/CustomDivider';
-import { Label } from '../shared/Texts';
+import Label from '../shared/Label';
 
 const PricingCategory = styled.th`
   max-width: 240px;
@@ -22,14 +22,18 @@ const TableHeadCategoryPricingList = ({ title, description, className, principal
     <PricingCategory className={className}>
       <Content style={{ height: '100%', justifyContent: 'space-between' }}>
         <Content>
-          <Label style={{ textAlign: 'center', marginBottom: 24 }} fontSize="32px" bold={principal}>
+          <Label className="text-center" fontSize={32} fontFamily={principal && 'bold'} style={{ marginBottom: 24 }}>
             {title}
           </Label>
           <CustomDivider red />
-          <Label style={{ textAlign: 'center', marginBottom: 24, maxWidth: 160 }}>{description}</Label>
+          <Label className="text-center line-height" style={{ marginBottom: 24, maxWidth: 160 }}>
+            {description}
+          </Label>
         </Content>
         <CustomButton inverted={!principal} boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius>
-          REQUEST QUOTE
+          <Label className="uppercase" fontFamily="bold">
+            request-quote
+          </Label>
         </CustomButton>
       </Content>
     </PricingCategory>
