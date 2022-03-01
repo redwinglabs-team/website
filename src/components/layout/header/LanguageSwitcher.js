@@ -80,7 +80,13 @@ const LanguageSwitcher = ({ className }) => {
       {showFloatingMenu && (
         <FloatingMenu>
           {Object.keys(languageConfig).map((key, index) => (
-            <Item key={index} onClick={() => setLanguage(languageConfig[key].languageKey)}>
+            <Item
+              key={index}
+              onClick={() => {
+                setLanguage(languageConfig[key].languageKey);
+                setShowFloatingMenu(false);
+              }}
+            >
               {languageConfig[key].flag} {capitalizeFirstLetter(translate(languageConfig[key].label, language))}
             </Item>
           ))}

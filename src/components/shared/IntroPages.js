@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import ContactUsIFrame from './ContactUsIFrame';
+import { IFrameSiderContext, SRC_BOOK_A_DEMO } from '../../context/IFrameSiderContext';
 import Label from './Label';
 
 const IntroContainer = styled.div`
@@ -87,15 +87,14 @@ const DemoButtonContainer = styled.div`
   }
 `;
 const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
-  const [showIFrame, setShowIFrame] = useState(false);
+  const { onOpen } = useContext(IFrameSiderContext);
   return (
     <IntroContainer id="intro" style={{ backgroundImage: `url(${bgImage})` }}>
       {haveDemoButton && (
-        <DemoButtonContainer className="mobile-none" onClick={() => setShowIFrame(true)}>
+        <DemoButtonContainer className="mobile-none" onClick={() => onOpen({ src: SRC_BOOK_A_DEMO })}>
           <Label fontFamily="bold">book-a-demo</Label>
         </DemoButtonContainer>
       )}
-      <ContactUsIFrame show={showIFrame} onClose={() => setShowIFrame(false)} />
       <TitleContainer>
         {description[0] && (
           <Label fontFamily="light" size="medium" className="w-100 uppercase">
