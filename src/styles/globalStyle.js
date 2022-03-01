@@ -151,4 +151,6 @@ export default createGlobalStyle`
     max-height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
     max-height: fill-available;
     }
+    
+    
 `;

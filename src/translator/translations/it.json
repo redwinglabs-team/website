@@ -209,5 +209,10 @@
   "pricing-entertainment-system-dashboard-title": "sistema dashboard",
   "pricing-entertainment-system-dashboard-description": "",
   "pricing-entertainment-guest-messaging-title": "messaggistica ospiti ",
-  "pricing-entertainment-guest-messaging-description": ""
+  "pricing-entertainment-guest-messaging-description": "",
+  "required": "obbligatorio",
+  "your-name-required": "Nome (Obbligatorio)",
+  "your-email-required": "Email (Obbligatorio)",
+  "object": "Oggetto",
+  "message": "Messaggio"
 }

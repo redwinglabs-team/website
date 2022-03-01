@@ -23,7 +23,7 @@ const Container = styled.div`
   width: -webkit-fill-available;
   flex-direction: column;
   min-height: ${({ theme: { header } }) => `${header.height}px`};
-  z-index: 1000;
+  z-index: 50;
 
   .sticky {
     position: sticky;

@@ -210,5 +210,10 @@
   "pricing-entertainment-system-dashboard-title": "system dashboard",
   "pricing-entertainment-system-dashboard-description": "",
   "pricing-entertainment-guest-messaging-title": "guest messaging ",
-  "pricing-entertainment-guest-messaging-description": ""
+  "pricing-entertainment-guest-messaging-description": "",
+  "required": "required",
+  "your-name-required": "Your Name (Required)",
+  "your-email-required": "Your Email (Required)",
+  "object": "object",
+  "message": "Message"
 }

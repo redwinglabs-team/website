@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Label from './Label';
+import { capitalizeFirstLetter, translate } from '../../translator';
+import { LanguageContext } from '../../context/LanguageContext';
 
 const FormContainer = styled.div`
   display: flex;
@@ -64,10 +66,13 @@ const Field = styled.div`
 `;
 
 const Form = () => {
+  const { language } = useContext(LanguageContext);
   const validationSchema = Yup.object().shape({
-    name: Yup.string().required('Required'),
-    email: Yup.string().email('Invalid email address').required('Required'),
-    subject: Yup.string(),
+    name: Yup.string().required(capitalizeFirstLetter(translate('required', language))),
+    email: Yup.string()
+      .email('Invalid email address')
+      .required(capitalizeFirstLetter(translate('required', language))),
+    object: Yup.string(),
     message: Yup.string()
   });
 
@@ -76,7 +81,7 @@ const Form = () => {
     initialValues: {
       name: '',
       email: '',
-      subject: '',
+      object: '',
       message: ''
     },
     validationSchema,
@@ -93,7 +98,13 @@ const Form = () => {
         </Label>
         <Row>
           <Field>
-            <Input id="name" name="name" onChange={handleChange} error={touched.name && !!errors.name} placeholder="Your Name (required)" />
+            <Input
+              id="name"
+              name="name"
+              onChange={handleChange}
+              error={touched.name && !!errors.name}
+              placeholder={translate('your-name-required', language)}
+            />
             {errors.name && touched.name ? (
               <ErrorMessage fontFamily="bold" fontSize={12} color="#fff">
                 {errors.name}
@@ -106,7 +117,7 @@ const Form = () => {
             <Input
               id="email"
               name="email"
-              placeholder="Your Email (required)"
+              placeholder={translate('your-email-required', language)}
               onChange={handleChange}
               error={touched.email && !!errors.email}
               type="email"
@@ -121,10 +132,16 @@ const Form = () => {
           </Field>
         </Row>
         <Field>
-          <Input id="subject" name="subject" onChange={handleChange} error={touched.subject && !!errors.subject} placeholder="Subject" />
-          {errors.subject && touched.subject ? (
+          <Input
+            id="object"
+            name="object"
+            onChange={handleChange}
+            error={touched.object && !!errors.object}
+            placeholder={translate('object', language)}
+          />
+          {errors.object && touched.object ? (
             <ErrorMessage fontFamily="bold" fontSize={12} color="#fff">
-              {errors.subject}
+              {errors.object}
             </ErrorMessage>
           ) : (
             <ErrorMessage> </ErrorMessage>
@@ -137,7 +154,7 @@ const Form = () => {
             name="message"
             onChange={handleChange}
             error={touched.message && !!errors.message}
-            placeholder="Message"
+            placeholder={translate('message', language)}
           />
           {errors.message && touched.message ? (
             <ErrorMessage fontFamily="bold" fontSize={12} color="#fff">

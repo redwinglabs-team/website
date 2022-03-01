@@ -20,6 +20,7 @@ export { ReactComponent as LinkedinIcon } from './svg/social/linkedin.svg';
 export { ReactComponent as ArrowDownIcon } from './svg/arrow-down.svg';
 export { ReactComponent as EnFlagIcon } from './svg/en-flag.svg';
 export { ReactComponent as ItFlagIcon } from './svg/it-flag.svg';
+export { ReactComponent as CrossIcon } from './svg/cross.svg';
 
 //  BACKGROUND
 export { ReactComponent as BGPms } from './svg/bg-intro/bg-pms.svg';

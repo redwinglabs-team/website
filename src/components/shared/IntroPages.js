@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import ContactUsIFrame from './ContactUsIFrame';
 import Label from './Label';
 
 const IntroContainer = styled.div`
@@ -84,13 +85,15 @@ const DemoButtonContainer = styled.div`
   }
 `;
 const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
+  const [showIFrame, setShowIFrame] = useState(false);
   return (
     <IntroContainer id="intro" style={{ backgroundImage: `url(${bgImage})` }}>
       {haveDemoButton && (
-        <DemoButtonContainer className="mobile-none" onClick={() => {}}>
+        <DemoButtonContainer className="mobile-none" onClick={() => setShowIFrame(true)}>
           <Label fontFamily="bold">book-a-demo</Label>
         </DemoButtonContainer>
       )}
+      <ContactUsIFrame show={showIFrame} onClose={() => setShowIFrame(false)} />
       <TitleContainer>
         {description[0] && (
           <Label fontFamily="light" size="medium" className="w-100 uppercase">
