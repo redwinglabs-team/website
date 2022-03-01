@@ -1,16 +1,17 @@
 import React, { createContext } from 'react';
+import { EnFlagIcon, ItFlagIcon } from '../assets';
 import useLocalStorage from '../hooks/useLocalStorage';
 
 export const languageConfig = {
   IT: {
     languageKey: 'IT',
-    // flag: <ItFlagIcon />,
+    flag: <ItFlagIcon />,
     label: 'italian'
   },
 
   EN: {
     languageKey: 'EN',
-    // flag: <EnFlagIcon />,
+    flag: <EnFlagIcon />,
     label: 'english'
   }
 };

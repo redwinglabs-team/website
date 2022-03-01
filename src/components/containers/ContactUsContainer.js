@@ -29,7 +29,7 @@ const ContactUsContainer = () => {
       {/* INTRO */}
       <IntroPages bgImage={ROUTE_LIST.CONTACT.backgroundImage} description={ROUTE_LIST.CONTACT.description} />
       {/* TITLE */}
-      <TitleDescriptionPage title="contact.us" />
+      <TitleDescriptionPage title="contact-us" />
       {/* FORM CONTAINER */}
       <ContactUsForm />
 

@@ -17,6 +17,9 @@ export { ReactComponent as TelegramIcon } from './svg/social/telegram.svg';
 export { ReactComponent as MediumIcon } from './svg/social/medium.svg';
 export { ReactComponent as YoutubeIcon } from './svg/social/youtube.svg';
 export { ReactComponent as LinkedinIcon } from './svg/social/linkedin.svg';
+export { ReactComponent as ArrowDownIcon } from './svg/arrow-down.svg';
+export { ReactComponent as EnFlagIcon } from './svg/en-flag.svg';
+export { ReactComponent as ItFlagIcon } from './svg/it-flag.svg';
 
 //  BACKGROUND
 export { ReactComponent as BGPms } from './svg/bg-intro/bg-pms.svg';
@@ -37,8 +40,8 @@ export { ReactComponent as ProductPop } from './svg/product/product-pop.svg';
 export { ReactComponent as ProductEntertainment } from './svg/product/product-entertainment.svg';
 
 // PRODUCTS QUADRO IMAGES
-export { ReactComponent as DescriptionQuadroEntertainment} from './svg/product/desc-quadro-ent.svg';
-export { ReactComponent as DescriptionQuadroEntertainmentTv} from './svg/product/desc-quadro-ent-tv.svg';
+export { ReactComponent as DescriptionQuadroEntertainment } from './svg/product/desc-quadro-ent.svg';
+export { ReactComponent as DescriptionQuadroEntertainmentTv } from './svg/product/desc-quadro-ent-tv.svg';
 export { ReactComponent as DescriptionQuadroPms } from './svg/product/desc-quadro-pms.svg';
 export { ReactComponent as DescriptionQuadroPmsMobile } from './svg/product/desc-quadro-pms-mobile.svg';
 export { ReactComponent as DescriptionQuadroFnb } from './svg/product/desc-quadro-fnb.svg';

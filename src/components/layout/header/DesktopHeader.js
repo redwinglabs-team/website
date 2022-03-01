@@ -13,6 +13,7 @@ import {
   ROUTE_PRODUCTS_QUADRO_SUITE
 } from '../../../router/routes';
 import { matchPathname } from '../../../utils/UtilStrings';
+import LanguageSwitcher from './LanguageSwitcher';
 import RightHeaderItems from './RightHeaderItems';
 
 const Container = styled.div`
@@ -93,7 +94,7 @@ const BottomHeader = styled.div`
 const LeftContainer = styled.div`
   display: flex;
   align-items: center;
-
+  justify-content: space-between;
   /* & > *:not(:last-child) {
     margin-right: 25px;
   } */
@@ -171,6 +172,7 @@ const DesktopHeader = ({ className, menuWithMarginBottom }) => {
       <TopHeader>
         <LeftContainer>
           <RedwingsLogo style={{ cursor: 'pointer', height: 20, width: 'auto' }} onClick={() => navigate(ROUTE_INDEX)} />
+          <LanguageSwitcher className="desktop-none" />
         </LeftContainer>
         <RightContainer>
           <RightHeaderItems itemsLink={MAIN_LINK} menuWithMarginBottom={menuWithMarginBottom} />
