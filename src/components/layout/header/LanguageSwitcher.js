@@ -11,6 +11,9 @@ const Container = styled.div`
   border: 1px solid #fff;
   padding: 7px 16px;
   position: relative;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+    margin-left: 16px;
+  }
 `;
 
 const FloatingMenu = styled.div`
@@ -44,13 +47,6 @@ const LanguageContainer = styled.div`
   .dropdown-arrow path {
     fill: ${({ color }) => color || '#ffffff'};
   }
-
-  @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
-    .language-label,
-    .dropdown-arrow {
-      display: block;
-    }
-  }
 `;
 
 const LanguageSwitcher = ({ className }) => {
@@ -74,12 +70,12 @@ const LanguageSwitcher = ({ className }) => {
           translate={false}
           fontSize={24}
           fontFamily="regular"
-          className="uppercase"
-          style={{ padding: '0 10px', minWidth: 32, lineHeight: 0 }}
+          className="uppercase mobile-none"
+          style={{ minWidth: 32, lineHeight: 0, marginLeft: 10 }}
         >
           {languageConfig[language].languageKey}
         </Label>
-        <ArrowDownIcon className="dropdown-arrow" style={{ marginRight: 9, transform: showFloatingMenu ? 'rotate(-180deg)' : 'rotate(0deg)' }} />
+        <ArrowDownIcon className="dropdown-arrow" style={{ marginLeft: 10, transform: showFloatingMenu ? 'rotate(-180deg)' : 'rotate(0deg)' }} />
       </LanguageContainer>
       {showFloatingMenu && (
         <FloatingMenu>
