@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import Form from '../shared/Form';
+import { AmericanFlagIcon, ItalianFlagIcon, GridPattern } from '../../assets';
+import { IFrameSiderContext, SRC_CONTACT_US } from '../../context/IFrameSiderContext';
+import CustomButton from '../shared/CustomButton';
 import Label from '../shared/Label';
+
+const GridContainer = styled.div`
+  position: absolute;
+  align-items: flex-start;
+  left: 0px;
+  top: 110px;
+  svg {
+    width: 200px;
+    height: 162px;
+  }
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
+    left: 0px;
+  }
+`;
 
 const MainContainerContactForm = styled.div`
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
@@ -30,7 +48,6 @@ const Content = styled.div`
   }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     flex-direction: column;
-    padding: 16px;
     & > *:not(:last-child) {
       margin-bottom: 32px;
       margin-right: 0px;
@@ -41,17 +58,18 @@ const Content = styled.div`
 const ContactsContainer = styled.div`
   background-color: ${({ theme: { colors } }) => colors.lightGreyBackground};
   width: -webkit-fill-available;
-  padding: 32px;
+  padding: 60px 112px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: start;
-  flex-direction: column;
+
   text-align-last: center;
   & > *:not(:last-child) {
     margin-bottom: 16px;
   }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     padding: 16px;
+    flex-direction: column;
   }
 
   .has-margin {
@@ -59,21 +77,76 @@ const ContactsContainer = styled.div`
   }
 `;
 
+const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  span:first-child {
+    margin-bottom: 24px;
+  }
+  & > div:not(:last-child) {
+    margin-bottom: 16px;
+  }
+`;
+
+const Row = styled.div`
+  display: flex;
+  align-items: center;
+  svg {
+    margin-right: 8px;
+  }
+`;
 const ContactUsForm = () => {
+  const { onOpen } = useContext(IFrameSiderContext);
   return (
     <MainContainerContactForm>
       <Content>
         <ContactsContainer>
-          <Label>footer-offices</Label>
-          <Label>(IT) Fasano, Apulia.</Label>
-          <Label>(USA) Brooklyn, NY.</Label>
-          <Label className="has-margin">info@redwinglabs.com</Label>
-          <Label>+19132939433</Label>
-          <Label>+39 080 482 9200</Label>
+          <Column>
+            <Label size="big" fontFamily="bold">
+              offices
+            </Label>
+            <Row>
+              <ItalianFlagIcon /> <Label size="small">Fasano, Apulia.</Label>
+            </Row>
+            <Row>
+              <AmericanFlagIcon />
+              <Label size="small">Brooklyn, NY.</Label>
+            </Row>
+          </Column>
+          <Column>
+            <Label size="big" fontFamily="bold">
+              phone
+            </Label>
+            <Row>
+              {' '}
+              <ItalianFlagIcon /> <Label size="small">+19132939433</Label>
+            </Row>
+            <Row>
+              {' '}
+              <AmericanFlagIcon />
+              <Label size="small">+39 080 482 9200</Label>
+            </Row>
+          </Column>
+          <Column>
+            <Label size="big" fontFamily="bold">
+              mail
+            </Label>
+            <Label translate={false} size="small">
+              info@redwinglabs.com
+            </Label>
+          </Column>
         </ContactsContainer>
-
-        <Form />
       </Content>
+
+      <GridContainer className="mobile-none">
+        <GridPattern />
+      </GridContainer>
+      <CustomButton
+        buttonStyle={{ marginTop: 88, width: 200, justifyContent: 'center', display: 'flex' }}
+        onClick={() => onOpen({ src: SRC_CONTACT_US })}
+      >
+        contact-us
+      </CustomButton>
     </MainContainerContactForm>
   );
 };

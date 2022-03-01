@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AmericanFlagIcon, ItalianFlagIcon, RedwingsLogo } from '../../../assets';
+import { RedwingsLogo } from '../../../assets';
 import { theme } from '../../../styles/theme';
 import { Container } from '../../shared/Containers';
 import Label from '../../shared/Label';
@@ -121,7 +121,9 @@ const Footer = () => {
         <FooterContent isInverted={isIndex()}>
           <FooterColumn>
             <RedwingsLogo style={{ marginBottom: 24 }} />
-            <Label style={{ maxWidth: 200 }}>rwl-footer</Label>
+            <Label className="line-height" style={{ maxWidth: 200 }}>
+              creators-of-next-generation-hospitality-management-system
+            </Label>
           </FooterColumn>
           <FooterColumn>
             <Label fontFamily="bold" style={{ marginBottom: 24 }}>
@@ -131,19 +133,19 @@ const Footer = () => {
               <Label fontFamily="regular" className="w-unset">
                 offices-footer
               </Label>
-              <ItalianFlagIcon /> Fasano, Apulia <AmericanFlagIcon /> Brooklyn, NY.
+              &nbsp;(IT) Fasano, Apulia, (USA) Brooklyn, NY.
             </Text>
             <Text style={{ marginBottom: 16 }}>
               <Label fontFamily="regular" className="w-unset">
                 phone-footer
               </Label>
-              <ItalianFlagIcon /> +39 080 482 9200 <AmericanFlagIcon /> +1917664032
+              &nbsp;(IT) +39 080 482 9200, (USA) +1917664032
             </Text>
             <Text>
               <Label fontFamily="regular" className="w-unset">
                 email-footer
-              </Label>{' '}
-              info@redwinglabs.com
+              </Label>
+              &nbsp;info@redwinglabs.com
             </Text>
           </FooterColumn>
           <FooterColumn className="link_list">

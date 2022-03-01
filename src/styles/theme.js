@@ -1,8 +1,10 @@
 export const configuration = {
   fontSizes: {
-    big: { desktop: 58, tablet: 40, mobile: 40 },
+    huge: { desktop: 58, tablet: 40, mobile: 40 },
+    big: { desktop: 48, tablet: 30, mobile: 24 },
     medium: { desktop: 32, tablet: 24, mobile: 24 },
-    normal: { desktop: 32, tablet: 16, mobile: 16 }
+    normal: { desktop: 32, tablet: 16, mobile: 16 },
+    small: { desktop: 24, tablet: 16, mobile: 16 }
   },
   lineHeight: {
     huge: { desktop: 70, tablet: 50, mobile: 31.25 },

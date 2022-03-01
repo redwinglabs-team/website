@@ -16,7 +16,6 @@ function App() {
           <AppRouter />
           <IFrameSiderConsumer>
             {(value) => {
-              console.log('value', value);
               return <IFrameSider open={value.open} onClose={value.onClose} src={value.src} />;
             }}
           </IFrameSiderConsumer>

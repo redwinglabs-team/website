@@ -53,7 +53,7 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
       {/* ENTERTAINMENT CASE */}
       {categories.length === 1 ? (
         <ProductContainer className="w-full" principal style={{ marginTop: 24 }}>
-          <Label fontFamily="bold" size="big">
+          <Label fontFamily="bold" size="huge">
             {categories[0].name}
           </Label>
           <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
@@ -81,7 +81,7 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
         <>
           {/* PMS,FNB,POP CASE */}
           <ProductContainer className="w-full">
-            <Label size="big">Essentials</Label>
+            <Label size="huge">Essentials</Label>
             <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
             {features
               .filter((feature) => feature.essentials)
@@ -106,7 +106,7 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
             <QuoteButton inverted />
           </ProductContainer>
           <ProductContainer className="w-full" principal style={{ marginTop: 24 }}>
-            <Label size="big">PRO</Label>
+            <Label size="huge">PRO</Label>
             <Label style={{ marginBottom: 24 }}>Includes everything in the Essentials plan, plus:</Label>
             {features
               .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')
@@ -131,7 +131,7 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
             <QuoteButton />
           </ProductContainer>
           <ProductContainer className="w-full">
-            <Label size="big" style={{ marginTop: 24 }}>
+            <Label size="huge" style={{ marginTop: 24 }}>
               Enterprise
             </Label>
             <Label style={{ marginBottom: 24 }}>Includes everything in the Essentials plan, plus:</Label>

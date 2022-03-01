@@ -68,10 +68,10 @@ const LanguageSwitcher = ({ className }) => {
         <Label
           color="#fff"
           translate={false}
-          fontSize={24}
+          fontSize={14}
           fontFamily="regular"
           className="uppercase mobile-none"
-          style={{ minWidth: 32, lineHeight: 0, marginLeft: 10 }}
+          style={{ minWidth: 32, marginLeft: 10 }}
         >
           {languageConfig[language].languageKey}
         </Label>

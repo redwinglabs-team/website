@@ -40,7 +40,7 @@ const TitleDescriptionPage = ({ supTitle, title, withGrid, withoutBorderBottom }
         <Label fontFamily="light" size="medium" className="uppercase w-100">
           {supTitle}
         </Label>
-        <Label size="big" fontFamily="bold" className="w-100 uppercase">
+        <Label size="huge" fontFamily="bold" className="w-100 uppercase">
           {title}
         </Label>
         {withGrid && (

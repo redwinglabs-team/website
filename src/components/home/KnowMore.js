@@ -24,7 +24,7 @@ const KnowMore = () => {
       <Label size="medium" className="uppercase w-unset">
         want-to
       </Label>
-      <Label size="big" fontFamily="bold" className="uppercase w-unset">
+      <Label size="huge" fontFamily="bold" className="uppercase w-unset">
         know-more
       </Label>
       <Label className="uppercase line-height">want-to-know-more-description</Label>

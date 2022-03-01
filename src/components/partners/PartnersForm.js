@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import Form from '../shared/Form';
+import { IFrameSiderContext, SRC_PARTNERS } from '../../context/IFrameSiderContext';
+import CustomButton from '../shared/CustomButton';
 import Label from '../shared/Label';
 
 const MainContainerPartnersForm = styled.div`
@@ -29,7 +30,7 @@ const Content = styled.div`
   }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     flex-direction: column;
-    padding: 16px;
+
     & > *:not(:last-child) {
       margin-bottom: 32px;
       margin-right: 0px;
@@ -55,6 +56,7 @@ const TitleContainer = styled.div`
 `;
 
 const PartnersForm = () => {
+  const { onOpen } = useContext(IFrameSiderContext);
   return (
     <MainContainerPartnersForm>
       <TitleContainer>
@@ -65,13 +67,19 @@ const PartnersForm = () => {
       </TitleContainer>
       <Content>
         <TextContainer>
-          <Label>partners-description-1</Label>
-          <Label>partners-description-2</Label>
-          <Label>partners-description-3</Label>
-          <Label>partners-description-4</Label>
+          <Label className="line-height">partners-description-1</Label>
+          <Label className="line-height">partners-description-2</Label>
+          <Label className="line-height">partners-description-3</Label>
+          <Label className="line-height">partners-description-4</Label>
         </TextContainer>
-        <Form />
       </Content>
+
+      <CustomButton
+        buttonStyle={{ marginTop: 88, width: 200, justifyContent: 'center', display: 'flex' }}
+        onClick={() => onOpen({ src: SRC_PARTNERS })}
+      >
+        contact-us
+      </CustomButton>
     </MainContainerPartnersForm>
   );
 };

@@ -102,7 +102,7 @@ const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
           </Label>
         )}
         {description[1] && (
-          <Label fontFamily="bold" size="big" className="w-100 uppercase">
+          <Label fontFamily="bold" size="huge" className="w-100 uppercase">
             {description[1]}
           </Label>
         )}

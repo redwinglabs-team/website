@@ -4,13 +4,13 @@ export const WEBSITE_LINK_LIST = {
     title: 'home',
     link: '/'
   },
-  PARTNERS: {
-    title: 'partners',
-    link: '/partners'
-  },
   PROJECTS: {
     title: 'products',
     link: '/products'
+  },
+  PARTNERS: {
+    title: 'partners',
+    link: '/partners'
   },
   CONTACT: {
     title: 'contact-us',
