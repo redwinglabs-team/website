@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 import browserDetection from '../../utils/browserDetection';
-import { Label } from '../shared/Texts';
+import Label from '../shared/Label';
 import TableHeadCategoryPricingList from './TableHeadCategoryPricingList';
 import TableRowPricingList from './TableRowPricingList';
 
@@ -72,8 +72,10 @@ const DesktopPricingList = ({ features, categories, productName, productDescript
         <thead style={{ fontFamily: theme.fontFamily.regular }}>
           <tr style={browserDetection() === 'CHROME' && { height: 1 }}>
             <PackagesMadeContainer>
-              <Label fontSize="32px">{productName}</Label>
-              <Label>{productDescription}</Label>
+              <Label fontSize={32} className="uppercase">
+                {productName}
+              </Label>
+              <Label className="line-height">{productDescription}</Label>
             </PackagesMadeContainer>
             {categories.length === 1 ? (
               <TableHeadCategoryPricingList principal title={categories[0].name} description={categories[0].description} />
@@ -89,7 +91,7 @@ const DesktopPricingList = ({ features, categories, productName, productDescript
         <tbody>
           <tr>
             <td>
-              <Label fontSize="32px">Features</Label>
+              <Label fontSize={32}>Features</Label>
             </td>
           </tr>
           {features.map((feature, index) => (

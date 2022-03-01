@@ -103,7 +103,7 @@ const ProductsQuadroSuiteContainer = () => {
       <IntroPages bgImage={ROUTE_LIST.PRODUCTS.backgroundImage} description={ROUTE_LIST.PRODUCTS.description} haveDemoButton />
       <MainContainer>
         <TitleDescriptionPage supTitle="how-does-your-business" title="interact-with-guest" />
-        <Label className="margined-label w-100">Select 1 or more interaction types below</Label>
+        <Label className="margined-label w-100">select-1-or-more-interaction-types-below</Label>
         <ButtonContainer>
           {Object.entries(initialButtons).map((button, index) => (
             <CustomButton

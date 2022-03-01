@@ -6,19 +6,16 @@ import IntroPages from '../shared/IntroPages';
 import TitleDescriptionPage from '../shared/TitleDescriptionPage';
 
 const PartnersContainer = () => {
-    return (
-        <Container>
-        {/* INTRO */}
-        <IntroPages
-            bgImage={ROUTE_LIST.CAREERS.backgroundImage}
-            description={ROUTE_LIST.CAREERS.description}
-        />
-        {/* TITLE */}
-        <TitleDescriptionPage title="PARTNERS" />
-        {/* FORM CONTAINER */}
-        <PartnersForm/>
+  return (
+    <Container>
+      {/* INTRO */}
+      <IntroPages bgImage={ROUTE_LIST.CAREERS.backgroundImage} description={ROUTE_LIST.CAREERS.description} />
+      {/* TITLE */}
+      <TitleDescriptionPage title="partners" />
+      {/* FORM CONTAINER */}
+      <PartnersForm />
     </Container>
-    );
+  );
 };
 
 export default PartnersContainer;

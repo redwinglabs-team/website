@@ -43,7 +43,7 @@ const ProductsQuadroPmsContainer = () => {
       <PricingList
         features={QUADRO_PRICING_FEATURES.PMS}
         productName="QUADRO PMS"
-        productDescription="Intuitive hospitality tech suited to your business needs."
+        productDescription="pms-description-pricing-list"
         categories={QUADRO_PRICING_CATEGORIES.CLASSIC}
       />
     </Container>
