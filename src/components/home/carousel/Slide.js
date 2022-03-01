@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { IFrameSiderContext, SRC_BOOK_A_DEMO } from '../../../context/IFrameSiderContext';
 import CustomButton from '../../shared/CustomButton';
 import Label from '../../shared/Label';
 
@@ -62,6 +63,7 @@ const ContentContainer = styled.div`
 `;
 
 const Slide = ({ title, subtitle, description, image }) => {
+  const { onOpen } = useContext(IFrameSiderContext);
   return (
     <SlideContainer className="swiper-slide w-full">
       <LeftSlideContainer className="h-full max-w-full">
@@ -75,7 +77,7 @@ const Slide = ({ title, subtitle, description, image }) => {
         </TitleContainer>
         <ContentContainer>
           <Label className="line-height">{description}</Label>
-          <CustomButton>request-a-demo</CustomButton>
+          <CustomButton onClick={() => onOpen({ src: SRC_BOOK_A_DEMO })}>request-a-demo</CustomButton>
         </ContentContainer>
       </LeftSlideContainer>
       <RightSlideContainer>{image}</RightSlideContainer>

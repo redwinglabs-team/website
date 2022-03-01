@@ -133,19 +133,19 @@ const Footer = () => {
               <Label fontFamily="regular" className="w-unset">
                 offices-footer
               </Label>
-              &nbsp;(IT) Fasano, Apulia, (USA) Brooklyn, NY.
+              <Label>&nbsp;(IT) Fasano, Apulia, (USA) Brooklyn, NY.</Label>
             </Text>
             <Text style={{ marginBottom: 16 }}>
               <Label fontFamily="regular" className="w-unset">
                 phone-footer
               </Label>
-              &nbsp;(IT) +39 080 482 9200, (USA) +1917664032
+              <Label className="nowrap">&nbsp;(IT) +39 080 482 9200, (USA) +1917664032</Label>
             </Text>
             <Text>
               <Label fontFamily="regular" className="w-unset">
                 email-footer
               </Label>
-              &nbsp;info@redwinglabs.com
+              <Label>&nbsp;info@redwinglabs.com</Label>
             </Text>
           </FooterColumn>
           <FooterColumn className="link_list">

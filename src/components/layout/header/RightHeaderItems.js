@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import HeaderItem from '../../shared/HeaderItem';
 import Label from '../../shared/Label';
-import LanguageSwitcher from './LanguageSwitcher';
 
 const RightContainerHeader = styled.div`
   display: flex;
@@ -25,7 +24,6 @@ const RightHeaderItems = ({ itemsLink, isQuadroMenu }) => {
           <Label className="nowrap">{item.title}</Label>
         </HeaderItem>
       ))}
-      <LanguageSwitcher className="mobile-none" />
     </RightContainerHeader>
   );
 };

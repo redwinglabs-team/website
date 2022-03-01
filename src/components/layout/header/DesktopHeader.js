@@ -102,6 +102,7 @@ const LeftContainer = styled.div`
 
 const RightContainer = styled.div`
   display: flex;
+  align-items: center;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
     margin-top: 16px;
     justify-content: center;
@@ -176,6 +177,7 @@ const DesktopHeader = ({ className, menuWithMarginBottom }) => {
         </LeftContainer>
         <RightContainer>
           <RightHeaderItems itemsLink={MAIN_LINK} menuWithMarginBottom={menuWithMarginBottom} />
+          <LanguageSwitcher className="mobile-none" />
         </RightContainer>
       </TopHeader>
       <BottomHeader

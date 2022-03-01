@@ -10,6 +10,7 @@ const Container = styled.div`
   border-radius: 24px;
   border: 1px solid #fff;
   padding: 7px 16px;
+  height: fit-content;
   position: relative;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     margin-left: 16px;
