@@ -13,7 +13,7 @@ import { theme } from '../../../styles/theme';
 import { Container } from '../../shared/Containers';
 import CustomButton from '../../shared/CustomButton';
 import IntroPages from '../../shared/IntroPages';
-import { Label } from '../../shared/Texts';
+import Label from '../../shared/Label';
 import TitleDescriptionPage from '../../shared/TitleDescriptionPage';
 
 const MainContainer = styled.div`
@@ -89,34 +89,33 @@ const ProductsQuadroSuiteContainer = () => {
   const [buttonClicked, setButtonClicked] = useState(initialButtons);
 
   const imageOpacified = (section) => {
-     if(buttonClicked[section])return '1';
+    if (buttonClicked[section]) return '1';
     return '0.2';
   };
 
-  const handleButtons = (key)=>{
-        setButtonClicked({...buttonClicked,[key]: !buttonClicked[key]})
-  }
-
-
+  const handleButtons = (key) => {
+    setButtonClicked({ ...buttonClicked, [key]: !buttonClicked[key] });
+  };
 
   return (
     <Container>
       {/* INTRO */}
-      <IntroPages bgImage={ROUTE_LIST.PRODUCTS.backgroundImage} description={ROUTE_LIST.PRODUCTS.description} haveDemoButton/>
+      <IntroPages bgImage={ROUTE_LIST.PRODUCTS.backgroundImage} description={ROUTE_LIST.PRODUCTS.description} haveDemoButton />
       <MainContainer>
-        <TitleDescriptionPage supTitle="HOW DOES YOUR BUSINESS" title="INTERACT WITH GUEST?" />
-        <Label className="margined-label">Select 1 or more interaction types below</Label>
+        <TitleDescriptionPage supTitle="how-does-your-business" title="interact-with-guest" />
+        <Label className="margined-label w-100">Select 1 or more interaction types below</Label>
         <ButtonContainer>
           {Object.entries(initialButtons).map((button, index) => (
             <CustomButton
-              fontSize="32px"
               inverted={Object.values(buttonClicked)[index] !== true}
               onClick={() => {
-                handleButtons(button[0])
+                handleButtons(button[0]);
               }}
               boxShadow={`0px 5px 25px ${theme.colors.primaryColor}60`}
             >
-              {button}
+              <Label fontSize={32} fontFamily="bold">
+                {button}
+              </Label>
             </CustomButton>
           ))}
         </ButtonContainer>
@@ -126,7 +125,10 @@ const ProductsQuadroSuiteContainer = () => {
               <ProductPms style={{ opacity: imageOpacified('Accomodation') }} onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_PMS)} />
             </GridRow>
             <GridRow>
-              <ProductEntertainment style={{ opacity: imageOpacified('Accomodation') }} onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_ENTERTAINMENT)} />
+              <ProductEntertainment
+                style={{ opacity: imageOpacified('Accomodation') }}
+                onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_ENTERTAINMENT)}
+              />
             </GridRow>
           </GridColumn>
           <GridRow>
@@ -134,7 +136,7 @@ const ProductsQuadroSuiteContainer = () => {
               <ProductFnb style={{ opacity: imageOpacified('Eating & Drinking') }} onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_FNB)} />
             </GridColumn>
             <GridColumn>
-              <ProductPop style={{ opacity: imageOpacified('Shopping')}} onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_POP)} />
+              <ProductPop style={{ opacity: imageOpacified('Shopping') }} onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_POP)} />
             </GridColumn>
           </GridRow>
         </Content>

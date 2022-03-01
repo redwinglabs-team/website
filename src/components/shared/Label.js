@@ -23,7 +23,9 @@ const STYText = styled.span`
   }
 
   z-index: 1;
-  width: 100%;
+  &.w-100 {
+    width: 100%;
+  }
   &.line-height {
     line-height: 1.5;
   }
@@ -59,6 +61,14 @@ const STYText = styled.span`
 
   &.nowrap {
     white-space: nowrap;
+  }
+  &.margined-label {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 120px;
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+      padding: 24px;
+    }
   }
 `;
 
@@ -131,29 +141,33 @@ export const AlternateFontFamilyLabel = ({ children }) => {
     const alternateTitle = sp.map((tl, index) => {
       if (tl === '&')
         return (
-          <Label key={index} fontFamily="bold" className="w-unset capitalize">
+          <Label key={index} fontFamily="bold" className="capitalize">
             &nbsp;{tl}&nbsp;
           </Label>
         );
       if (sp[index - 1] === '&')
         return (
-          <Label key={index} fontFamily="regular" className="w-unset capitalize">
+          <Label key={index} fontFamily="regular" className="capitalize">
             {tl}&nbsp;
           </Label>
         );
       if (index % 2 === 0)
         return (
-          <Label key={index} fontFamily="bold" className="w-unset capitalize">
+          <Label key={index} fontFamily="bold" className="capitalize">
             {tl}&nbsp;
           </Label>
         );
       return (
-        <Label key={index} fontFamily="regular" className="w-unset capitalize">
+        <Label key={index} fontFamily="regular" className="capitalize">
           {tl}
         </Label>
       );
     });
     return alternateTitle;
   };
-  return <Label fontSize={32}>{alternateFontWeight()}</Label>;
+  return (
+    <Label fontSize={32} className="w-100 nowrap">
+      {alternateFontWeight()}
+    </Label>
+  );
 };

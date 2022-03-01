@@ -68,9 +68,6 @@ const Text = styled.p`
     width: auto;
     margin: 0px 8px;
   }
-  & > span {
-    font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
-  }
 `;
 
 const FooterBottomContainer = styled.div`
@@ -128,18 +125,25 @@ const Footer = () => {
           </FooterColumn>
           <FooterColumn>
             <Label fontFamily="bold" style={{ marginBottom: 24 }}>
-              Contacts
+              contacts
             </Label>
             <Text style={{ marginBottom: 16, whiteSpace: 'nowrap' }}>
-              <span>Offices:</span>
+              <Label fontFamily="regular" className="w-unset">
+                offices-footer
+              </Label>
               <ItalianFlagIcon /> Fasano, Apulia <AmericanFlagIcon /> Brooklyn, NY.
             </Text>
             <Text style={{ marginBottom: 16 }}>
-              <span>Phone:</span>
+              <Label fontFamily="regular" className="w-unset">
+                phone-footer
+              </Label>
               <ItalianFlagIcon /> +39 080 482 9200 <AmericanFlagIcon /> +1917664032
             </Text>
             <Text>
-              <span>Email:</span> info@redwinglabs.com
+              <Label fontFamily="regular" className="w-unset">
+                email-footer
+              </Label>{' '}
+              info@redwinglabs.com
             </Text>
           </FooterColumn>
           <FooterColumn className="link_list">
