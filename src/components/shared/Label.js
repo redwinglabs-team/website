@@ -65,6 +65,9 @@ const STYText = styled.span`
   &.nowrap {
     white-space: nowrap;
   }
+  &.f-wrap {
+    flex-wrap: wrap;
+  }
   &.margined-label {
     margin-left: auto;
     margin-right: auto;
@@ -169,7 +172,7 @@ export const AlternateFontFamilyLabel = ({ children }) => {
     return alternateTitle;
   };
   return (
-    <Label fontSize={32} className="w-100 nowrap">
+    <Label fontSize={32} className="w-100 f-wrap">
       {alternateFontWeight()}
     </Label>
   );

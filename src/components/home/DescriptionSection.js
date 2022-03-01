@@ -53,6 +53,10 @@ const RightContainer = styled(Container)`
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     justify-content: center;
     height: fit-content;
+    margin: 16px 0px;
+    & > *:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
 `;
 
