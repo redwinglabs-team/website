@@ -66,7 +66,7 @@ const DemoButtonContainer = styled.div`
   color: ${({ theme: { colors } }) => colors.white};
   font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
   border-radius: 10px 10px 0px 0px;
-  left: -155px;
+  left: -185px;
   font-size: 24px;
   padding: 12px 100px;
   transform: rotate(90deg);
