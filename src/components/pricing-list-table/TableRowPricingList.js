@@ -11,7 +11,7 @@ const TableRow = styled.tr`
     height: fit-content;
   }
 `;
-const ContentTd = styled.tr`
+const ContentTd = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,13 +24,15 @@ const TableRowPricingList = ({ title, description, essentials, pro, enterprise, 
     <TableRow bgColored={bgColored}>
       <td>
         <ContentTd onClick={() => setOpenedAccordion(index)}>
-          <PlusIcon style={{ marginRight: 8 }} />
-          <Label className="w-100">{title}</Label>
+          <PlusIcon style={{ marginRight: 8, width: 24 }} />
+          <Label fontFamily="regular" className="w-100 capitalize text-eft">
+            {title}
+          </Label>
         </ContentTd>
         <SlideDown className="my-dropdown-slidedown">
           {openedAccordion === index ? (
-            <div style={{ padding: 20 }}>
-              <Label className="line-height" fontSize={12}>
+            <div style={{ padding: 20, paddingLeft: 0 }}>
+              <Label className="line-height text-left" fontSize={12}>
                 {description}
               </Label>
             </div>
@@ -39,21 +41,23 @@ const TableRowPricingList = ({ title, description, essentials, pro, enterprise, 
       </td>
       {connect ? (
         <td style={{ position: 'relative' }} className="x-shadow">
-          <ContentTd>{typeof connect === 'boolean' ? [connect ? <CheckIcon /> : null] : <Label className="text-center">{connect}</Label>}</ContentTd>
+          <ContentTd>
+            {typeof connect === 'boolean' ? [connect ? <CheckIcon key={0} /> : null] : <Label className="text-center">{connect}</Label>}
+          </ContentTd>
         </td>
       ) : (
         <>
           <td style={{ position: 'relative' }} className="left-shadow">
             <ContentTd>
-              {typeof essentials === 'boolean' ? [essentials ? <CheckIcon /> : null] : <Label className="text-center">{essentials}</Label>}
+              {typeof essentials === 'boolean' ? [essentials ? <CheckIcon key={0} /> : null] : <Label className="text-center">{essentials}</Label>}
             </ContentTd>
           </td>
           <td style={{ position: 'relative' }} className="x-shadow">
-            <ContentTd>{typeof pro === 'boolean' ? [pro ? <CheckIcon /> : null] : <Label className="text-center">{pro}</Label>}</ContentTd>
+            <ContentTd>{typeof pro === 'boolean' ? [pro ? <CheckIcon key={0} /> : null] : <Label className="text-center">{pro}</Label>}</ContentTd>
           </td>
           <td className="right-shadow" style={{ position: 'relative' }}>
             <ContentTd>
-              {typeof enterprise === 'boolean' ? [enterprise ? <CheckIcon /> : null] : <Label className="text-center">{enterprise}</Label>}
+              {typeof enterprise === 'boolean' ? [enterprise ? <CheckIcon key={0} /> : null] : <Label className="text-center">{enterprise}</Label>}
             </ContentTd>
           </td>
         </>

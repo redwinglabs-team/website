@@ -75,16 +75,6 @@ const TitleContainer = styled(Container)`
   }
 `;
 
-const LabeledTitleRegular = styled.span`
-  font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
-  margin-right: 8px;
-`;
-
-const LabeledTitleBold = styled.span`
-  font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
-  margin-right: 8px;
-`;
-
 const Divider = styled.hr``;
 
 const Clients = () => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components/macro';
 import { CrossIcon } from '../../assets';
 import CustomButton from './CustomButton';
@@ -25,20 +25,25 @@ const Container = styled.div`
 `;
 
 const IFrameSider = ({ open, onClose, src }) => {
-  const [ready, setReady] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setReady(true);
-    }, 3000);
-  }, []);
+  const [loading, setLoading] = useState(true);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setReady(true);
+  //   }, 3000);
+  // }, []);
+
+  const onLoad = () => {
+    setLoading(false);
+  };
 
   return (
     <Container open={open}>
       <CustomButton onClick={onClose} background="transparent" buttonStyle={{ position: 'fixed', zIndex: 150 }}>
         <CrossIcon style={{ transform: 'scale(1.5)' }} />
       </CustomButton>
-      {!ready ? <Loader /> : null}
-      <iframe title="contact-us" src={ready ? src : 'about:blank'} width="100%" height="100%" style={{ border: 0 }} loading="lazy" />
+      {/* {!ready ? <Loader /> : null} */}
+      {loading ? <Loader /> : null}
+      <iframe title="contact-us" src={src} width="100%" height="100%" style={{ border: 0 }} onLoad={onLoad} />
     </Container>
   );
 };

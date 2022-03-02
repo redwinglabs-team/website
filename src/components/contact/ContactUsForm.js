@@ -142,7 +142,8 @@ const ContactUsForm = () => {
         <GridPattern />
       </GridContainer>
       <CustomButton
-        buttonStyle={{ marginTop: 88, width: 200, justifyContent: 'center', display: 'flex' }}
+        fontSize={24}
+        buttonStyle={{ marginTop: 88, marginBottom: 88, width: 300, justifyContent: 'center', display: 'flex' }}
         onClick={() => onOpen({ src: SRC_CONTACT_US })}
       >
         contact-us

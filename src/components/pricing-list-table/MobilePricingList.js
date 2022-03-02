@@ -58,7 +58,7 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
           </Label>
           <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
           {features.map((feature, index) => (
-            <PricingRow bgColored={index % 2 === 0} className="w-full">
+            <PricingRow key={index} bgColored={index % 2 === 0} className="w-full">
               <Content>
                 <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
                 <LabelContainer className="w-full">
@@ -86,7 +86,7 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
             {features
               .filter((feature) => feature.essentials)
               .map((feature, index) => (
-                <PricingRow bgColored={index % 2 === 0} className="w-full">
+                <PricingRow key={index} bgColored={index % 2 === 0} className="w-full">
                   <Content>
                     <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
                     <LabelContainer className="w-full">
@@ -111,7 +111,7 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
             {features
               .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')
               .map((feature, index) => (
-                <PricingRow bgColored={index % 2 === 0} className="w-full">
+                <PricingRow key={index} bgColored={index % 2 === 0} className="w-full">
                   <Content>
                     <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
                     <LabelContainer className="w-full">
@@ -138,7 +138,7 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
             {features
               .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')
               .map((feature, index) => (
-                <PricingRow bgColored={index % 2 === 0} className="w-full">
+                <PricingRow key={index} bgColored={index % 2 === 0} className="w-full">
                   <Content>
                     <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
                     <LabelContainer className="w-full">

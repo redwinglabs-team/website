@@ -70,7 +70,9 @@ const CustomButton = ({
       inverted={inverted}
       widthBorderRadius={widthBorderRadius}
     >
-      <Label fontFamily="bold">{children}</Label>
+      <Label fontSize={fontSize} fontFamily="bold">
+        {children}
+      </Label>
     </StyledButton>
   );
 };

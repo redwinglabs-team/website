@@ -107,6 +107,7 @@ const ProductsQuadroSuiteContainer = () => {
         <ButtonContainer>
           {Object.entries(initialButtons).map((button, index) => (
             <CustomButton
+              key={index}
               inverted={Object.values(buttonClicked)[index] !== true}
               onClick={() => {
                 handleButtons(button[0]);

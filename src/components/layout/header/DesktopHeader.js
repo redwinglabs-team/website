@@ -120,51 +120,43 @@ const DesktopHeader = ({ className, menuWithMarginBottom }) => {
   const MAIN_LINK = {
     HOME: {
       title: 'home',
-      link: ROUTE_INDEX,
-      onClick: () => {}
+      link: ROUTE_INDEX
     },
     PRODUCTS: {
       title: 'products',
       link: ROUTE_PRODUCTS_QUADRO_SUITE,
-      onClick: () => {}
+      hasChildren: true
     },
     PARTNERS: {
       title: 'partners',
-      link: ROUTE_PARTNERS,
-      onClick: () => {}
+      link: ROUTE_PARTNERS
     },
     CONTACT: {
       title: 'contact-us',
-      link: ROUTE_CONTACT_US,
-      onClick: () => {}
+      link: ROUTE_CONTACT_US
     }
   };
 
   const QUADRO_LINK = {
     SUITE: {
       title: 'Suite',
-      link: ROUTE_PRODUCTS_QUADRO_SUITE,
-      onClick: () => {}
+      link: ROUTE_PRODUCTS_QUADRO_SUITE
     },
     PMS: {
       title: 'Pms',
-      link: ROUTE_PRODUCTS_QUADRO_PMS,
-      onClick: () => {}
+      link: ROUTE_PRODUCTS_QUADRO_PMS
     },
     FNB: {
       title: 'Fnb',
-      link: ROUTE_PRODUCTS_QUADRO_FNB,
-      onClick: () => {}
+      link: ROUTE_PRODUCTS_QUADRO_FNB
     },
     POP: {
       title: 'Pop',
-      link: ROUTE_PRODUCTS_QUADRO_POP,
-      onClick: () => {}
+      link: ROUTE_PRODUCTS_QUADRO_POP
     },
     ENTERTAINMENT: {
       title: 'Entertainment',
-      link: ROUTE_PRODUCTS_QUADRO_ENTERTAINMENT,
-      onClick: () => {}
+      link: ROUTE_PRODUCTS_QUADRO_ENTERTAINMENT
     }
   };
 

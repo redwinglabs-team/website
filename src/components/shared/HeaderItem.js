@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
-import { ROUTE_PRODUCTS } from '../../router/routes';
 import { matchPathname } from '../../utils/UtilStrings';
+import Label from './Label';
 
 const Item = styled.div`
   color: ${({ colorInverted, theme: { colors } }) => (colorInverted ? colors.primaryColor : colors.white)};
@@ -11,10 +11,6 @@ const Item = styled.div`
   background: transparent;
   cursor: pointer;
   font-family: ${({ theme: { fontFamily }, textRegular }) => (textRegular ? fontFamily.regular : fontFamily.bold)};
-
-  &:hover {
-    text-shadow: ${({ shadowHover }) => shadowHover && '0 0 5px #ffffff'};
-  }
 
   .underline {
     width: ${({ isHover }) => (isHover ? '100%' : 0)};
@@ -29,36 +25,29 @@ const Item = styled.div`
     height: 3px;
   }
 `;
-const HeaderItem = ({ id, className, href, target, children, disabledHover, style, textRegular, shadowHover, colorInverted, onClick }) => {
+const HeaderItem = ({ children, style, colorInverted, onClick }) => {
   const [isHover, setIsHover] = useState(false);
   // console.log(`${children}`,href === window.location.pathname && matchPathname("products"))
 
-  const isSelectedItem = () => {
-    // eslint-disable-next-line prefer-destructuring
-    const pathname = window.location.pathname;
-    if (href === pathname) return true;
-    if (href === pathname && matchPathname(ROUTE_PRODUCTS)) return true;
-    return false;
+  const isActive = () => {
+    const { pathname } = window.location;
+    if (children?.isActiveWildcard?.length) {
+      console.log('children?.isActiveWildCard', children?.isActiveWildcard);
+    }
+    return pathname === children.link || (children?.hasChildren && matchPathname(children.link));
   };
-
   return (
     <Item
-      id={id}
-      className={className}
-      href={href}
-      target={target}
       colorInverted={colorInverted}
-      isHover={disabledHover ? false : isHover}
+      isHover={isHover}
       onMouseOver={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
       style={style}
-      textRegular={textRegular}
-      shadowHover={shadowHover}
       onClick={onClick}
     >
       <>
-        {children}
-        {!disabledHover && <div className={isSelectedItem() ? 'is-underlined' : 'underline'} />}
+        <Label fontFamily={isActive() ? 'bold' : 'regular'}>{children.title}</Label>
+        <div className={isActive() ? 'is-underlined' : 'underline'} />
       </>
     </Item>
   );

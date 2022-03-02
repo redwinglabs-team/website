@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { IFrameSiderContext, SRC_BOOK_A_DEMO } from '../../context/IFrameSiderContext';
 import CustomButton from '../shared/CustomButton';
 import CustomDivider from '../shared/CustomDivider';
 import Label from '../shared/Label';
@@ -18,6 +19,7 @@ const Content = styled.div`
 `;
 
 const TableHeadCategoryPricingList = ({ title, description, className, principal }) => {
+  const { onOpen } = useContext(IFrameSiderContext);
   return (
     <PricingCategory className={className}>
       <Content style={{ height: '100%', justifyContent: 'space-between' }}>
@@ -30,7 +32,7 @@ const TableHeadCategoryPricingList = ({ title, description, className, principal
             {description}
           </Label>
         </Content>
-        <CustomButton inverted={!principal} boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius>
+        <CustomButton inverted={!principal} boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius onClick={() => onOpen({ src: SRC_BOOK_A_DEMO })}>
           <Label className="uppercase" fontFamily="bold">
             request-quote
           </Label>

@@ -12,6 +12,7 @@ const MainContainerPartnersForm = styled.div`
   margin-right: auto;
   margin-left: auto;
   padding: 48px 170px;
+  padding-bottom: 0px;
   width: -webkit-fill-available;
 
   max-width: inherit;
@@ -75,7 +76,8 @@ const PartnersForm = () => {
       </Content>
 
       <CustomButton
-        buttonStyle={{ marginTop: 88, width: 200, justifyContent: 'center', display: 'flex' }}
+        fontSize={24}
+        buttonStyle={{ marginTop: 88, marginBottom: 88, width: 300, justifyContent: 'center', display: 'flex' }}
         onClick={() => onOpen({ src: SRC_PARTNERS })}
       >
         contact-us
