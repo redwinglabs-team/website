@@ -86,7 +86,7 @@ const Clients = () => {
           <Label fontFamily="bold" className="uppercase w-unset">
             clients
           </Label>
-          <div style={{ position: 'absolute', display: 'flex' }}>
+          <div className="mobile-none" style={{ position: 'absolute', display: 'flex' }}>
             <Label fontSize={132} color="#2323231a" className="uppercase w-unset">
               our
             </Label>
