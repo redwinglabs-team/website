@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 import { RedwingsLogo } from '../../../assets';
 import { theme } from '../../../styles/theme';
 import { Container } from '../../shared/Containers';
@@ -112,6 +113,7 @@ const FooterLinksGrid = styled.div`
 `;
 
 const Footer = () => {
+  const navigate = useNavigate();
   const isIndex = () => window.location.pathname === '/';
 
   return (
@@ -151,7 +153,7 @@ const Footer = () => {
           <FooterColumn className="link_list">
             <FooterLinksGrid>
               {Object.values(WEBSITE_LINK_LIST).map((link, index) => (
-                <Label key={index} fontFamily="bold" className="capitalize" fontSize={24} style={{ cursor: 'pointer' }}>
+                <Label key={index} fontFamily="bold" className="capitalize pointer" fontSize={24} onClick={() => navigate(link.link)}>
                   {link.title}
                 </Label>
               ))}

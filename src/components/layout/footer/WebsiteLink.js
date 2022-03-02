@@ -1,19 +1,21 @@
+import { ROUTE_CONTACT_US, ROUTE_INDEX, ROUTE_PARTNERS, ROUTE_PRODUCTS } from '../../../router/routes';
+
 /* eslint-disable import/prefer-default-export */
 export const WEBSITE_LINK_LIST = {
   HOME: {
     title: 'home',
-    link: '/'
+    link: ROUTE_INDEX
   },
   PROJECTS: {
     title: 'products',
-    link: '/products'
+    link: ROUTE_PRODUCTS
   },
   PARTNERS: {
     title: 'partners',
-    link: '/partners'
+    link: ROUTE_PARTNERS
   },
   CONTACT: {
     title: 'contact-us',
-    link: '/contact'
+    link: ROUTE_CONTACT_US
   }
 };

@@ -68,6 +68,10 @@ const STYText = styled.span`
   &.f-wrap {
     flex-wrap: wrap;
   }
+
+  &.pointer {
+    cursor: pointer;
+  }
   &.margined-label {
     margin-left: auto;
     margin-right: auto;

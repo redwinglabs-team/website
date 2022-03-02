@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import HeaderItem from '../../shared/HeaderItem';
 import Label from '../../shared/Label';
@@ -9,6 +10,7 @@ const RightContainerHeader = styled.div`
 `;
 
 const RightHeaderItems = ({ itemsLink, isQuadroMenu }) => {
+  const navigate = useNavigate();
   return (
     <RightContainerHeader>
       {Object.values(itemsLink).map((item, index) => (
@@ -16,10 +18,9 @@ const RightHeaderItems = ({ itemsLink, isQuadroMenu }) => {
           key={index}
           style={{ marginRight: 32 }}
           colorInverted={isQuadroMenu}
-          // className="mobile-none"
           textRegular={item.link !== window.location.pathname}
           href={item.link}
-          onClick={item.onClick}
+          onClick={() => navigate(item.link)}
         >
           <Label className="nowrap">{item.title}</Label>
         </HeaderItem>
