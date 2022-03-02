@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { LinkedinIcon, GithubIcon, TwitterIcon, YoutubeIcon, FacebookIcon, InstagramIcon } from '../../../assets';
+import { LanguageContext } from '../../../context/LanguageContext';
 
 const IconListContainer = styled.div`
   display: flex;
@@ -29,41 +30,47 @@ const IconItem = styled.div`
 `;
 
 const IconList = ({ isInverted }) => {
+  const { language } = useContext(LanguageContext);
   /// ADD-LINKS
   const socialLinks = {
     TWITTER: {
       icon: <TwitterIcon />,
-      link: ''
+      itLink: 'https://twitter.com/Italia_Quadro',
+      usLink: 'https://twitter.com/USA_Quadro'
     },
     FACEBOOK: {
       icon: <FacebookIcon />,
-      link: 'https://www.facebook.com/redwinglabs/'
+      itLink: 'https://www.facebook.com/redwinglabs/',
+      usLink: 'https://www.facebook.com/redwinglabs/'
     },
     INSTAGRAM: {
       icon: <InstagramIcon />,
-      link: ''
+      itLink: 'https://www.instagram.com/italia_quadro/',
+      usLink: 'https://www.instagram.com/usa_quadro/'
     },
     GITHUB: {
       icon: <GithubIcon />,
-      link: 'https://github.com/redwinglabs-team'
+      itLink: 'https://github.com/redwinglabs-team',
+      usLink: 'https://github.com/redwinglabs-team'
     },
     YOUTUBE: {
       icon: <YoutubeIcon />,
-      link: 'https://www.youtube.com/channel/UCvyijjNa0s_y7tvpCy7fZCA'
+      itLink: 'https://www.youtube.com/channel/UCvyijjNa0s_y7tvpCy7fZCA',
+      usLink: 'https://www.youtube.com/channel/UCvyijjNa0s_y7tvpCy7fZCA'
     },
     LINKEDIN: {
       icon: <LinkedinIcon />,
-      link: 'https://www.linkedin.com/company/redwing-labs/'
+      itLink: 'https://www.linkedin.com/company/redwing-labs/',
+      usLink: 'https://www.linkedin.com/company/redwing-labs/'
     }
   };
-
   return (
     <IconListContainer isInverted={isInverted}>
       {Object.values(socialLinks).map((social, index) => (
         <IconItem
           key={index}
           onClick={() => {
-            window.open(social.link, '_blank', 'noopener,noreferrer');
+            window.open(language.toUpperCase() === 'IT' ? social.itLink : social.usLink, '_blank', 'noopener,noreferrer');
           }}
         >
           {social.icon}

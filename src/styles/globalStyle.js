@@ -17,7 +17,6 @@ export default createGlobalStyle`
       height: 100%;
       box-sizing: border-box;
       scroll-behavior: smooth;
-      overflow-x: hidden;
       
 
     };
