@@ -8,37 +8,44 @@ export default createGlobalStyle`
       scrollbar-width: thin;
     }
 
+    *, *:before, *:after {
+      -webkit-box-sizing: inherit;
+      -moz-box-sizing: inherit;
+      box-sizing: inherit;
+    }
+
     *::-webkit-scrollbar-track {
       display: none;
     }
 
     html {
       width: 100%;
-      height: 100%;
+      min-height: 100%;
       box-sizing: border-box;
-      scroll-behavior: smooth;
-      
+      scroll-behavior: smooth;  
 
     };
 
     body {
+      margin: 0;
       width: 100%;
-      height: 100%;
+      min-height: 100%;
       line-height: inherit;
-      overflow-y: auto;
-      overflow-x:hidden;
       min-width: 0;
-      font-family:  ${({ theme: { fontFamily } }) => fontFamily.regular};
-      margin: 0px;
+      font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
+      background-attachment: fixed;
+      opacity: 1;
       background-color: ${({ theme: { colors } }) => colors.white};
       color:${({ theme: { colors } }) => colors.primaryColor};
-      scroll-behavior: smooth;
+      overflow-x: hidden;
+
+      
       
     };
 
     #root {
       height: 100%;
-
+      overflow: hidden;
       & > div:first-child {
         display: flex;
         flex-flow: column;
