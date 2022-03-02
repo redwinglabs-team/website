@@ -25,7 +25,7 @@ const IntroContent = styled.div`
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: ${({ hasImage }) => (hasImage ? 'flex-end' : 'center')};
   }
 `;
 
@@ -110,7 +110,7 @@ const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
           <Label fontFamily="bold">book-a-demo</Label>
         </DemoButtonContainer>
       )}
-      <IntroContent>
+      <IntroContent hasImage={productImage}>
         <TitleContainer>
           {description[0] && (
             <Label fontFamily="light" size="medium" className="w-100 uppercase">

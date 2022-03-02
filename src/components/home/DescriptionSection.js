@@ -8,9 +8,9 @@ const DescriptionSectionContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-flow: column;
   padding: 64px 170px;
+  padding-top: 32px;
   flex-direction: row;
   width: fit-content;
   max-height: 600px;
@@ -27,10 +27,8 @@ const DescriptionSectionContainer = styled.div`
     margin-bottom: 64px;
   }
 `;
-const LeftContainer = styled(Container)`
+const LeftContainer = styled.div`
   position: relative;
-  height: -webkit-fill-available;
-  width: -moz-available;
   background-color: ${({ theme: { colors } }) => colors.lightGreyBackground};
   margin-right: 64px;
   max-width: 300px;
@@ -87,12 +85,19 @@ const DescriptionSection = () => {
         </GridContainer>
       </LeftContainer>
       <RightContainer>
-        <AlternateFontFamilyLabel>innovative-solution</AlternateFontFamilyLabel>
-        <Label className="line-height">innovative-solution-description</Label>
-        <AlternateFontFamilyLabel>cloud-based-and-interconnected</AlternateFontFamilyLabel>
-        <Label className="line-height">cloud-based-and-interconnected-description</Label>
-        <AlternateFontFamilyLabel>solid-foundation</AlternateFontFamilyLabel>
-        <Label className="line-height">solid-foundation-description</Label>
+        <Container>
+          <AlternateFontFamilyLabel>innovative-solution</AlternateFontFamilyLabel>
+          <Label className="line-height">innovative-solution-description</Label>
+        </Container>
+        <Container>
+          {' '}
+          <AlternateFontFamilyLabel>cloud-based-and-interconnected</AlternateFontFamilyLabel>
+          <Label className="line-height">cloud-based-and-interconnected-description</Label>
+        </Container>
+        <Container>
+          <AlternateFontFamilyLabel>solid-foundation</AlternateFontFamilyLabel>
+          <Label className="line-height">solid-foundation-description</Label>
+        </Container>
       </RightContainer>
     </DescriptionSectionContainer>
   );
