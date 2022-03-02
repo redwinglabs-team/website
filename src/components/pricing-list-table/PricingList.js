@@ -39,7 +39,7 @@ const PricingList = ({ features, productName, productDescription, categories }) 
     }
   };
   return (
-    <div id="pricing" style={{ width: '100%' }}>
+    <div id="pricing" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
         <CustomDivider red />{' '}
         <PricingInfo>

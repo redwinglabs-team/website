@@ -32,8 +32,8 @@ const PricingTable = styled.table`
   }
   th,
   td {
-    max-width: ${({ isSingleColumn }) => (isSingleColumn ? '400px' : '240px')};
-    min-width: ${({ isSingleColumn }) => (isSingleColumn ? '400px' : '240px')};
+    max-width: ${({ isSingleColumn }) => (isSingleColumn ? '400px' : '280px')};
+    min-width: ${({ isSingleColumn }) => (isSingleColumn ? '400px' : '280px')};
   }
 `;
 
@@ -45,15 +45,18 @@ const DesktopPricingList = ({ features, categories, productName, productDescript
           boxShadow: '0px 0px 99px #00000029',
           height: 'calc(100% + 48px)',
           top: -24,
-          width: categories.length > 1 ? 280 : 425,
-          left: categories.length > 1 ? 730 : 625,
+          width: categories.length > 1 ? 280 : 400,
+          left: categories.length > 1 ? 730 : 570,
           position: 'absolute'
         }}
       />
 
-      <div style={{ position: 'absolute', background: 'white', top: -24, left: 730, width: 280, height: 24, zIndex: 1 }} className="header-shadow" />
       <div
-        style={{ position: 'absolute', background: 'white', bottom: -24, left: 730, width: 280, height: 24, zIndex: 1 }}
+        style={{ position: 'absolute', background: 'white', top: -24, left: categories.length > 1 ? 730 : 570, width: 280, height: 24, zIndex: 1 }}
+        className="header-shadow"
+      />
+      <div
+        style={{ position: 'absolute', background: 'white', bottom: -24, left: categories.length > 1 ? 730 : 570, width: 280, height: 24, zIndex: 1 }}
         className="header-shadow"
       />
 
@@ -72,7 +75,7 @@ const DesktopPricingList = ({ features, categories, productName, productDescript
 
       <PricingTable border="none" cellSpacing={0} cellPadding={20} isSingleColumn={categories.length === 1}>
         <thead style={{ fontFamily: theme.fontFamily.regular }}>
-          <tr style={browserDetection() === 'CHROME' && { height: 1 }}>
+          <tr style={browserDetection() === 'CHROME' ? { height: 1 } : {}}>
             <PackagesMadeContainer>
               <Label fontSize={32} className="uppercase text-left">
                 {productName}
