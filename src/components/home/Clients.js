@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { Container } from '../shared/Containers';
 import borgoImage from '../../assets/images/home/Borgo Egnazia.png';
 import ciminoImage from '../../assets/images/home/Masseria Cimino.png';

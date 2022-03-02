@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import Label from '../shared/Label';
 
 const OverviewContainer = styled.div`
@@ -8,7 +8,7 @@ const OverviewContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 32px 0px;
+  margin-bottom: 32px;
   margin-right: auto;
   margin-left: auto;
   padding: 64px 170px;
@@ -27,8 +27,14 @@ const Overview = ({ title, description }) => {
       <Label className="w-100" fontFamily="bold" fontSize={32}>
         overview
       </Label>
-      <Label fontSize={24}>{title}</Label>
-      {description && <Label fontSize={24}>{description}</Label>}
+      <Label className="w-100" fontSize={24}>
+        {title}
+      </Label>
+      {description && (
+        <Label className="w-100" fontSize={24}>
+          {description}
+        </Label>
+      )}
     </OverviewContainer>
   );
 };

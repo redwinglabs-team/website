@@ -1,11 +1,15 @@
 /* eslint-disable import/prefer-default-export */
+export const QUADRO_PRICING_CATEGORY_ESSENTIAL = { id: 'ESSENTIALS', name: 'Essentials', description: 'essentials-description' };
+export const QUADRO_PRICING_CATEGORY_PRO = { id: 'PRO', name: 'Pro', description: 'pro-description' };
+export const QUADRO_PRICING_CATEGORY_ENTERPRISE = { id: 'ENTERPRISE', name: 'Enterprise', description: 'enterprise-description' };
+export const QUADRO_PRICING_CATEGORY_ENTERTAINMENT = {
+  id: 'CONNECT',
+  name: 'Connect',
+  description: 'entertainment-description'
+};
 export const QUADRO_PRICING_CATEGORIES = {
-  CLASSIC: [
-    { id: 'ESSENTIALS', name: 'Essentials', description: 'essentials-description' },
-    { id: 'PRO', name: 'Pro', description: 'pro-description' },
-    { id: 'ENTERPRISE', name: 'Enterprise', description: 'enterprise-description' }
-  ],
-  ENTERTAINMENT: [{ id: 'CONNECT', name: 'Connect', description: 'Omnichannel guest entertainment and communication platform.' }]
+  CLASSIC: [QUADRO_PRICING_CATEGORY_ESSENTIAL, QUADRO_PRICING_CATEGORY_PRO, QUADRO_PRICING_CATEGORY_ENTERPRISE],
+  ENTERTAINMENT: [QUADRO_PRICING_CATEGORY_ENTERTAINMENT]
 };
 
 export const QUADRO_PRICING_FEATURES = {

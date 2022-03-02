@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { LinkedinIcon, GithubIcon, TwitterIcon, YoutubeIcon, FacebookIcon, InstagramIcon } from '../../../assets';
 import { LanguageContext } from '../../../context/LanguageContext';
 

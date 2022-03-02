@@ -169,7 +169,7 @@ export const AlternateFontFamilyLabel = ({ children }) => {
         );
       return (
         <Label key={index} fontFamily="regular" className="capitalize">
-          {tl}
+          {tl}&nbsp;
         </Label>
       );
     });

@@ -1,6 +1,6 @@
 import React from 'react';
 import SlideDown from 'react-slidedown';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { CheckIcon, PlusIcon } from '../../assets';
 import Label from '../shared/Label';
 

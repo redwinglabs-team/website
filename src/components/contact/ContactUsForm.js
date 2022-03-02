@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { AmericanFlagIcon, ItalianFlagIcon, GridPattern } from '../../assets';
 import { IFrameSiderContext, SRC_CONTACT_US } from '../../context/IFrameSiderContext';
 import CustomButton from '../shared/CustomButton';
@@ -65,7 +65,7 @@ const ContactsContainer = styled.div`
 
   text-align-last: center;
   & > *:not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     padding: 16px;

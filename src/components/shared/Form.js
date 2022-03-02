@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Label from './Label';

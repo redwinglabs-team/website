@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { GridPattern } from '../../assets';
 import { Container } from '../shared/Containers';
 import Label, { AlternateFontFamilyLabel } from '../shared/Label';
@@ -41,7 +41,6 @@ const LeftContainer = styled(Container)`
   }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     margin: 0px;
-    max-height: 200px;
   }
 `;
 const RightContainer = styled(Container)`

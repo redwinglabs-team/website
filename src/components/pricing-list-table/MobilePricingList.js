@@ -1,7 +1,12 @@
 import React, { useContext } from 'react';
 import SlideDown from 'react-slidedown';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { PlusIcon } from '../../assets';
+import {
+  QUADRO_PRICING_CATEGORY_ENTERPRISE,
+  QUADRO_PRICING_CATEGORY_ESSENTIAL,
+  QUADRO_PRICING_CATEGORY_PRO
+} from '../../constants/quadroPricingFeatures';
 import { IFrameSiderContext, SRC_BOOK_A_DEMO } from '../../context/IFrameSiderContext';
 import { Container } from '../shared/Containers';
 import CustomButton from '../shared/CustomButton';
@@ -60,7 +65,7 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
           <Label fontFamily="bold" size="huge">
             {categories[0].name}
           </Label>
-          <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
+          <Label style={{ marginBottom: 24 }}> {categories[0].description}</Label>
           {features.map((feature, index) => (
             <PricingRow key={index} bgColored={index % 2 === 0} className="w-full">
               <Content>
@@ -85,8 +90,8 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
         <>
           {/* PMS,FNB,POP CASE */}
           <ProductContainer className="w-full">
-            <Label size="huge">Essentials</Label>
-            <Label style={{ marginBottom: 24 }}>Lorem Impsum, Lorem Impsum, Lorem Impsum, Lorem Impsum</Label>
+            <Label size="huge">{QUADRO_PRICING_CATEGORY_ESSENTIAL.name}</Label>
+            <Label style={{ marginBottom: 24 }}>{QUADRO_PRICING_CATEGORY_ESSENTIAL.description}</Label>
             {features
               .filter((feature) => feature.essentials)
               .map((feature, index) => (
@@ -110,8 +115,8 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
             <QuoteButton inverted />
           </ProductContainer>
           <ProductContainer className="w-full" principal style={{ marginTop: 24 }}>
-            <Label size="huge">PRO</Label>
-            <Label style={{ marginBottom: 24 }}>Includes everything in the Essentials plan, plus:</Label>
+            <Label size="huge">{QUADRO_PRICING_CATEGORY_PRO.name}</Label>
+            <Label style={{ marginBottom: 24 }}>{QUADRO_PRICING_CATEGORY_PRO.description}</Label>
             {features
               .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')
               .map((feature, index) => (
@@ -136,9 +141,9 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
           </ProductContainer>
           <ProductContainer className="w-full">
             <Label size="huge" style={{ marginTop: 24 }}>
-              Enterprise
+              {QUADRO_PRICING_CATEGORY_ENTERPRISE.name}
             </Label>
-            <Label style={{ marginBottom: 24 }}>Includes everything in the Essentials plan, plus:</Label>
+            <Label style={{ marginBottom: 24 }}>{QUADRO_PRICING_CATEGORY_ENTERPRISE.description}</Label>
             {features
               .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')
               .map((feature, index) => (

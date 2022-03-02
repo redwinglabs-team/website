@@ -23,12 +23,7 @@ const ProductsQuadroPopContainer = () => {
       />
       {/* TITLE */}
       <TitleDescriptionPage supTitle="QUADRO" title="POP" withButtons />
-      <Overview
-        description="User-friendly Point of Purchase system that is compatible with any device.
-         POP features a Fast and intuitive setup.
-          From hotels and resorts to restaurants and retail establishments,
-           Quadro POP is fully customizable and scalable to match your business needs."
-      />
+      <Overview description="pop-overview-description" />
       <CustomDivider red />
 
       {/* BASE DESCRIPTION */}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { TopUpIcon } from '../../assets';
 import Footer from './footer/Footer';
 import DesktopHeader from './header/DesktopHeader';

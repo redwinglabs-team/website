@@ -1,7 +1,7 @@
 /* eslint-disable no-else-return */
 /* eslint-disable consistent-return */
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 const LabeledDescriptionContainer = styled.div`
   display: flex;

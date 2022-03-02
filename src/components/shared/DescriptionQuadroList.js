@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import Label, { AlternateFontFamilyLabel } from './Label';
 
 const DescriptionsMainContainer = styled.div`
@@ -21,7 +21,7 @@ const DescriptionsMainContainer = styled.div`
   max-width: inherit;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     flex-direction: column;
-    padding: 16px;
+    padding: 32px;
     svg {
       width: 100%;
       height: 100%;

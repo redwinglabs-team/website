@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { ProductEntertainment, ProductFnb, ProductPms, ProductPop } from '../../../assets';
 import { ROUTE_LIST } from '../../../constants/routesList';
 import {

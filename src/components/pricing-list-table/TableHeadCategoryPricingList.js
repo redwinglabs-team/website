@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { IFrameSiderContext, SRC_BOOK_A_DEMO } from '../../context/IFrameSiderContext';
 import CustomButton from '../shared/CustomButton';
 import CustomDivider from '../shared/CustomDivider';

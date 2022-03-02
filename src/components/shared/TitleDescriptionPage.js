@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { GridPattern } from '../../assets';
 import { Container } from './Containers';
 import CustomDivider from './CustomDivider';
@@ -36,6 +36,8 @@ const TitleContainer = styled.div`
 
 const Row = styled.div`
   display: flex;
+  width: 100%;
+  align-items: center;
 `;
 
 const GridContainer = styled.div`
@@ -51,36 +53,35 @@ const TitleDescriptionPage = ({ supTitle, title, withGrid, withoutBorderBottom, 
   return (
     <MainContainer>
       <TitleContainer>
-        <Row>
-          <Container>
+        <Container>
+          <Row>
             <Label fontFamily="light" size="medium" className="uppercase w-100">
               {supTitle}
             </Label>
-            <Label size="huge" fontFamily="bold" className="w-100 uppercase">
-              {title}
-            </Label>
-            {withGrid && (
-              <GridContainer className="mobile-none">
-                <GridPattern />
-              </GridContainer>
+            {withButtons && (
+              <Row style={{ columnGap: 30, justifyContent: 'flex-end' }}>
+                <a href="#overview">
+                  <Label size="normal" fontFamily="bold" className="cursor">
+                    overview
+                  </Label>
+                </a>
+                <a href="#pricing">
+                  <Label size="normal" fontFamily="bold" className="cursor">
+                    pricing
+                  </Label>
+                </a>
+              </Row>
             )}
-          </Container>
-        </Row>
-
-        {withButtons && (
-          <Row style={{ columnGap: 50 }}>
-            <a href="#overview">
-              <Label size="normal" fontFamily="bold" className="cursor">
-                overview
-              </Label>
-            </a>
-            <a href="#pricing">
-              <Label size="normal" fontFamily="bold" className="cursor">
-                pricing
-              </Label>
-            </a>
           </Row>
-        )}
+          <Label size="huge" fontFamily="bold" className="w-100 uppercase">
+            {title}
+          </Label>
+          {withGrid && (
+            <GridContainer className="mobile-none">
+              <GridPattern />
+            </GridContainer>
+          )}
+        </Container>
       </TitleContainer>
       {!withoutBorderBottom && <CustomDivider red />}
     </MainContainer>

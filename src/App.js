@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components/macro';
 import IFrameSider from './components/shared/IFrameSider';
 import { IFrameSiderConsumer, IFrameSiderProvider } from './context/IFrameSiderContext';
 import { LanguageProvider } from './context/LanguageContext';

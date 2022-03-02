@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const Container = styled.div`
   width: 100%;

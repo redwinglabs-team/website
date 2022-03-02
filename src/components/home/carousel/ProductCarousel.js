@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
 import { Lazy } from 'swiper/js/swiper.esm';
