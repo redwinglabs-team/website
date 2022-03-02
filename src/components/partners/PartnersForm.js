@@ -14,7 +14,7 @@ const MainContainerPartnersForm = styled.div`
   padding: 48px 170px;
   padding-bottom: 0px;
   width: -webkit-fill-available;
-
+  width: -moz-available;
   max-width: inherit;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 16px;
@@ -53,6 +53,7 @@ const TitleContainer = styled.div`
   align-items: start;
   flex-direction: column;
   width: -webkit-fill-available;
+  width: -moz-available;
   margin-bottom: 32px;
 `;
 

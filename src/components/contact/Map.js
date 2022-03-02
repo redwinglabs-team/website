@@ -9,11 +9,13 @@ const MainContainerMap = styled.div`
   margin-left: auto;
   padding: 24px 170px 48px;
   width: -webkit-fill-available;
+  width: -moz-available;
   z-index: 1;
 
   max-width: inherit;
   img {
     width: -webkit-fill-available;
+    width: -moz-available;
   }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 32px;

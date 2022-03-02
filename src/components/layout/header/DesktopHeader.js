@@ -20,15 +20,15 @@ const Container = styled.div`
   display: flex;
   position: absolute;
   background-color: transparent;
-  width: -webkit-fill-available;
   flex-direction: column;
   min-height: ${({ theme: { header } }) => `${header.height}px`};
   z-index: 50;
-
+  width: 100%;
   .sticky {
     position: sticky;
     top: 0;
     width: -webkit-fill-available;
+    width: -moz-available;
     transition: width 0.5s ease;
     /* animation: smoothScrollIn 1s forwards; */
   }

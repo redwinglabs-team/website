@@ -30,6 +30,7 @@ const DescriptionSectionContainer = styled.div`
 const LeftContainer = styled(Container)`
   position: relative;
   height: -webkit-fill-available;
+  width: -moz-available;
   background-color: ${({ theme: { colors } }) => colors.lightGreyBackground};
   margin-right: 64px;
   max-width: 300px;

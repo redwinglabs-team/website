@@ -18,6 +18,7 @@ const FooterContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: -webkit-fill-available;
+  width: -moz-available;
   padding: 32px 170px 0px;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     padding: 32px;

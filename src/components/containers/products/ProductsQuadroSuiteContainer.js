@@ -71,6 +71,7 @@ const ButtonContainer = styled.div`
   align-items: center;
   margin: 16px 120px;
   width: -webkit-fill-available;
+  width: -moz-available;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     flex-direction: column;
     margin: 24px;

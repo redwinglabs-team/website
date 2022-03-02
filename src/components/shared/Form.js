@@ -29,12 +29,14 @@ const FormContent = styled.div`
 const Input = styled.input`
   display: flex;
   width: -webkit-fill-available;
+  width: -moz-available;
   padding: 8px;
 `;
 const TextArea = styled.textarea`
   display: flex;
   resize: vertical;
   width: -webkit-fill-available;
+  width: -moz-available;
   padding: 8px;
   font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
 `;
@@ -63,6 +65,7 @@ const Field = styled.div`
   display: flex;
   flex-direction: column;
   width: -webkit-fill-available;
+  width: -moz-available;
 `;
 
 const Form = () => {

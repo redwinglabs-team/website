@@ -21,6 +21,7 @@ const MainContainer = styled.div`
 const TitleContainer = styled.div`
   flex: 1;
   width: -webkit-fill-available;
+  width: -moz-available;
   align-self: flex-start;
   margin: 0px 120px;
   padding: 0px 0px 48px 16px;

@@ -9,6 +9,7 @@ const SecondDescriptionContainer = styled(Container)`
   padding: 48px 0px;
   height: min-content;
   width: -webkit-fill-available;
+  width: -moz-available;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 32px 0px;
   }

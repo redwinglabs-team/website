@@ -17,6 +17,18 @@ const IntroContainer = styled.div`
   background-size: 2500px;
 `;
 
+const IntroContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+`;
+
 const TitleContainer = styled.div`
   width: 50%;
   display: flex;
@@ -35,6 +47,7 @@ const TitleContainer = styled.div`
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     width: 100%;
     padding: 24px;
+    /* height: 100%; */
   }
 `;
 
@@ -42,15 +55,18 @@ const ImageProductContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-self: flex-end;
-  svg {
-    width: fit-content;
 
-    /* max-height: 600px;
-    max-width: 433px; */
+  svg {
     width: 90%;
     height: 90%;
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
+      align-self: flex-end;
+      margin-bottom: -11px;
+    }
   }
-
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
+    height: 250px;
+  }
   #bg-quadro-pop {
     right: -370px;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
@@ -94,7 +110,7 @@ const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
           <Label fontFamily="bold">book-a-demo</Label>
         </DemoButtonContainer>
       )}
-      <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', height: '100%' }}>
+      <IntroContent>
         <TitleContainer>
           {description[0] && (
             <Label fontFamily="light" size="medium" className="w-100 uppercase">
@@ -112,8 +128,8 @@ const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
             </Label>
           )}
         </TitleContainer>
-        {productImage && <ImageProductContainer className="mobile-none ">{productImage}</ImageProductContainer>}
-      </div>
+        {productImage && <ImageProductContainer>{productImage}</ImageProductContainer>}
+      </IntroContent>
     </IntroContainer>
   );
 };

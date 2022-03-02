@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 import browserDetection from '../../utils/browserDetection';
 import Label from '../shared/Label';
@@ -39,7 +39,7 @@ const PricingTable = styled.table`
 
 const DesktopPricingList = ({ features, categories, productName, productDescription, openedAccordion, setOpenedAccordion }) => {
   return (
-    <MainContainer>
+    <MainContainer id="pricing" style={{ scrollMarginTop: 100 }}>
       <div
         style={{
           boxShadow: '0px 0px 99px #00000029',
@@ -74,7 +74,7 @@ const DesktopPricingList = ({ features, categories, productName, productDescript
         <thead style={{ fontFamily: theme.fontFamily.regular }}>
           <tr style={browserDetection() === 'CHROME' && { height: 1 }}>
             <PackagesMadeContainer>
-              <Label fontSize={32} className="uppercase">
+              <Label fontSize={32} className="uppercase text-left">
                 {productName}
               </Label>
               <Label className="line-height text-left">{productDescription}</Label>

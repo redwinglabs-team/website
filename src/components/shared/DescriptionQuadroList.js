@@ -11,6 +11,7 @@ const DescriptionsMainContainer = styled.div`
   margin-left: auto;
   padding: 64px 170px;
   width: -webkit-fill-available;
+  width: -moz-available;
   & > *:not(:last-child) {
     margin-right: 32px;
   }

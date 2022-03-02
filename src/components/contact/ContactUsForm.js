@@ -30,7 +30,7 @@ const MainContainerContactForm = styled.div`
   margin-left: auto;
   padding: 48px 170px 24px;
   width: -webkit-fill-available;
-
+  width: -moz-available;
   max-width: inherit;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 16px;
@@ -43,6 +43,7 @@ const Content = styled.div`
   align-items: start;
   flex-direction: row;
   width: -webkit-fill-available;
+  width: -moz-available;
   & > *:not(:last-child) {
     margin-right: 32px;
   }
@@ -58,6 +59,7 @@ const Content = styled.div`
 const ContactsContainer = styled.div`
   background-color: ${({ theme: { colors } }) => colors.lightGreyBackground};
   width: -webkit-fill-available;
+  width: -moz-available;
   padding: 60px 112px;
   display: flex;
   justify-content: space-between;

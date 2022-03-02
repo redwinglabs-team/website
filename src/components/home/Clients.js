@@ -16,14 +16,11 @@ const ClientsContainer = styled(Container)`
   z-index: 1;
   height: min-content;
   width: -webkit-fill-available;
+  width: -moz-available;
   position: relative;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 32px 64px;
   }
-  /* 
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
-     padding: 32px 64px;
-  } */
 `;
 const ClientsTextContainer = styled(Container)`
   margin: 32px;

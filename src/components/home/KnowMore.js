@@ -7,6 +7,7 @@ const KnowMoreContainer = styled(Container)`
   background-color: ${({ theme: { colors } }) => colors.primaryColor};
   color: ${({ theme: { colors } }) => colors.white};
   width: -webkit-fill-available;
+  width: -moz-available;
   height: fit-content;
   margin-top: 32px;
   padding: 32px 170px;
