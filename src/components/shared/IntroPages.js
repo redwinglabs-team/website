@@ -43,10 +43,12 @@ const ImageProductContainer = styled.div`
   justify-content: flex-end;
   align-self: flex-end;
   svg {
-    position: relative;
-    width: 100%;
+    position: absolute;
+    width: fit-content;
+
     max-height: 600px;
-    right: -190px;
+    bottom: 0px;
+    right: 0px;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
       right: 0px;
     }
@@ -111,8 +113,8 @@ const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
             {description[2]}
           </Label>
         )}
+        {productImage && <ImageProductContainer className="mobile-none ">{productImage}</ImageProductContainer>}
       </TitleContainer>
-      {productImage && <ImageProductContainer className="mobile-none ">{productImage}</ImageProductContainer>}
     </IntroContainer>
   );
 };

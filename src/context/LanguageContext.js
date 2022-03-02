@@ -5,13 +5,13 @@ import useLocalStorage from '../hooks/useLocalStorage';
 export const languageConfig = {
   IT: {
     languageKey: 'IT',
-    flag: <ItFlagIcon />,
+    flag: <ItFlagIcon style={{ width: 20 }} />,
     label: 'italian'
   },
 
   EN: {
     languageKey: 'EN',
-    flag: <EnFlagIcon />,
+    flag: <EnFlagIcon style={{ width: 20 }} />,
     label: 'english'
   }
 };
