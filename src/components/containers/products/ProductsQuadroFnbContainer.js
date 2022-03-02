@@ -22,7 +22,7 @@ const ProductsQuadroFnbContainer = () => {
         haveDemoButton
       />
       {/* TITLE */}
-      <TitleDescriptionPage supTitle="QUADRO" title="FNB" />
+      <TitleDescriptionPage supTitle="QUADRO" title="FNB" withButtons />
       <Overview
         description="All-in-one intuitively-designed restaurant management system providing restaurateurs with
                  the capabilities to run front-of-house, kitchen, and back-office operations from a single

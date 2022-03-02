@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SlideDown from 'react-slidedown';
 import styled from 'styled-components';
 import { PlusIcon } from '../../assets';
+import { IFrameSiderContext, SRC_BOOK_A_DEMO } from '../../context/IFrameSiderContext';
 import { Container } from '../shared/Containers';
 import CustomButton from '../shared/CustomButton';
 import Label from '../shared/Label';
@@ -43,9 +44,12 @@ const LabelContainer = styled.div`
 `;
 
 const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAccordion }) => {
+  const { onOpen } = useContext(IFrameSiderContext);
   const QuoteButton = ({ inverted }) => (
-    <CustomButton boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius interved={inverted}>
-      REQUEST QUOTE
+    <CustomButton boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius interved={inverted} onClick={() => onOpen({ src: SRC_BOOK_A_DEMO })}>
+      <Label className="uppercase" fontFamily="bold">
+        request-quote
+      </Label>
     </CustomButton>
   );
   return (

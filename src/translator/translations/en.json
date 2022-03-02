@@ -215,5 +215,7 @@
   "your-name-required": "Your Name (Required)",
   "your-email-required": "Your Email (Required)",
   "object": "object",
-  "message": "Message"
+  "message": "Message",
+  "pricing": "pricing",
+  "pricing-description": "Quadro has tools for every size and budget. Talk to a specialist today to get setup with the plan that's right for you."
 }

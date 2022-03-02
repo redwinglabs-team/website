@@ -22,7 +22,7 @@ const ProductsQuadroPopContainer = () => {
         haveDemoButton
       />
       {/* TITLE */}
-      <TitleDescriptionPage supTitle="QUADRO" title="POP" />
+      <TitleDescriptionPage supTitle="QUADRO" title="POP" withButtons />
       <Overview
         description="User-friendly Point of Purchase system that is compatible with any device.
          POP features a Fast and intuitive setup.

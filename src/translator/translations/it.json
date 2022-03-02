@@ -214,5 +214,7 @@
   "your-name-required": "Nome (Obbligatorio)",
   "your-email-required": "Email (Obbligatorio)",
   "object": "Oggetto",
-  "message": "Messaggio"
+  "message": "Messaggio",
+  "pricing": "prezzi",
+  "pricing-description": "Quadro ha strumenti per ogni dimensione e budget. Parla con uno specialista oggi stesso per configurare il piano che fa per te."
 }

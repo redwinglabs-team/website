@@ -46,7 +46,9 @@ const HeaderItem = ({ children, style, colorInverted, onClick }) => {
       onClick={onClick}
     >
       <>
-        <Label fontFamily={isActive() ? 'bold' : 'regular'}>{children.title}</Label>
+        <Label fontFamily={isActive() ? 'bold' : 'regular'} className="nowrap">
+          {children.title}
+        </Label>
         <div className={isActive() ? 'is-underlined' : 'underline'} />
       </>
     </Item>

@@ -17,7 +17,8 @@ export default createGlobalStyle`
       height: 100%;
       box-sizing: border-box;
       scroll-behavior: smooth;
-      overflow-x:hidden;
+      overflow-x: hidden;
+      
 
     };
 
@@ -32,6 +33,8 @@ export default createGlobalStyle`
       margin: 0px;
       background-color: ${({ theme: { colors } }) => colors.white};
       color:${({ theme: { colors } }) => colors.primaryColor};
+      scroll-behavior: smooth;
+      
     };
 
     #root {

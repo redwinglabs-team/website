@@ -23,7 +23,7 @@ const OverviewContainer = styled.div`
 
 const Overview = ({ title, description }) => {
   return (
-    <OverviewContainer>
+    <OverviewContainer id="overview" style={{ scrollMarginTop: 80 }}>
       <Label className="w-100" fontFamily="bold" fontSize={32}>
         overview
       </Label>

@@ -22,7 +22,7 @@ const ProductsQuadroPmsContainer = () => {
         haveDemoButton
       />
       {/* TITLE */}
-      <TitleDescriptionPage supTitle="QUADRO" title="PMS" />
+      <TitleDescriptionPage supTitle="QUADRO" title="PMS" withButtons />
       <Overview description="overview-description" />
       <CustomDivider red />
       {/* BASE DESCRIPTION */}

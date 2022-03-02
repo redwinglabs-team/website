@@ -22,7 +22,7 @@ const ProductsQuadroEntertainmentContainer = () => {
         haveDemoButton
       />
       {/* TITLE */}
-      <TitleDescriptionPage supTitle="QUADRO" title="ENTERTAINMENT" />
+      <TitleDescriptionPage supTitle="QUADRO" title="ENTERTAINMENT" withButtons />
       <Overview title="overview-entertainment-title" description="overview-entertainment-description" />
       <CustomDivider red />
 

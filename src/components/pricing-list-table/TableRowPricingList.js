@@ -25,7 +25,7 @@ const TableRowPricingList = ({ title, description, essentials, pro, enterprise, 
       <td>
         <ContentTd onClick={() => setOpenedAccordion(index)}>
           <PlusIcon style={{ marginRight: 8, width: 24 }} />
-          <Label fontFamily="regular" className="w-100 capitalize text-eft">
+          <Label fontFamily="regular" className="w-100 capitalize text-left">
             {title}
           </Label>
         </ContentTd>
