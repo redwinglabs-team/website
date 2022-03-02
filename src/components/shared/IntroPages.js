@@ -43,15 +43,12 @@ const ImageProductContainer = styled.div`
   justify-content: flex-end;
   align-self: flex-end;
   svg {
-    position: absolute;
     width: fit-content;
 
-    max-height: 600px;
-    bottom: 0px;
-    right: 0px;
-    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
-      right: 0px;
-    }
+    /* max-height: 600px;
+    max-width: 433px; */
+    width: 90%;
+    height: 90%;
   }
 
   #bg-quadro-pop {
@@ -97,24 +94,26 @@ const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
           <Label fontFamily="bold">book-a-demo</Label>
         </DemoButtonContainer>
       )}
-      <TitleContainer>
-        {description[0] && (
-          <Label fontFamily="light" size="medium" className="w-100 uppercase">
-            {description[0]}
-          </Label>
-        )}
-        {description[1] && (
-          <Label fontFamily="bold" size="huge" className="w-100 uppercase">
-            {description[1]}
-          </Label>
-        )}
-        {description[2] && (
-          <Label fontFamily="light" size="medium" className="w-100 nowrap uppercase">
-            {description[2]}
-          </Label>
-        )}
+      <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', height: '100%' }}>
+        <TitleContainer>
+          {description[0] && (
+            <Label fontFamily="light" size="medium" className="w-100 uppercase">
+              {description[0]}
+            </Label>
+          )}
+          {description[1] && (
+            <Label fontFamily="bold" size="huge" className="w-100 uppercase">
+              {description[1]}
+            </Label>
+          )}
+          {description[2] && (
+            <Label fontFamily="light" size="medium" className="w-100 nowrap uppercase">
+              {description[2]}
+            </Label>
+          )}
+        </TitleContainer>
         {productImage && <ImageProductContainer className="mobile-none ">{productImage}</ImageProductContainer>}
-      </TitleContainer>
+      </div>
     </IntroContainer>
   );
 };
