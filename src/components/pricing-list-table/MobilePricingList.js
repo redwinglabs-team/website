@@ -67,9 +67,9 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
           </Label>
           <Label style={{ marginBottom: 24 }}> {categories[0].description}</Label>
           {features.map((feature, index) => (
-            <PricingRow key={index} bgColored={index % 2 === 0} className="w-full">
+            <PricingRow key={index} bgColored={index % 2 === 0} className="w-full" onClick={() => setOpenedAccordion(index)}>
               <Content>
-                <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
+                <PlusIcon style={{ marginRight: 8 }} />
                 <LabelContainer className="w-full">
                   <Label bold>{feature.feature}</Label>
                   {typeof feature.connect === 'string' && <Label>{feature.connect}</Label>}
@@ -95,9 +95,9 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
             {features
               .filter((feature) => feature.essentials)
               .map((feature, index) => (
-                <PricingRow key={index} bgColored={index % 2 === 0} className="w-full">
+                <PricingRow key={index} bgColored={index % 2 === 0} className="w-full" onClick={() => setOpenedAccordion(index)}>
                   <Content>
-                    <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
+                    <PlusIcon style={{ marginRight: 8 }} />
                     <LabelContainer className="w-full">
                       <Label bold>{feature.feature}</Label>
                       {typeof feature.essentials === 'string' && <Label>{feature.essentials}</Label>}
@@ -120,9 +120,9 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
             {features
               .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')
               .map((feature, index) => (
-                <PricingRow key={index} bgColored={index % 2 === 0} className="w-full">
+                <PricingRow key={index} bgColored={index % 2 === 0} className="w-full" onClick={() => setOpenedAccordion(index)}>
                   <Content>
-                    <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
+                    <PlusIcon style={{ marginRight: 8 }} />
                     <LabelContainer className="w-full">
                       <Label bold>{feature.feature}</Label>
                       {typeof feature.pro === 'string' && <Label>{feature.pro}</Label>}
@@ -147,9 +147,9 @@ const MobilePricingList = ({ features, categories, openedAccordion, setOpenedAcc
             {features
               .filter((feature) => !feature.essentials || typeof feature.essentials === 'string')
               .map((feature, index) => (
-                <PricingRow key={index} bgColored={index % 2 === 0} className="w-full">
+                <PricingRow key={index} bgColored={index % 2 === 0} className="w-full" onClick={() => setOpenedAccordion(index)}>
                   <Content>
-                    <PlusIcon onClick={() => setOpenedAccordion(index)} style={{ marginRight: 8 }} />
+                    <PlusIcon style={{ marginRight: 8 }} />
                     <LabelContainer className="w-full">
                       <Label bold>{feature.feature}</Label>
                       {typeof feature.enterprise === 'string' && <Label>{feature.enterprise}</Label>}
