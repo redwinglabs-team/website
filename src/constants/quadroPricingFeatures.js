@@ -322,7 +322,7 @@ export const QUADRO_PRICING_FEATURES = {
     },
     {
       feature: 'pricing-entertainment-casting-ariplay-title',
-      // description: 'pricing-entertainment-casting-ariplay-description',
+      description: 'pricing-entertainment-casting-ariplay-description',
       connect: true
     },
     {
@@ -332,7 +332,7 @@ export const QUADRO_PRICING_FEATURES = {
     },
     {
       feature: 'pricing-entertainment-native-apps-title',
-      // description: 'pricing-entertainment-native-apps-description',
+      description: 'pricing-entertainment-native-apps-description',
       connect: true
     },
     {
@@ -342,7 +342,7 @@ export const QUADRO_PRICING_FEATURES = {
     },
     {
       feature: 'pricing-entertainment-guest-messaging-title',
-      // description: 'pricing-entertainment-guest-messaging-description',
+      description: 'pricing-entertainment-guest-messaging-description',
       connect: true
     },
     {
@@ -352,7 +352,7 @@ export const QUADRO_PRICING_FEATURES = {
     },
     {
       feature: 'pricing-entertainment-video-and-music-title',
-      // description: 'pricing-entertainment-video-and-music-description',
+      description: 'pricing-entertainment-video-and-music-description',
       connect: true
     },
     {
@@ -377,12 +377,12 @@ export const QUADRO_PRICING_FEATURES = {
     },
     {
       feature: 'pricing-entertainment-iot-capabilities-title',
-      // description: 'pricing-entertainment-iot-capabilities-description',
+      description: 'pricing-entertainment-iot-capabilities-description',
       connect: true
     },
     {
       feature: 'pricing-entertainment-system-dashboard-title',
-      // description: 'pricing-entertainment-system-dashboard-description',
+      description: 'pricing-entertainment-system-dashboard-description',
       connect: true
     },
 
@@ -394,6 +394,11 @@ export const QUADRO_PRICING_FEATURES = {
     {
       feature: 'pricing-entertainment-pms-integration-title',
       description: 'pricing-entertainment-pms-integration-description',
+      connect: true
+    },
+    {
+      feature: 'pricing-entertainment-in-app-discount-title',
+      description: 'pricing-entertainment-in-app-discount-description',
       connect: true
     }
   ]

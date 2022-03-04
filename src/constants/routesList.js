@@ -32,7 +32,7 @@ export const ROUTE_LIST = {
     title: 'careers',
     backgroundImage: BGCareers,
     description: {
-      0: 'we-are',
+      0: 'we-are-partners',
       1: 'curious-ambitious-humble-hungry',
       2: 'sound-like-you-we-want-to-know'
     },
@@ -42,8 +42,9 @@ export const ROUTE_LIST = {
     title: 'contact-us',
     backgroundImage: BGContact,
     description: {
-      0: 'we-are-contact',
-      1: 'leading-the-hospitality-industry-towards-new-technologies'
+      0: 'we-build-tools',
+      1: 'designed-to-enhance-the-guest-experience',
+      2: 'through-advanced-decision-making-technologies'
     },
     route: ROUTE_CONTACT_US
   },

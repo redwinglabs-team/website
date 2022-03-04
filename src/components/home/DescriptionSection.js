@@ -77,7 +77,7 @@ const DescriptionSection = () => {
   return (
     <DescriptionSectionContainer>
       <LeftContainer>
-        <Label fontFamily="light" fontSize={24}>
+        <Label fontFamily="light" className="text-center" fontSize={24} style={{ lineHeight: '36px' }}>
           building-technology
         </Label>
         <GridContainer className="mobile-none">
@@ -85,16 +85,16 @@ const DescriptionSection = () => {
         </GridContainer>
       </LeftContainer>
       <RightContainer>
-        <Container>
+        <Container gap={16}>
           <AlternateFontFamilyLabel>innovative-solution</AlternateFontFamilyLabel>
           <Label className="line-height">innovative-solution-description</Label>
         </Container>
-        <Container>
+        <Container gap={16}>
           {' '}
           <AlternateFontFamilyLabel>cloud-based-and-interconnected</AlternateFontFamilyLabel>
           <Label className="line-height">cloud-based-and-interconnected-description</Label>
         </Container>
-        <Container>
+        <Container gap={16}>
           <AlternateFontFamilyLabel>solid-foundation</AlternateFontFamilyLabel>
           <Label className="line-height">solid-foundation-description</Label>
         </Container>

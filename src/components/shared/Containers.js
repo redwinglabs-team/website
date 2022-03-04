@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import styled from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
 
 export const Container = styled.div`
   width: 100%;
@@ -8,6 +8,17 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-flow: column;
+
+  ${({ gap }) => {
+    if (gap) {
+      return css`
+        & > *:not(:last-child) {
+          margin-bottom: ${gap}px;
+        }
+      `;
+    }
+    return null;
+  }}
 `;
 
 export const ImageContainer = styled.div`
