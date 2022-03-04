@@ -42,7 +42,7 @@ export const ROUTE_LIST = {
     title: 'contact-us',
     backgroundImage: BGContact,
     description: {
-      0: 'we-are',
+      0: 'we-are-contact',
       1: 'leading-the-hospitality-industry-towards-new-technologies'
     },
     route: ROUTE_CONTACT_US
