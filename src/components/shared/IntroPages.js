@@ -30,7 +30,7 @@ const IntroContent = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  width: 50%;
+  width: ${({ hasImage }) => (hasImage ? '50%' : '80%')};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,7 +111,7 @@ const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
         </DemoButtonContainer>
       )}
       <IntroContent hasImage={productImage}>
-        <TitleContainer>
+        <TitleContainer hasImage={productImage}>
           {description[0] && (
             <Label fontFamily="light" size="medium" className="w-100 uppercase">
               {description[0]}
