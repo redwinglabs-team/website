@@ -14,6 +14,7 @@ const Container = styled.div`
   position: relative;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     margin-left: 16px;
+    font-size: 12px;
   }
 `;
 
@@ -28,6 +29,12 @@ const FloatingMenu = styled.div`
   width: 100%;
   & > div:not(:last-child) {
     margin-bottom: 20px;
+  }
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+    width: unset;
+    padding: 10px;
+    right: 0px;
+    left: unset;
   }
 `;
 const Item = styled.div`
