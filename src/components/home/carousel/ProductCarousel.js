@@ -122,7 +122,7 @@ const ProductCarousel = () => {
         <Swiper {...params}>
           <Slide title="QUADRO" subtitle="Property Management System" description="pms-description" image={<img src={carouselPms} alt="pms" />} />
           <Slide title="QUADRO" subtitle="Food and Beverage" description="fnb-description" image={<img src={carouselFnb} alt="fnb" />} />
-          <Slide title="QUADRO" subtitle="Point of Purchase" description="pos-description" image={<img src={carouselPop} alt="pop" />} />
+          <Slide title="QUADRO" subtitle="Point of Sale" description="pos-description" image={<img src={carouselPop} alt="pop" />} />
           <Slide
             title="QUADRO"
             subtitle="Entertainment"

@@ -131,7 +131,7 @@ const ContactUsForm = () => {
           </Column>
           <Column>
             <Label size="big" fontFamily="bold">
-              mail
+              email
             </Label>
             <Label translate={false} size="small">
               info@redwinglabs.com

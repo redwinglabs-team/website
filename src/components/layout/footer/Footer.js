@@ -154,7 +154,16 @@ const Footer = () => {
           <FooterColumn className="link_list">
             <FooterLinksGrid>
               {Object.values(WEBSITE_LINK_LIST).map((link, index) => (
-                <Label key={index} fontFamily="bold" className="capitalize pointer" fontSize={24} onClick={() => navigate(link.link)}>
+                <Label
+                  key={index}
+                  fontFamily="bold"
+                  className="capitalize pointer"
+                  fontSize={24}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    navigate(link.link);
+                  }}
+                >
                   {link.title}
                 </Label>
               ))}
