@@ -120,9 +120,9 @@ const ProductCarousel = () => {
         />
         <RedBox />
         <Swiper {...params}>
-          <Slide title="QUADRO" subtitle="Property Management System" description="pms-description" image={<img src={carouselPms} alt="pms" />} />
-          <Slide title="QUADRO" subtitle="Food and Beverage" description="fnb-description" image={<img src={carouselFnb} alt="fnb" />} />
-          <Slide title="QUADRO" subtitle="Point of Sale" description="pos-description" image={<img src={carouselPop} alt="pop" />} />
+          <Slide title="QUADRO PMS" subtitle="Property Management System" description="pms-description" image={<img src={carouselPms} alt="pms" />} />
+          <Slide title="QUADRO FNB" subtitle="Food and Beverage Manager" description="fnb-description" image={<img src={carouselFnb} alt="fnb" />} />
+          <Slide title="QUADRO POP" subtitle="Point of Sale System" description="pos-description" image={<img src={carouselPop} alt="pop" />} />
           <Slide
             title="QUADRO"
             subtitle="Entertainment"

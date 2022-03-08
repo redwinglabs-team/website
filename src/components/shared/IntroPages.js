@@ -57,8 +57,8 @@ const ImageProductContainer = styled.div`
   align-self: flex-end;
 
   svg {
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
       align-self: flex-end;
       margin-bottom: -11px;

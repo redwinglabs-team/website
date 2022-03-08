@@ -120,7 +120,7 @@ export const QUADRO_DESCRIPTION_LIST = {
   POP: {
     BASE_DESCRIPTIONS: {
       0: {
-        title: 'Point of Purchase',
+        title: 'Point of Sale',
         description: 'pop-description'
       },
       1: {
