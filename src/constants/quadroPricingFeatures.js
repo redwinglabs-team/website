@@ -199,8 +199,8 @@ export const QUADRO_PRICING_FEATURES = {
       enterprise: true
     },
     {
-      feature: 'pricing-fnb-buil-int-crm-module-title',
-      description: 'pricing-fnb-buil-int-crm-module-description',
+      feature: 'pricing-fnb-built-in-crm-module-title',
+      description: 'pricing-fnb-built-in-crm-module-description',
       essentials: true,
       pro: true,
       enterprise: true
