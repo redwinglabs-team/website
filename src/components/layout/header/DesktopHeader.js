@@ -138,7 +138,7 @@ const DesktopHeader = ({ className, menuWithMarginBottom }) => {
           style={{ cursor: 'pointer', height: 32, width: 'auto' }}
           onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_SUITE)}
         />
-        <RightHeaderItems itemsLink={QUADRO_LINK} isQuadroMenu menuWithMarginBottom={menuWithMarginBottom} />
+        <RightHeaderItems itemsLink={QUADRO_LINK} colorInverted menuWithMarginBottom={menuWithMarginBottom} />
       </BottomHeader>
     </Container>
   );

@@ -87,6 +87,7 @@ const DemoButtonContainer = styled.div`
   height: 84px;
   padding-top: 10px;
   transform: rotate(90deg);
+  animation: ${({ pulseDemo }) => (pulseDemo ? 'pulse 0.5s linear' : null)};
   width: 365px;
   display: flex;
   justify-content: center;
@@ -100,13 +101,29 @@ const DemoButtonContainer = styled.div`
     margin-left: 6px;
     text-decoration: underline;
   }
+  @keyframes pulse {
+    0% {
+      transform: rotate(90deg) scale(1);
+    }
+    50% {
+      transform: rotate(90deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(90deg) scale(1);
+    }
+  }
 `;
-const IntroPages = ({ bgImage, description, productImage, haveDemoButton }) => {
+const IntroPages = ({ bgImage, description, productImage, haveDemoButton, pulseDemo, onAnimationEnd }) => {
   const { onOpen } = useContext(IFrameSiderContext);
   return (
     <IntroContainer id="intro" style={{ backgroundImage: `url(${bgImage})` }}>
       {haveDemoButton && (
-        <DemoButtonContainer className="mobile-none" onClick={() => onOpen({ src: SRC_BOOK_A_DEMO })}>
+        <DemoButtonContainer
+          pulseDemo={pulseDemo}
+          onAnimationEnd={onAnimationEnd}
+          className="mobile-none"
+          onClick={() => onOpen({ src: SRC_BOOK_A_DEMO })}
+        >
           <Label fontFamily="bold">book-a-demo</Label>
         </DemoButtonContainer>
       )}

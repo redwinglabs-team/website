@@ -8,12 +8,12 @@ const RightContainerHeader = styled.div`
   align-items: center;
 `;
 
-const RightHeaderItems = ({ itemsLink, isQuadroMenu }) => {
+const RightHeaderItems = ({ itemsLink, colorInverted }) => {
   const navigate = useNavigate();
   return (
     <RightContainerHeader>
       {Object.values(itemsLink).map((item, index) => (
-        <HeaderItem key={index} style={{ marginRight: 32 }} colorInverted={isQuadroMenu} onClick={() => navigate(item.link)}>
+        <HeaderItem key={index} style={{ marginRight: 32 }} colorInverted={colorInverted} onClick={() => navigate(item.link)}>
           {item}
         </HeaderItem>
       ))}

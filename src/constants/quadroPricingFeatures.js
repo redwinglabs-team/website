@@ -167,8 +167,8 @@ export const QUADRO_PRICING_FEATURES = {
       feature: 'pricing-fnb-cashier-registry-title',
       description: 'pricing-fnb-cashier-registry-description',
       essentials: '1 Outlet',
-      pro: 'Up to 3 Outlet',
-      enterprise: '3+ Outlet'
+      pro: 'Up to 3 Outlets',
+      enterprise: '3+ Outlets'
     },
     {
       feature: 'pricing-fnb-centralized-reservation-title',
@@ -185,8 +185,8 @@ export const QUADRO_PRICING_FEATURES = {
       enterprise: true
     },
     {
-      feature: 'pricing-fnb-water-table-side-ordering-title',
-      description: 'pricing-fnb-water-table-side-ordering-description',
+      feature: 'pricing-fnb-table-side-ordering-title',
+      description: 'pricing-fnb-table-side-ordering-description',
       essentials: true,
       pro: true,
       enterprise: true
@@ -199,8 +199,8 @@ export const QUADRO_PRICING_FEATURES = {
       enterprise: true
     },
     {
-      feature: 'pricing-fnb-customer-relationship-module-title',
-      description: 'pricing-fnb-customer-relationship-module-description',
+      feature: 'pricing-fnb-buil-int-crm-module-title',
+      description: 'pricing-fnb-buil-int-crm-module-description',
       essentials: true,
       pro: true,
       enterprise: true
@@ -227,16 +227,9 @@ export const QUADRO_PRICING_FEATURES = {
       enterprise: true
     },
     {
-      feature: 'pricing-fnb-invetory-management-title',
-      description: 'pricing-fnb-invetory-management-description',
+      feature: 'pricing-fnb-inventory-management-title',
+      description: 'pricing-fnb-inventory-management-description',
       essentials: false,
-      pro: true,
-      enterprise: true
-    },
-    {
-      feature: 'pricing-fnb-customer-relationship-module-title',
-      description: 'pricing-fnb-customer-relationship-module-description',
-      essentials: true,
       pro: true,
       enterprise: true
     },
@@ -278,15 +271,15 @@ export const QUADRO_PRICING_FEATURES = {
       enterprise: true
     },
     {
-      feature: 'pricing-pop-invetory-management-title',
-      description: 'pricing-pop-invetory-management-description',
+      feature: 'pricing-pop-inventory-management-title',
+      description: 'pricing-pop-inventory-management-description',
       essentials: true,
       pro: true,
       enterprise: true
     },
     {
-      feature: 'pricing-pop-customer-relationship-module-title',
-      description: 'pricing-pop-customer-relationship-module-description',
+      feature: 'pricing-pop-built-in-crm-module-title',
+      description: 'pricing-pop-built-in-crm-module-description',
       essentials: true,
       pro: true,
       enterprise: true

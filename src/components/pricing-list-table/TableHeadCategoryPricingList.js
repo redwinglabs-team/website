@@ -23,16 +23,16 @@ const TableHeadCategoryPricingList = ({ title, description, className, principal
   return (
     <PricingCategory className={className}>
       <Content style={{ height: '100%', justifyContent: 'space-between' }}>
-        <Content>
-          <Label className="text-center" fontSize={32} fontFamily={principal && 'bold'} style={{ marginBottom: 24 }}>
+        <Content style={{ height: '100%', justifyContent: 'flex-start' }}>
+          <Label className="text-center" fontSize={32} fontFamily={principal && 'bold'} style={{ marginBottom: 16 }}>
             {title}
           </Label>
           <CustomDivider red />
-          <Label className="text-center line-height" style={{ marginBottom: 24, maxWidth: 160 }}>
+          <Label className="text-center line-height" style={{ height: '100%', display: 'flex', alignItems: 'center', maxWidth: 160, marginTop: 16 }}>
             {description}
           </Label>
         </Content>
-        <CustomButton inverted={!principal} boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius onClick={() => onOpen({ src: SRC_BOOK_A_DEMO })}>
+        <CustomButton boxShadow="0px 3px 20px 0px #00000022" widthBorderRadius onClick={() => onOpen({ src: SRC_BOOK_A_DEMO })}>
           <Label className="uppercase" fontFamily="bold">
             request-quote
           </Label>

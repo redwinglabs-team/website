@@ -80,7 +80,7 @@ const ButtonContainer = styled.div`
 `;
 
 const initialButtons = {
-  Accomodation: true,
+  Accommodations: true,
   'Eating & Drinking': false,
   Shopping: false
 };
@@ -88,6 +88,7 @@ const initialButtons = {
 const ProductsQuadroSuiteContainer = () => {
   const navigate = useNavigate();
   const [buttonClicked, setButtonClicked] = useState(initialButtons);
+  const [pulseDemo, setPulseDemo] = useState(false);
 
   const imageOpacified = (section) => {
     if (buttonClicked[section]) return '1';
@@ -95,15 +96,22 @@ const ProductsQuadroSuiteContainer = () => {
   };
 
   const handleButtons = (key) => {
+    setPulseDemo(true);
     setButtonClicked({ ...buttonClicked, [key]: !buttonClicked[key] });
   };
 
   return (
     <Container>
       {/* INTRO */}
-      <IntroPages bgImage={ROUTE_LIST.PRODUCTS.backgroundImage} description={ROUTE_LIST.PRODUCTS.description} haveDemoButton />
+      <IntroPages
+        bgImage={ROUTE_LIST.PRODUCTS.backgroundImage}
+        description={ROUTE_LIST.PRODUCTS.description}
+        haveDemoButton
+        pulseDemo={pulseDemo}
+        onAnimationEnd={() => setPulseDemo(false)}
+      />
       <MainContainer>
-        <TitleDescriptionPage supTitle="how-does-your-business" title="interact-with-guest" />
+        <TitleDescriptionPage supTitle="how-does-your-business" title="interact-with-guests" />
         <Label className="margined-label w-100">select-1-or-more-interaction-types-below</Label>
         <ButtonContainer>
           {Object.entries(initialButtons).map((button, index) => (
@@ -124,11 +132,11 @@ const ProductsQuadroSuiteContainer = () => {
         <Content>
           <GridColumn style={{ flexDirection: 'column', marginRight: 16, justifyContent: 'space-between' }}>
             <GridRow style={{ marginBottom: 16 }}>
-              <ProductPms style={{ opacity: imageOpacified('Accomodation') }} onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_PMS)} />
+              <ProductPms style={{ opacity: imageOpacified('Accommodations') }} onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_PMS)} />
             </GridRow>
             <GridRow>
               <ProductEntertainment
-                style={{ opacity: imageOpacified('Accomodation') }}
+                style={{ opacity: imageOpacified('Accommodations') }}
                 onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_ENTERTAINMENT)}
               />
             </GridRow>

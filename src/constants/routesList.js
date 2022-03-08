@@ -52,7 +52,7 @@ export const ROUTE_LIST = {
     title: 'Fnb',
     productImage: <BGFnb />,
     description: {
-      0: 'QUADRO',
+      0: 'QUADRO FNB',
       1: 'FOOD & BEVERAGE MANAGER'
     }
   },
@@ -60,15 +60,15 @@ export const ROUTE_LIST = {
     title: 'Pop',
     productImage: <BGPop />,
     description: {
-      0: 'QUADRO',
-      1: 'POINT OF PURCHASE'
+      0: 'Quadro POP',
+      1: 'POINT OF SALE SYSTEM'
     }
   },
   PMS: {
     title: 'Pms',
     productImage: <BGPms />,
     description: {
-      0: 'QUADRO',
+      0: 'Quadro PMS',
       1: 'PROPERTY MANAGEMENT SYSTEM'
     }
   },
@@ -76,8 +76,8 @@ export const ROUTE_LIST = {
     title: 'Entertainment',
     productImage: <BGEntertainment />,
     description: {
-      0: 'QUADRO',
-      1: 'ENTERTAINMENT SOLUTION'
+      0: 'Quadro Entertainment',
+      1: 'ENTERTAINMENT AND COMMUNICATION PLATFORM'
     }
   }
 };

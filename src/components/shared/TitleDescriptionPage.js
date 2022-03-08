@@ -1,7 +1,8 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/mouse-events-have-key-events */
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
 import { GridPattern } from '../../assets';
-import { Container } from './Containers';
+import useWindowSize from '../../hooks/useWindowSize';
 import CustomDivider from './CustomDivider';
 import Label from './Label';
 
@@ -23,15 +24,20 @@ const TitleContainer = styled.div`
   width: -webkit-fill-available;
   width: -moz-available;
   align-self: flex-start;
-  margin: 0px 120px;
-  padding: 0px 0px 48px 16px;
+  padding: 0px 168px 16px;
   max-width: inherit;
   justify-content: space-between;
   display: flex;
 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-    margin: 8px 24px;
-    padding: 0px;
+    padding: 0px 32px 16px;
   }
 `;
 
@@ -50,39 +56,89 @@ const GridContainer = styled.div`
   }
 `;
 
+const Item = styled.a`
+  .underline {
+    width: ${({ isHover }) => (isHover ? '100%' : 0)};
+    transition: width 0.3s;
+    background: ${({ theme: { colors } }) => colors.primaryColor};
+    height: 3px;
+  }
+
+  .is-underlined {
+    width: 100%;
+    background: ${({ theme: { colors } }) => colors.primaryColor};
+    height: 3px;
+  }
+`;
+
 const TitleDescriptionPage = ({ supTitle, title, withGrid, withoutBorderBottom, withButtons }) => {
+  const [_, height] = useWindowSize();
+  const [isHover, setIsHover] = useState(false);
+
+  const [activeSectionId, setActiveSectionId] = useState('overview');
+
+  const setActiveSection = () => {
+    const { top: overviewTop, bottom: overviewBottom } = document.getElementById('overview').getBoundingClientRect();
+    if (overviewTop < height || overviewBottom < height) {
+      setActiveSectionId('overview');
+    }
+
+    const { top: pricingTop, bottom: pricingBottom } = document.getElementById('pricing').getBoundingClientRect();
+    if (pricingTop < height || pricingBottom < height) {
+      setActiveSectionId('pricing');
+    }
+  };
+
+  useEffect(() => {
+    if (withButtons) {
+      document.addEventListener('scroll', setActiveSection);
+    }
+  }, [withButtons]);
   return (
     <MainContainer>
       <TitleContainer>
-        <Container>
-          <Row>
-            <Label fontFamily="light" size="medium" className="uppercase w-100">
-              {supTitle}
-            </Label>
-            {withButtons && (
-              <Row style={{ columnGap: 30, justifyContent: 'flex-end' }}>
-                <a href="#overview">
-                  <Label size="normal" fontFamily="bold" className="cursor">
-                    overview
-                  </Label>
-                </a>
-                <a href="#pricing">
-                  <Label size="normal" fontFamily="bold" className="cursor">
-                    pricing
-                  </Label>
-                </a>
-              </Row>
-            )}
-          </Row>
-          <Label size="huge" fontFamily="bold" className="w-100 uppercase">
-            {title}
+        <Row>
+          <Label fontFamily="light" size="medium" className="uppercase w-100">
+            {supTitle}
           </Label>
-          {withGrid && (
-            <GridContainer className="mobile-none">
-              <GridPattern />
-            </GridContainer>
+
+          {withButtons && (
+            <Row style={{ columnGap: 30, justifyContent: 'flex-end' }}>
+              <Item
+                href="#overview"
+                isHover={isHover === 'overview'}
+                onClick={() => setActiveSectionId('overview')}
+                onMouseOver={() => setIsHover('overview')}
+                onMouseLeave={() => setIsHover(null)}
+              >
+                <Label size="normal" fontFamily={activeSectionId === 'overview' ? 'bold' : 'regular'} className="cursor">
+                  overview
+                </Label>
+                <div className={activeSectionId === 'overview' ? 'is-underlined' : 'underline'} />
+              </Item>
+              <Item
+                href="#pricing"
+                isHover={isHover === 'pricing'}
+                onClick={() => setActiveSectionId('pricing')}
+                onMouseOver={() => setIsHover('pricing')}
+                onMouseLeave={() => setIsHover(null)}
+              >
+                <Label size="normal" fontFamily={activeSectionId === 'pricing' ? 'bold' : 'regular'} className="cursor">
+                  pricing
+                </Label>
+                <div className={activeSectionId === 'pricing' ? 'is-underlined' : 'underline'} />
+              </Item>
+            </Row>
           )}
-        </Container>
+        </Row>
+        <Label size="huge" fontFamily="bold" className="w-100 uppercase">
+          {title}
+        </Label>
+        {withGrid && (
+          <GridContainer className="mobile-none">
+            <GridPattern />
+          </GridContainer>
+        )}
       </TitleContainer>
       {!withoutBorderBottom && <CustomDivider red />}
     </MainContainer>

@@ -43,7 +43,7 @@ export const QUADRO_DESCRIPTION_LIST = {
         description: 'pms-analytics-platform-description'
       },
       2: {
-        title: 'Integrations MarketPlace',
+        title: 'Integrations Marketplace',
         description: 'pms-integration-marketplace-description'
       },
       3: {

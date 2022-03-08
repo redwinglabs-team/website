@@ -121,12 +121,12 @@ const ContactUsForm = () => {
             </Label>
             <Row>
               {' '}
-              <ItalianFlagIcon /> <Label size="small">+19132939433</Label>
+              <ItalianFlagIcon /> <Label size="small">+39 080 482 9200</Label>
             </Row>
             <Row>
               {' '}
               <AmericanFlagIcon />
-              <Label size="small">+39 080 482 9200</Label>
+              <Label size="small">+1 (917) 664-4032</Label>
             </Row>
           </Column>
           <Column>

@@ -142,7 +142,7 @@ const Footer = () => {
               <Label fontFamily="regular" className="w-unset">
                 phone-footer
               </Label>
-              <Label className="nowrap">&nbsp;(IT) +39 080 482 9200, (USA) +1917664032</Label>
+              <Label className="nowrap">&nbsp;(IT) +39 080 482 9200, (USA) +1 (917) 664-4032</Label>
             </Text>
             <Text>
               <Label fontFamily="regular" className="w-unset">
@@ -171,7 +171,7 @@ const Footer = () => {
           />
           <BottomContainer>
             <IconList isInverted={isIndex()} />
-            <PrivacyElement>© 2021 Redwing Labs. All rights reserved.</PrivacyElement>
+            <PrivacyElement>© 2022 Redwing Technologies. All rights reserved.</PrivacyElement>
           </BottomContainer>
         </FooterBottomContainer>
       </FooterContainer>

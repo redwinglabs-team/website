@@ -27,7 +27,6 @@ const Item = styled.div`
 `;
 const HeaderItem = ({ children, style, colorInverted, onClick }) => {
   const [isHover, setIsHover] = useState(false);
-  // console.log(`${children}`,href === window.location.pathname && matchPathname("products"))
 
   const isActive = () => {
     const { pathname } = window.location;

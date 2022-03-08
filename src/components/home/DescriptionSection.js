@@ -86,8 +86,8 @@ const DescriptionSection = () => {
       </LeftContainer>
       <RightContainer>
         <Container gap={16}>
-          <AlternateFontFamilyLabel>innovative-solution</AlternateFontFamilyLabel>
-          <Label className="line-height">innovative-solution-description</Label>
+          <AlternateFontFamilyLabel>innovative-solutions</AlternateFontFamilyLabel>
+          <Label className="line-height">innovative-solutions-description</Label>
         </Container>
         <Container gap={16}>
           {' '}
