@@ -27,7 +27,7 @@ export const ImageContainer = styled.div`
   svg {
     width: 100%;
     height: 100%;
-    padding: 32px;
+    padding: 0px 32px;
   }
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {

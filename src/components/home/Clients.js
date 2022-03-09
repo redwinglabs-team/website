@@ -24,6 +24,7 @@ const ClientsContainer = styled(Container)`
 `;
 const ClientsTextContainer = styled(Container)`
   margin: 32px;
+  margin-top: 0px;
   height: min-content;
   & > div:not(:last-child) {
     margin-bottom: 32px !important;
@@ -39,7 +40,6 @@ const ClientsTextContainer = styled(Container)`
 `;
 
 const ClientListContainer = styled(Container)`
-  margin: 32px;
   height: fit-content;
   flex-direction: row;
   justify-content: space-around;

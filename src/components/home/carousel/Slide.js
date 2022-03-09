@@ -34,14 +34,11 @@ const RightSlideContainer = styled.div`
     height: 100%;
   }
   img {
-    width: 700px;
     height: 500px;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
-      width: 350px;
       height: 220px;
     }
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-      width: 300px;
       height: 200px;
     }
   }

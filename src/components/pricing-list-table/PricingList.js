@@ -14,10 +14,10 @@ const PricingInfo = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 32px 0px;
+  margin: 48px 0px;
   margin-right: auto;
   margin-left: auto;
-  padding: 64px 170px;
+  padding: 48px 170px;
   & > *:not(:last-child) {
     margin-bottom: 16px;
   }
@@ -50,7 +50,7 @@ const PricingList = ({ features, productName, productDescription, categories }) 
         </PricingInfo>
         <CustomDivider red />
       </div>
-      <div style={{ marginTop: 80 }}>
+      <div style={{ marginTop: 112 }}>
         {width > theme.mediaQueries.desktopPixel ? (
           <DesktopPricingList
             features={features}

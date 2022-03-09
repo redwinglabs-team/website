@@ -9,16 +9,18 @@ const DescriptionsMainContainer = styled.div`
   flex-direction: row;
   margin-right: auto;
   margin-left: auto;
-  padding: 64px 170px;
+  padding: 88px 170px;
   width: -webkit-fill-available;
   width: -moz-available;
   & > *:not(:last-child) {
     margin-right: 32px;
   }
-  svg {
-    max-width: 600px;
-    max-height: 600px;
-  }
+  /* svg {
+    height: 100%;
+    width: 100%; */
+  /* max-width: 600px;
+    max-height: 600px; */
+  /* } */
   max-width: inherit;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     flex-direction: column;
@@ -35,8 +37,9 @@ const DescriptionList = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 50%;
   & > *:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 56px;
   }
 `;
 const Description = styled.div`

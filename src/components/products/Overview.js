@@ -8,10 +8,10 @@ const OverviewContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 32px;
+  margin: 48px 0px;
   margin-right: auto;
   margin-left: auto;
-  padding: 64px 170px;
+  padding: 48px 170px;
   & > *:not(:last-child) {
     margin-bottom: 16px;
   }

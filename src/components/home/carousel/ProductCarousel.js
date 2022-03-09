@@ -38,6 +38,7 @@ const TitleContainer = styled(Container)`
 
 const CarouselContainer = styled(Container)`
   background-color: ${({ theme: { colors } }) => colors.lightGreyBackground};
+  padding-bottom: 48px;
   .swiper-wrapper {
     margin-bottom: 36px;
   }

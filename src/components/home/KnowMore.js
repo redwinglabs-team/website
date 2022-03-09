@@ -10,7 +10,7 @@ const KnowMoreContainer = styled(Container)`
   width: -moz-available;
   height: fit-content;
   margin-top: 88px;
-  padding: 32px 170px;
+  padding: 48px 170px;
   & > span {
     text-align: center !important;
   }

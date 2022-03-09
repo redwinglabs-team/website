@@ -18,12 +18,13 @@ const SecondDescriptionContainer = styled(Container)`
 const Grid = styled(Container)`
   color: ${({ theme: { colors } }) => colors.white};
   margin-top: 48px;
+  margin-bottom: 24px;
 `;
 const GridRow = styled(Container)`
   flex-direction: row;
   height: fit-content;
   justify-content: flex-start;
-  margin-bottom: 48px;
+  margin-bottom: 64px;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     flex-direction: column;
   }
