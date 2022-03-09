@@ -21,11 +21,11 @@ const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  width: 100%;
   .margined-label {
     margin-left: auto;
     margin-right: auto;
-    padding: 16px 120px;
+    padding: 16px 168px;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
       padding: 24px;
     }
@@ -54,7 +54,7 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   align-items: start;
-  margin: 32px 120px;
+  margin: 32px 168px;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     margin: 24px;
     padding: 0px;
@@ -69,13 +69,16 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 16px 120px;
+  margin: 16px 168px;
   width: -webkit-fill-available;
   width: -moz-available;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     flex-direction: column;
-    margin: 24px;
+    margin: 0 16px;
     padding: 0px;
+    button {
+      width: 100%;
+    }
   }
 `;
 

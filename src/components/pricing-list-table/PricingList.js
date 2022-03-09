@@ -14,9 +14,8 @@ const PricingInfo = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
   margin: 48px 0px;
-  margin-right: auto;
-  margin-left: auto;
   padding: 48px 170px;
   & > *:not(:last-child) {
     margin-bottom: 16px;
@@ -40,13 +39,15 @@ const PricingList = ({ features, productName, productDescription, categories }) 
   };
   return (
     <div id="pricing" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
-        <CustomDivider red />{' '}
+      <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', width: '100%' }}>
+        <CustomDivider red />
         <PricingInfo>
           <Label className="w-100" fontFamily="bold" fontSize={32}>
             pricing
           </Label>
-          <Label fontSize={24}>pricing-description</Label>
+          <Label className="w-100" fontSize={24}>
+            pricing-description
+          </Label>
         </PricingInfo>
         <CustomDivider red />
       </div>

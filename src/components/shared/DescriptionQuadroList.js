@@ -9,18 +9,13 @@ const DescriptionsMainContainer = styled.div`
   flex-direction: row;
   margin-right: auto;
   margin-left: auto;
-  padding: 88px 170px;
+  padding: 32px 170px;
   width: -webkit-fill-available;
   width: -moz-available;
   & > *:not(:last-child) {
     margin-right: 32px;
   }
-  /* svg {
-    height: 100%;
-    width: 100%; */
-  /* max-width: 600px;
-    max-height: 600px; */
-  /* } */
+
   max-width: inherit;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     flex-direction: column;

@@ -34,7 +34,7 @@ const RightSlideContainer = styled.div`
     height: 100%;
   }
   img {
-    height: 500px;
+    height: 750px;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
       height: 220px;
     }

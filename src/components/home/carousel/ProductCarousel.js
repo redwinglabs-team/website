@@ -109,7 +109,7 @@ const ProductCarousel = () => {
         </TitleContainer>
         <CustomDivider
           style={{
-            width: '90%',
+            width: '85%',
             backgroundColor: theme.colors.grey,
             height: 0.5
           }}
