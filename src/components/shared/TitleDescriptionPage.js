@@ -36,7 +36,7 @@ const TitleContainer = styled.div`
   flex-flow: column;
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-    padding: 0px 32px 16px;
+    padding: 32px;
   }
 `;
 

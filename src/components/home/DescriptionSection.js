@@ -21,9 +21,8 @@ const DescriptionSectionContainer = styled.div`
   }
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
-    padding: 16px 64px;
+    padding: 32px 64px;
     height: fit-content;
-    margin-bottom: 64px;
   }
 `;
 const LeftContainer = styled.div`
