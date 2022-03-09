@@ -13,15 +13,16 @@ import carouselEntertainment from '../../../assets/images/entertainment.png';
 import { theme } from '../../../styles/theme';
 import Slide from './Slide';
 import Label from '../../shared/Label';
+import CustomDivider from '../../shared/CustomDivider';
 
 const ProductCarouselContainer = styled.div`
-  margin: 32px;
+  margin: 88px 32px;
 `;
 
 const TitleContainer = styled(Container)`
   height: min-content;
   flex-direction: row;
-  padding: 32px 130px;
+  padding: 48px 130px;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     flex-flow: column;
     padding: 32px;
@@ -33,10 +34,6 @@ const TitleContainer = styled(Container)`
       text-align: center;
     }
   }
-`;
-
-const MainTitleContainer = styled(Container)`
-  flex-direction: column;
 `;
 
 const CarouselContainer = styled(Container)`
@@ -62,8 +59,6 @@ const CarouselContainer = styled(Container)`
     height: min-content;
   }
 `;
-
-const Divider = styled.hr``;
 
 const RedBox = styled.div`
   position: absolute;
@@ -101,19 +96,19 @@ const ProductCarousel = () => {
     <ProductCarouselContainer className="w-full">
       <CarouselContainer>
         <TitleContainer className="w-full">
-          <MainTitleContainer>
-            <Label size="medium" className="uppercase">
+          <Container>
+            <Label fontFamily="light" size="medium" className="uppercase w-100">
               our
             </Label>
-            <Label size="medium" fontFamily="bold" className="uppercase">
+            <Label size="huge" fontFamily="bold" className="uppercase w-100" mobileStyle={{ marginBottom: 16 }}>
               products
             </Label>
-          </MainTitleContainer>
+          </Container>
           <Label className="line-height">rwl-carousel-description</Label>
         </TitleContainer>
-        <Divider
+        <CustomDivider
           style={{
-            width: '80%',
+            width: '90%',
             backgroundColor: theme.colors.grey,
             height: 0.5
           }}

@@ -20,8 +20,7 @@ const HomeContainer = () => {
       <Clients />
       {/* PRODUCT CAROUSEL */}
       <ProductCarousel />
-      {/* ABOUT US TITLE */}
-      <TitleDescriptionPage supTitle="about" title="us" withGrid />
+
       {/* SECOND DESCRIPTION */}
       <SecondDescription />
       {/* KNOW MORE */}

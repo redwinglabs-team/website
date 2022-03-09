@@ -4,12 +4,12 @@ import { theme } from '../../styles/theme';
 
 const Divider = styled.div``;
 
-const CustomDivider = ({ red, style }) => {
+const CustomDivider = ({ red, color, style }) => {
   return (
     <Divider
       style={{
         width: '85%',
-        backgroundColor: red ? theme.colors.red : theme.colors.grey,
+        backgroundColor: red ? color || theme.colors.red : theme.colors.grey,
         height: 2,
         ...style
       }}

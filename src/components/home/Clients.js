@@ -12,7 +12,7 @@ import Label from '../shared/Label';
 
 const ClientsContainer = styled(Container)`
   background-color: ${({ theme: { colors } }) => colors.lightGreyBackground};
-  padding: 48px 106px 24px;
+  padding: 48px 106px;
   z-index: 1;
   height: min-content;
   width: -webkit-fill-available;

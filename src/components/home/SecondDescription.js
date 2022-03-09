@@ -3,10 +3,10 @@ import styled from 'styled-components/macro';
 import { QuadroRedLogo } from '../../assets';
 import { Container } from '../shared/Containers';
 import Label from '../shared/Label';
+import TitleDescriptionPage from '../shared/TitleDescriptionPage';
 
 const SecondDescriptionContainer = styled(Container)`
   background: linear-gradient(90deg, #be3144 62%, #232323 62%);
-  padding: 48px 0px;
   height: min-content;
   width: -webkit-fill-available;
   width: -moz-available;
@@ -17,12 +17,13 @@ const SecondDescriptionContainer = styled(Container)`
 
 const Grid = styled(Container)`
   color: ${({ theme: { colors } }) => colors.white};
+  margin-top: 48px;
 `;
 const GridRow = styled(Container)`
   flex-direction: row;
   height: fit-content;
   justify-content: flex-start;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     flex-direction: column;
   }
@@ -54,6 +55,8 @@ const LogoContainer = styled(Container)`
 const SecondDescription = () => {
   return (
     <SecondDescriptionContainer>
+      <TitleDescriptionPage color="#fff" supTitle="about" title="us" withGrid />
+
       <Grid>
         <GridRow>
           <GridColumn withMoreMarginLeft>

@@ -9,7 +9,6 @@ import Label from './Label';
 const MainContainer = styled.div`
   width: 100%;
   display: flex;
-  margin: 32px;
   flex-direction: column;
   align-items: center;
   a {
@@ -24,7 +23,7 @@ const TitleContainer = styled.div`
   width: -webkit-fill-available;
   width: -moz-available;
   align-self: flex-start;
-  padding: 0px 168px 16px;
+  padding: 48px 168px;
   max-width: inherit;
   justify-content: space-between;
   display: flex;
@@ -71,7 +70,7 @@ const Item = styled.a`
   }
 `;
 
-const TitleDescriptionPage = ({ supTitle, title, withGrid, withoutBorderBottom, withButtons }) => {
+const TitleDescriptionPage = ({ supTitle, title, withGrid, withoutBorderBottom, withButtons, color }) => {
   const [_, height] = useWindowSize();
   const [isHover, setIsHover] = useState(false);
 
@@ -98,7 +97,7 @@ const TitleDescriptionPage = ({ supTitle, title, withGrid, withoutBorderBottom, 
     <MainContainer>
       <TitleContainer>
         <Row>
-          <Label fontFamily="light" size="medium" className="uppercase w-100">
+          <Label color={color} fontFamily="light" size="medium" className="uppercase w-100">
             {supTitle}
           </Label>
 
@@ -131,7 +130,7 @@ const TitleDescriptionPage = ({ supTitle, title, withGrid, withoutBorderBottom, 
             </Row>
           )}
         </Row>
-        <Label size="huge" fontFamily="bold" className="w-100 uppercase">
+        <Label color={color} size="huge" fontFamily="bold" className="w-100 uppercase">
           {title}
         </Label>
         {withGrid && (
@@ -140,7 +139,7 @@ const TitleDescriptionPage = ({ supTitle, title, withGrid, withoutBorderBottom, 
           </GridContainer>
         )}
       </TitleContainer>
-      {!withoutBorderBottom && <CustomDivider red />}
+      {!withoutBorderBottom && <CustomDivider red color={color} />}
     </MainContainer>
   );
 };

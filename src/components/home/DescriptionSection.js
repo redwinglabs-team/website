@@ -9,8 +9,7 @@ const DescriptionSectionContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-flow: column;
-  padding: 64px 170px;
-  padding-top: 32px;
+  padding: 88px 170px;
   flex-direction: row;
   width: fit-content;
   max-height: 600px;
