@@ -33,7 +33,7 @@ const MainContainerContactForm = styled.div`
   width: -moz-available;
   max-width: inherit;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-    padding: 16px;
+    padding: 32px;
   }
 `;
 

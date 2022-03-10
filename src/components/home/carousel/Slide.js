@@ -22,11 +22,20 @@ const LeftSlideContainer = styled.div`
   position: relative;
   display: flex;
   align-items: flex-start;
-  /* justify-content: flex-start; */
   justify-content: space-between;
   flex-direction: column;
   max-height: 450px;
   min-height: 350px;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+    justify-content: flex-start;
+    width: 100%;
+    & > *:first-child {
+      margin-bottom: 16px;
+    }
+    button {
+      align-self: center;
+    }
+  }
 `;
 const RightSlideContainer = styled.div`
   svg {

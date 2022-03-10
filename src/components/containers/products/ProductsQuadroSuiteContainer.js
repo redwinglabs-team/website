@@ -74,10 +74,13 @@ const ButtonContainer = styled.div`
   width: -moz-available;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     flex-direction: column;
-    margin: 0 16px;
+    margin: 16px;
+    margin-top: 0px;
     padding: 0px;
     button {
-      width: 100%;
+      display: flex;
+      justify-content: center;
+      width: 80%;
     }
   }
 `;

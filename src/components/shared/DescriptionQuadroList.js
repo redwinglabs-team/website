@@ -20,6 +20,10 @@ const DescriptionsMainContainer = styled.div`
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     flex-direction: column;
     padding: 32px;
+
+    & > *:not(:last-child) {
+      margin-right: 0px;
+    }
     svg {
       width: 100%;
       height: 100%;
@@ -32,9 +36,11 @@ const DescriptionList = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 50%;
   & > *:not(:last-child) {
     margin-bottom: 56px;
+  }
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
+    width: 100%;
   }
 `;
 const Description = styled.div`

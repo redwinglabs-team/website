@@ -38,6 +38,7 @@ const LeftContainer = styled.div`
   }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     margin: 0px;
+    align-self: center;
   }
 `;
 const RightContainer = styled(Container)`
