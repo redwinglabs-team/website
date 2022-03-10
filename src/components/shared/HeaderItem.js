@@ -30,9 +30,7 @@ const HeaderItem = ({ children, style, colorInverted, onClick }) => {
 
   const isActive = () => {
     const { pathname } = window.location;
-    if (children?.isActiveWildcard?.length) {
-      console.log('children?.isActiveWildCard', children?.isActiveWildcard);
-    }
+
     return pathname === children.link || (children?.hasChildren && matchPathname(children.link));
   };
   return (
