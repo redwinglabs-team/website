@@ -16,7 +16,7 @@ export const QUADRO_DESCRIPTION_LIST = {
   PMS: {
     BASE_DESCRIPTIONS: {
       0: {
-        title: 'Reservation Managment',
+        title: 'Reservation Management',
         description: 'pms-reservation-management-description'
       },
       1: {
@@ -35,7 +35,7 @@ export const QUADRO_DESCRIPTION_LIST = {
     BASE_DESCRIPTIONS_IMAGE: <DescriptionQuadroPms />,
     OTHER_DESCRIPTIONS: {
       0: {
-        title: 'Space Managment',
+        title: 'Space Management',
         description: 'pms-space-management-description'
       },
       1: {
@@ -47,7 +47,7 @@ export const QUADRO_DESCRIPTION_LIST = {
         description: 'pms-integration-marketplace-description'
       },
       3: {
-        title: 'Revenue Managment',
+        title: 'Revenue Management',
         description: 'pms-revenue-management-description'
       }
     },

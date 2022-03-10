@@ -15,8 +15,8 @@ export const QUADRO_PRICING_CATEGORIES = {
 export const QUADRO_PRICING_FEATURES = {
   PMS: [
     {
-      feature: 'pricing-pms-managment-dashboard-title',
-      description: 'pricing-pms-managment-dashboard-description',
+      feature: 'pricing-pms-management-dashboard-title',
+      description: 'pricing-pms-management-dashboard-description',
       essentials: true,
       pro: true,
       enterprise: true
