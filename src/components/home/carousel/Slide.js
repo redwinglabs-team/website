@@ -83,7 +83,7 @@ const Slide = ({ title, subtitle, description, image }) => {
         </TitleContainer>
         <ContentContainer>
           <Label className="line-height">{description}</Label>
-          <CustomButton buttonStyle={{ width: 120 }} onClick={() => onOpen({ src: SRC_BOOK_A_DEMO })}>
+          <CustomButton buttonStyle={{ width: 140, justifyContent: 'center', display: 'flex' }} onClick={() => onOpen({ src: SRC_BOOK_A_DEMO })}>
             request-a-demo
           </CustomButton>
         </ContentContainer>

@@ -11,13 +11,21 @@ const MainContainerPartnersForm = styled.div`
   flex-direction: column;
   margin-right: auto;
   margin-left: auto;
-  padding: 48px 170px;
   padding-bottom: 0px;
   width: -webkit-fill-available;
   width: -moz-available;
   max-width: inherit;
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-    padding: 32px;
+
+  padding: 48px 170px;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) and (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    padding: 24px 64px;
+  }
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
+    padding: 24px;
+    padding-top: 48px;
   }
 `;
 

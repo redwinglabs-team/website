@@ -16,6 +16,12 @@ const OverviewContainer = styled.div`
     margin-bottom: 16px;
   }
   max-width: inherit;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) and (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    flex-direction: column;
+    padding: 32px 64px;
+  }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 32px;
   }

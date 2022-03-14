@@ -35,8 +35,13 @@ const TitleContainer = styled.div`
   align-items: center;
   flex-flow: column;
 
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-    padding: 32px;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) and (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    padding: 32px 64px;
+  }
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
+    padding: 32px 24px;
   }
 `;
 

@@ -17,6 +17,9 @@ import CustomDivider from '../../shared/CustomDivider';
 
 const ProductCarouselContainer = styled.div`
   margin: 88px 32px;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+    margin: 88px 24px;
+  }
 `;
 
 const TitleContainer = styled(Container)`
@@ -38,7 +41,6 @@ const TitleContainer = styled(Container)`
 
 const CarouselContainer = styled(Container)`
   background-color: ${({ theme: { colors } }) => colors.lightGreyBackground};
-  padding-bottom: 48px;
   .swiper-wrapper {
     margin-bottom: 36px;
   }
@@ -49,6 +51,7 @@ const CarouselContainer = styled(Container)`
     height: min-content;
     overflow: hidden;
     margin: 0px 32px;
+    padding-bottom: 48px;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
       margin: 0px;
     }
@@ -58,6 +61,10 @@ const CarouselContainer = styled(Container)`
     width: -moz-available !important;
     width: fill-available !important;
     height: min-content;
+  }
+
+  .swiper-pagination {
+    bottom: 10px;
   }
 `;
 

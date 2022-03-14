@@ -16,8 +16,17 @@ const DescriptionsMainContainer = styled.div`
     margin-right: 32px;
   }
 
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) and (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    flex-direction: column;
+    padding: 32px 64px;
+    & > *:not(:last-child) {
+      margin-right: 0px;
+    }
+  }
+
   max-width: inherit;
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
     flex-direction: column;
     padding: 32px;
 

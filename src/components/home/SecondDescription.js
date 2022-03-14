@@ -19,12 +19,16 @@ const Grid = styled(Container)`
   color: ${({ theme: { colors } }) => colors.white};
   margin-top: 48px;
   margin-bottom: 24px;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
+    margin-bottom: 0px;
+  }
 `;
 const GridRow = styled(Container)`
   flex-direction: row;
   height: fit-content;
   justify-content: flex-start;
   margin-bottom: 64px;
+
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     flex-direction: column;
   }
@@ -33,10 +37,36 @@ const GridRow = styled(Container)`
 const GridColumn = styled(Container)`
   height: fit-content;
   width: 33%;
-  margin-left: ${({ withMoreMarginLeft }) => (withMoreMarginLeft ? '170px' : '48px')};
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
-    margin: 32px;
+  /* margin-left: ${({ withMoreMarginLeft }) => (withMoreMarginLeft ? '170px' : '48px')}; */
+
+  &.first {
+    margin-left: 170px;
+  }
+  &.second {
+    margin-left: 48px;
+  }
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) and (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    &.first {
+      margin-left: 0px;
+    }
+    &.second {
+      margin-top: 64px;
+      margin-left: 0px;
+    }
+    width: 100%;
+    padding: 0px 64px;
+  }
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
+    margin: 0 24px;
+
     width: fit-content;
+    &.second {
+      margin-left: 0px;
+
+      margin-top: 64px;
+    }
   }
 `;
 const LogoContainer = styled(Container)`
@@ -60,7 +90,7 @@ const SecondDescription = () => {
 
       <Grid>
         <GridRow>
-          <GridColumn withMoreMarginLeft>
+          <GridColumn className="first">
             <Label fontSize={24} fontFamily="bold" className="line-height">
               rwl-description
             </Label>
@@ -70,7 +100,7 @@ const SecondDescription = () => {
           <LogoContainer>
             <QuadroRedLogo />
           </LogoContainer>
-          <GridColumn>
+          <GridColumn className="second">
             <Label fontSize={24} fontFamily="bold" className="line-height">
               rwl-description-2
             </Label>

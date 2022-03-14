@@ -28,12 +28,20 @@ const MainContainerContactForm = styled.div`
   flex-direction: column;
   margin-right: auto;
   margin-left: auto;
-  padding: 48px 170px 24px;
   width: -webkit-fill-available;
   width: -moz-available;
   max-width: inherit;
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-    padding: 32px;
+  padding: 48px 170px;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) and (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    padding: 24px 64px;
+    padding-top: 48px;
+  }
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
+    padding: 24px;
+    padding-top: 48px;
   }
 `;
 
@@ -69,8 +77,8 @@ const ContactsContainer = styled.div`
   & > *:not(:last-child) {
     margin-bottom: 24px;
   }
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
-    padding: 16px;
+  @media (max-width: 1300px) {
+    padding: 32px;
     flex-direction: column;
   }
 
@@ -140,7 +148,7 @@ const ContactUsForm = () => {
         </ContactsContainer>
       </Content>
 
-      <GridContainer className="mobile-none">
+      <GridContainer className="desktop-only">
         <GridPattern />
       </GridContainer>
       <CustomButton

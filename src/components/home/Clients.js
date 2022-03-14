@@ -18,8 +18,14 @@ const ClientsContainer = styled(Container)`
   width: -webkit-fill-available;
   width: -moz-available;
   position: relative;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) and (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    padding: 24px 64px;
+  }
+
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-    padding: 32px 64px;
+    padding: 24px;
   }
 `;
 const ClientsTextContainer = styled(Container)`
@@ -83,7 +89,7 @@ const Clients = () => {
           <Label fontFamily="bold" className="uppercase w-unset">
             clients
           </Label>
-          <div className="mobile-none" style={{ position: 'absolute', display: 'flex' }}>
+          <div className="desktop-only" style={{ position: 'absolute', display: 'flex' }}>
             <Label fontSize={132} color="#2323231a" className="uppercase w-unset">
               our
             </Label>

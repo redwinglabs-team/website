@@ -38,6 +38,11 @@ const TitleContainer = styled.div`
   padding-left: 170px;
   max-width: fit-content;
 
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) and (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    padding-left: 64px;
+  }
+
   .nowrap {
     white-space: nowrap;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
@@ -60,13 +65,14 @@ const ImageProductContainer = styled.div`
     width: 80%;
     height: 80%;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
-      align-self: flex-end;
-      margin-bottom: -11px;
+      height: 400px;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
-    height: 250px;
-  }
+
   #bg-quadro-pop {
     right: -370px;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {

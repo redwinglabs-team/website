@@ -58,6 +58,14 @@ export default createGlobalStyle`
       margin-top: ${theme.headerHeight}px;
     }
 
+    .desktop-only {
+      display: block;
+
+      @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
+        display: none !important;
+      }
+    }
+    
     .desktop-none {
       @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
         display: none !important;

@@ -23,9 +23,9 @@ const MainContainer = styled.div`
   flex-direction: column;
   width: 100%;
   .margined-label {
+    padding: 16px 168px;
     margin-left: auto;
     margin-right: auto;
-    padding: 16px 168px;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
       padding: 24px;
     }
@@ -54,34 +54,61 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   align-items: start;
-  margin: 32px 168px;
+  margin: 32px 0px;
+  & > *:not(:last-child) {
+    margin-right: 16px;
+  }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-    margin: 24px;
+    & > *:not(:last-child) {
+      margin-right: 0px;
+    }
+    margin: 24px 0px;
     padding: 0px;
+    flex-direction: column;
   }
 `;
 
 const GridColumn = styled.div`
   display: flex;
   justify-content: center;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+    margin-right: 0px;
+    margin-bottom: 16px;
+  }
 `;
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 16px 168px;
   width: -webkit-fill-available;
   width: -moz-available;
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) and (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    padding: 24px 0px;
+  }
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     flex-direction: column;
-    margin: 16px;
     margin-top: 0px;
     padding: 0px;
     button {
       display: flex;
       justify-content: center;
-      width: 80%;
+      width: 100%;
     }
+  }
+`;
+
+const SectionContent = styled(Container)`
+  padding: 48px 168px;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) and (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    padding: 24px 64px;
+  }
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
+    padding: 24px;
   }
 `;
 
@@ -118,44 +145,48 @@ const ProductsQuadroSuiteContainer = () => {
       />
       <MainContainer>
         <TitleDescriptionPage supTitle="how-does-your-business" title="interact-with-guests" />
-        <Label className="margined-label w-100">select-1-or-more-interaction-types-below</Label>
-        <ButtonContainer>
-          {Object.entries(initialButtons).map((button, index) => (
-            <CustomButton
-              key={index}
-              inverted={Object.values(buttonClicked)[index] !== true}
-              onClick={() => {
-                handleButtons(button[0]);
-              }}
-              boxShadow={`0px 5px 25px ${theme.colors.primaryColor}60`}
-            >
-              <Label fontSize={32} fontFamily="bold">
-                {button}
-              </Label>
-            </CustomButton>
-          ))}
-        </ButtonContainer>
-        <Content>
-          <GridColumn style={{ flexDirection: 'column', marginRight: 16, justifyContent: 'space-between' }}>
-            <GridRow style={{ marginBottom: 16 }}>
-              <ProductPms style={{ opacity: imageOpacified('Accommodations') }} onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_PMS)} />
-            </GridRow>
+        <SectionContent>
+          <Label className="w-100" mobileStyle={{ marginTop: 24 }}>
+            select-1-or-more-interaction-types-below
+          </Label>
+          <ButtonContainer>
+            {Object.entries(initialButtons).map((button, index) => (
+              <CustomButton
+                key={index}
+                inverted={Object.values(buttonClicked)[index] !== true}
+                onClick={() => {
+                  handleButtons(button[0]);
+                }}
+                boxShadow={`0px 5px 25px ${theme.colors.primaryColor}60`}
+              >
+                <Label fontSize={32} fontFamily="bold">
+                  {button}
+                </Label>
+              </CustomButton>
+            ))}
+          </ButtonContainer>
+          <Content>
+            <GridColumn style={{ flexDirection: 'column', justifyContent: 'space-between' }}>
+              <GridRow style={{ marginBottom: 16 }}>
+                <ProductPms style={{ opacity: imageOpacified('Accommodations') }} onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_PMS)} />
+              </GridRow>
+              <GridRow>
+                <ProductEntertainment
+                  style={{ opacity: imageOpacified('Accommodations') }}
+                  onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_ENTERTAINMENT)}
+                />
+              </GridRow>
+            </GridColumn>
             <GridRow>
-              <ProductEntertainment
-                style={{ opacity: imageOpacified('Accommodations') }}
-                onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_ENTERTAINMENT)}
-              />
+              <GridColumn style={{ marginRight: 16 }}>
+                <ProductFnb style={{ opacity: imageOpacified('Eating & Drinking') }} onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_FNB)} />
+              </GridColumn>
+              <GridColumn>
+                <ProductPop style={{ opacity: imageOpacified('Shopping') }} onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_POP)} />
+              </GridColumn>
             </GridRow>
-          </GridColumn>
-          <GridRow>
-            <GridColumn style={{ marginRight: 16 }}>
-              <ProductFnb style={{ opacity: imageOpacified('Eating & Drinking') }} onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_FNB)} />
-            </GridColumn>
-            <GridColumn>
-              <ProductPop style={{ opacity: imageOpacified('Shopping') }} onClick={() => navigate(ROUTE_PRODUCTS_QUADRO_POP)} />
-            </GridColumn>
-          </GridRow>
-        </Content>
+          </Content>
+        </SectionContent>
       </MainContainer>
     </Container>
   );

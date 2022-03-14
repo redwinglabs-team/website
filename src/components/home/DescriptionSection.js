@@ -14,15 +14,15 @@ const DescriptionSectionContainer = styled.div`
   width: fit-content;
   max-height: 600px;
 
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-    flex-flow: column;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) and (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 32px 64px;
-    max-height: none;
   }
 
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
-    padding: 32px 64px;
-    height: fit-content;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
+    flex-flow: column;
+    padding: 24px;
+    max-height: none;
   }
 `;
 const LeftContainer = styled.div`
@@ -30,15 +30,16 @@ const LeftContainer = styled.div`
   background-color: ${({ theme: { colors } }) => colors.lightGreyBackground};
   margin-right: 64px;
   max-width: 300px;
-  padding: 32px;
+  padding: 24px;
   & > span {
     height: 100%;
     display: flex;
     align-items: center;
   }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-    margin: 0px;
+    margin: 24px 0px;
     align-self: center;
+    max-width: 100%;
   }
 `;
 const RightContainer = styled(Container)`
