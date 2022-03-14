@@ -47,6 +47,9 @@ const GridRow = styled.div`
   justify-content: center;
   align-items: center;
   align-items: start;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+    width: 100%;
+  }
 `;
 
 const Content = styled.div`
@@ -72,6 +75,7 @@ const GridColumn = styled.div`
   display: flex;
   justify-content: center;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+    width: 100%;
     margin-right: 0px;
     margin-bottom: 16px;
   }
