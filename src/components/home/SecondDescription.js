@@ -37,7 +37,6 @@ const GridRow = styled(Container)`
 const GridColumn = styled(Container)`
   height: fit-content;
   width: 33%;
-  /* margin-left: ${({ withMoreMarginLeft }) => (withMoreMarginLeft ? '170px' : '48px')}; */
 
   &.first {
     margin-left: 170px;
@@ -45,6 +44,7 @@ const GridColumn = styled(Container)`
   &.second {
     margin-left: 48px;
   }
+
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) and (min-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
     &.first {
@@ -62,8 +62,11 @@ const GridColumn = styled(Container)`
     margin: 0 24px;
 
     width: fit-content;
+    &.first {
+      margin-left: 24px;
+    }
     &.second {
-      margin-left: 0px;
+      margin-left: 24px;
 
       margin-top: 64px;
     }
