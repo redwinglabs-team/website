@@ -12,7 +12,6 @@ const DescriptionSectionContainer = styled.div`
   padding: 88px 170px;
   flex-direction: row;
   width: fit-content;
-  max-height: 600px;
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) and (min-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {

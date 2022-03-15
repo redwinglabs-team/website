@@ -74,7 +74,6 @@ const GridColumn = styled(Container)`
 `;
 const LogoContainer = styled(Container)`
   height: fit-content;
-  max-width: 600px;
   background-color: ${({ theme: { colors } }) => colors.white};
   padding: 16px;
   svg {
