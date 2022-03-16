@@ -88,7 +88,7 @@ const LogoContainer = styled(Container)`
 const SecondDescription = () => {
   return (
     <SecondDescriptionContainer>
-      <TitleDescriptionPage color="#fff" supTitle="about" title="us" withGrid />
+      <TitleDescriptionPage color="#ffffff" supTitle="about" title="us" withGrid />
 
       <Grid>
         <GridRow>
